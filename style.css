@@ -992,3 +992,30 @@ html[dir="rtl"] .footer-bottom {
     transform: none;
   }
 }
+/* ELEGANT GOLD BUTTON ARROW */
+
+.primary-button::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 22px;
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.primary-button:hover::after {
+  transform: translateX(4px) rotate(-45deg);
+}
+
+[dir="rtl"] .primary-button::after {
+  margin-left: 0;
+  margin-right: 22px;
+  transform: rotate(135deg);
+}
+
+[dir="rtl"] .primary-button:hover::after {
+  transform: translateX(-4px) rotate(135deg);
+}
