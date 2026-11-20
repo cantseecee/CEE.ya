@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080808">
+  <meta name="description" content="CEE YA. — An independent creative digital studio exploring creativity, innovation and new possibilities.">
 
   <title>CEE YA. — Beyond the Ordinary</title>
-  <meta name="description" content="CEE YA. — An independent creative digital space exploring ideas, innovation and discovery.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -19,65 +20,104 @@
 
 <body>
 
+  <!-- DESKTOP LEFT SIDEBAR -->
+  <aside class="sidebar sidebar-left">
+    <a href="#home" class="brand">CEE YA<span>.</span></a>
+
+    <div class="sidebar-caption">
+      INDEPENDENT<br>
+      CREATIVE<br>
+      DIGITAL STUDIO
+    </div>
+
+    <div class="sidebar-bottom">
+      EST. 2026<br>
+      MOROCCO
+    </div>
+  </aside>
+
+  <!-- DESKTOP RIGHT SIDEBAR -->
+  <aside class="sidebar sidebar-right">
+    <nav class="desktop-nav">
+      <a href="#home"><span>01</span> HOME</a>
+      <a href="#about"><span>02</span> ABOUT</a>
+      <a href="#vision"><span>03</span> VISION</a>
+      <a href="#explorations"><span>04</span> EXPLORE</a>
+      <a href="#collection"><span>05</span> COLLECTION</a>
+    </nav>
+
+    <a href="#contact" class="sidebar-contact">
+      LET'S TALK <span>↗</span>
+    </a>
+  </aside>
+
+  <!-- MOBILE HEADER -->
   <header class="mobile-header">
-    <a href="#home" class="logo">CEE YA<span>.</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+    <a href="#home" class="brand">CEE YA<span>.</span></a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
       <span></span>
       <span></span>
     </button>
   </header>
 
+  <!-- MOBILE NAVIGATION -->
   <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#vision">Vision</a>
-    <a href="#explorations">Explorations</a>
-    <a href="#collection">Collection</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">01 — HOME</a>
+    <a href="#about">02 — ABOUT</a>
+    <a href="#vision">03 — VISION</a>
+    <a href="#explorations">04 — EXPLORE</a>
+    <a href="#collection">05 — COLLECTION</a>
+    <a href="#contact">06 — CONTACT</a>
+
+    <span class="mobile-menu-footer">CEE YA. — MOROCCO</span>
   </nav>
-
-  <aside class="sidebar-left">
-    <a href="#home" class="logo">CEE YA<span>.</span></a>
-    <div class="side-label">INDEPENDENT CREATIVE DIGITAL STUDIO</div>
-    <div class="side-bottom">EST. 2026 — MOROCCO</div>
-  </aside>
-
-  <aside class="sidebar-right">
-    <div class="side-links">
-      <a href="#home">01 / HOME</a>
-      <a href="#about">02 / ABOUT</a>
-      <a href="#vision">03 / VISION</a>
-      <a href="#explorations">04 / EXPLORE</a>
-      <a href="#collection">05 / COLLECTION</a>
-      <a href="#contact">06 / CONTACT</a>
-    </div>
-    <a href="#contact" class="side-contact">LET'S TALK ↗</a>
-  </aside>
 
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="home">
-      <div class="hero-top">
+
+      <div class="hero-meta">
         <span>INDEPENDENT CREATIVE DIGITAL STUDIO</span>
         <span>01 — 06</span>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-orb">
-          <div class="orb-ring ring-one"></div>
-          <div class="orb-ring ring-two"></div>
-          <div class="orb-core"></div>
-        </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="sculpture sculpture-outer"></div>
+        <div class="sculpture sculpture-middle"></div>
+        <div class="sculpture sculpture-inner"></div>
+        <div class="sculpture-core"></div>
+        <div class="visual-orbit orbit-a"></div>
+        <div class="visual-orbit orbit-b"></div>
+      </div>
 
-        <p class="eyebrow">A NEW PERSPECTIVE</p>
-        <h1>THINK<br>BEYOND<br><em>THE ORDINARY.</em></h1>
+      <div class="hero-content">
+        <p class="eyebrow">
+          <span></span> A NEW PERSPECTIVE
+        </p>
+
+        <h1>
+          THINK<br>
+          BEYOND<br>
+          <em>THE ORDINARY.</em>
+        </h1>
 
         <p class="hero-description">
           A new perspective on creativity, innovation and the digital world.
         </p>
 
-        <a href="#about" class="main-button">
-          EXPLORE CEE YA <span>↘</span>
+        <a href="#about" class="hero-button">
+          <span>EXPLORE CEE YA.</span>
+          <span class="button-arrow">↘</span>
         </a>
       </div>
 
@@ -85,173 +125,273 @@
         <span>CREATIVITY ✳ INNOVATION ✳ DISCOVERY</span>
         <a href="#about">SCROLL TO DISCOVER ↓</a>
       </div>
+
+      <span class="hero-index">01 / 06</span>
+
     </section>
 
-    <div class="marquee">
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Think different, create more, explore further">
       <div class="marquee-track">
         <span>THINK DIFFERENT ✳ CREATE MORE ✳ EXPLORE FURTHER ✳</span>
         <span>THINK DIFFERENT ✳ CREATE MORE ✳ EXPLORE FURTHER ✳</span>
       </div>
     </div>
 
-    <section class="section about" id="about">
-      <div class="section-top">
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+
+      <div class="section-heading">
         <span>01 / WHO WE ARE</span>
         <span>ABOUT CEE YA.</span>
       </div>
 
-      <div class="about-content">
-        <p class="eyebrow">MORE THAN A DIGITAL SPACE</p>
-        <h2>Ideas deserve<br><em>to become reality.</em></h2>
-        <p class="body-copy">
-          CEE YA. is an independent creative digital space exploring ideas,
-          technology and new possibilities. A place where curiosity meets
-          creativity, and every new perspective opens another direction.
-        </p>
+      <div class="about-layout">
+        <div class="section-label">
+          <span>THE IDEA</span>
+          <span>EST. 2026</span>
+        </div>
+
+        <div class="about-main">
+          <p class="eyebrow">MORE THAN A DIGITAL SPACE</p>
+
+          <h2>
+            Ideas deserve<br>
+            <em>to become reality.</em>
+          </h2>
+
+          <p class="body-copy">
+            CEE YA. is an independent creative digital space exploring
+            ideas, technology and new possibilities. A place where
+            curiosity meets creativity, and every new perspective
+            opens another direction.
+          </p>
+        </div>
       </div>
+
+      <div class="about-decoration">C / Y</div>
+
     </section>
 
-    <section class="section vision" id="vision">
-      <div class="section-top">
+    <!-- VISION -->
+    <section class="section vision-section" id="vision">
+
+      <div class="section-heading">
         <span>02 / OUR DIRECTION</span>
         <span>THE VISION</span>
       </div>
 
-      <div class="vision-grid">
-        <div>
+      <div class="vision-layout">
+
+        <div class="vision-main">
           <p class="eyebrow">OUR PHILOSOPHY</p>
-          <h2>Not just<br>what exists.<br><em>What's next.</em></h2>
+
+          <h2>
+            Not just<br>
+            what exists.<br>
+            <em>What's next.</em>
+          </h2>
         </div>
 
-        <div class="vision-text">
+        <div class="vision-side">
+          <div class="vision-symbol">◈</div>
+
           <p>
             We believe in questioning the usual, exploring the unknown
             and creating with intention.
           </p>
+
           <p>
             Every idea starts somewhere. Ours starts beyond the ordinary.
           </p>
+
           <span class="vision-number">02 / 06</span>
         </div>
+
       </div>
     </section>
 
-    <section class="section explorations" id="explorations">
-      <div class="section-top">
+    <!-- EXPLORATIONS -->
+    <section class="section explorations-section" id="explorations">
+
+      <div class="section-heading">
         <span>03 / WHAT WE EXPLORE</span>
         <span>OUR INTERESTS</span>
       </div>
 
-      <div class="explore-heading">
+      <div class="explore-intro">
         <p class="eyebrow">A WORLD OF POSSIBILITIES</p>
-        <h2>Curiosity has<br><em>no limits.</em></h2>
+        <h2>
+          Curiosity has<br>
+          <em>no limits.</em>
+        </h2>
       </div>
 
       <div class="explore-grid">
+
         <article class="explore-card">
-          <span class="card-number">01</span>
-          <div class="card-symbol">✳</div>
+          <div class="card-top">
+            <span>01</span>
+            <span>↗</span>
+          </div>
+
+          <div class="card-icon">✳</div>
+
           <h3>CREATIVITY</h3>
-          <p>Ideas, aesthetics and new ways of seeing the world.</p>
-          <span class="card-arrow">↗</span>
+
+          <p>
+            Ideas, aesthetics and new ways of seeing the world.
+          </p>
         </article>
 
         <article class="explore-card">
-          <span class="card-number">02</span>
-          <div class="card-symbol">◈</div>
+          <div class="card-top">
+            <span>02</span>
+            <span>↗</span>
+          </div>
+
+          <div class="card-icon">◈</div>
+
           <h3>INNOVATION</h3>
-          <p>Technology, digital experiences and possibilities.</p>
-          <span class="card-arrow">↗</span>
+
+          <p>
+            Technology, digital experiences and possibilities.
+          </p>
         </article>
 
         <article class="explore-card">
-          <span class="card-number">03</span>
-          <div class="card-symbol">◎</div>
+          <div class="card-top">
+            <span>03</span>
+            <span>↗</span>
+          </div>
+
+          <div class="card-icon">◎</div>
+
           <h3>DISCOVERY</h3>
-          <p>New perspectives, inspiration and everyday finds.</p>
-          <span class="card-arrow">↗</span>
+
+          <p>
+            New perspectives, inspiration and everyday finds.
+          </p>
         </article>
+
       </div>
     </section>
 
-    <section class="section collection" id="collection">
-      <div class="section-top">
+    <!-- COLLECTION -->
+    <section class="section collection-section" id="collection">
+
+      <div class="section-heading">
         <span>04 / SELECTED FINDS</span>
         <span>THE COLLECTION</span>
       </div>
 
-      <div class="collection-heading">
+      <div class="collection-intro">
         <div>
           <p class="eyebrow">A DIFFERENT KIND OF DISCOVERY</p>
-          <h2>Objects with<br><em>character.</em></h2>
+          <h2>
+            Objects with<br>
+            <em>character.</em>
+          </h2>
         </div>
-        <p class="collection-note">
-          A curated space for interesting finds and modern essentials.
+
+        <p class="collection-description">
+          A curated space for interesting finds, modern essentials
+          and unexpected discoveries.
         </p>
       </div>
 
       <div class="collection-grid">
+
         <article class="product-card">
-          <div class="product-art art-one">
-            <div class="product-shape shape-one"></div>
-            <span>01</span>
+          <div class="product-art product-art-one">
+            <span class="product-number">01</span>
+            <div class="product-object object-one"></div>
+            <span class="product-art-label">FORM / 001</span>
           </div>
-          <div class="product-info">
-            <h3>EVERYDAY OBJECTS</h3>
-            <p>Thoughtful finds for daily life.</p>
+
+          <div class="product-details">
+            <div>
+              <h3>EVERYDAY OBJECTS</h3>
+              <p>Thoughtful finds for daily life.</p>
+            </div>
             <span>COMING SOON</span>
           </div>
         </article>
 
         <article class="product-card">
-          <div class="product-art art-two">
-            <div class="product-shape shape-two"></div>
-            <span>02</span>
+          <div class="product-art product-art-two">
+            <span class="product-number">02</span>
+            <div class="product-object object-two"></div>
+            <span class="product-art-label">FORM / 002</span>
           </div>
-          <div class="product-info">
-            <h3>MODERN ESSENTIALS</h3>
-            <p>Simple ideas. Distinctive details.</p>
+
+          <div class="product-details">
+            <div>
+              <h3>MODERN ESSENTIALS</h3>
+              <p>Simple ideas. Distinctive details.</p>
+            </div>
             <span>COMING SOON</span>
           </div>
         </article>
 
         <article class="product-card">
-          <div class="product-art art-three">
-            <div class="product-shape shape-three"></div>
-            <span>03</span>
+          <div class="product-art product-art-three">
+            <span class="product-number">03</span>
+            <div class="product-object object-three"></div>
+            <span class="product-art-label">FORM / 003</span>
           </div>
-          <div class="product-info">
-            <h3>CURATED FINDS</h3>
-            <p>Discover something unexpected.</p>
+
+          <div class="product-details">
+            <div>
+              <h3>CURATED FINDS</h3>
+              <p>Discover something unexpected.</p>
+            </div>
             <span>COMING SOON</span>
           </div>
         </article>
+
       </div>
     </section>
 
-    <section class="signature-section">
-      <span class="signature-mark">S</span>
-      <span class="signature-name">SALMATY</span>
-    </section>
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
 
-    <section class="section contact" id="contact">
-      <div class="section-top">
+      <div class="section-heading">
         <span>05 / GET IN TOUCH</span>
         <span>CONTACT</span>
       </div>
 
-      <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
-      <h2>Let's create<br><em>what's next.</em></h2>
+      <div class="contact-content">
+        <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
 
-      <a class="contact-link" href="mailto:hello@ceeya.com">
-        LET'S TALK <span>↗</span>
-      </a>
+        <h2>
+          Let's create<br>
+          <em>what's next.</em>
+        </h2>
+
+        <a href="mailto:hello@ceeya.com" class="contact-button">
+          LET'S TALK <span>↗</span>
+        </a>
+      </div>
+
+      <div class="contact-decoration">BEYOND / 2026</div>
+
     </section>
 
-    <footer>
-      <a href="#home" class="footer-logo">CEE YA<span>.</span></a>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+      <a href="#home" class="footer-brand">CEE YA<span>.</span></a>
+
       <p>BEYOND THE ORDINARY.</p>
-      <span>© 2026 CEE YA. ALL RIGHTS RESERVED.</span>
+
+      <span class="footer-copyright">
+        © 2026 CEE YA. ALL RIGHTS RESERVED.
+      </span>
+
+      <!-- Tiny discreet signature detail -->
+      <span class="hidden-signature" aria-label="Signature">s.</span>
+
     </footer>
 
   </main>
