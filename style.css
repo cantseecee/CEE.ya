@@ -1,506 +1,1328 @@
 
-/* =========================================
-   CEE YA. — VERSION 14
-   MULTILINGUAL EXPERIENCE
-   ENGLISH / FRENCH / ARABIC
-========================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* 01 — TRANSLATIONS */
-
-  const translations = {
-
-    en: {
-      navHome: "Home",
-      navAbout: "About",
-      navExplore: "Explore",
-      navCollection: "Collection",
-      navContact: "Contact",
-
-      heroEyebrow: "INDEPENDENT CREATIVE DIGITAL STUDIO",
-      heroTitle: "THINK BEYOND<br>THE ORDINARY.",
-      heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
-      heroButton: "EXPLORE CEE YA.",
-      scrollText: "SCROLL TO DISCOVER",
-
-      aboutLabel: "01 / ABOUT",
-      aboutSub: "A DIFFERENT POINT OF VIEW",
-      aboutTitle: "More than<br>a digital space.",
-      aboutCopy: "CEE YA. is an independent Moroccan creative space exploring ideas, design and new possibilities. A place where curiosity meets intention and every detail has a purpose.",
-      aboutBrand: "CEE YA. — MOROCCO",
-
-      exploreLabel: "02 / EXPLORATIONS",
-      exploreDirections: "THREE DIRECTIONS",
-      explorePerspective: "OUR PERSPECTIVE",
-      exploreTitle: "Ideas worth<br>discovering.",
-
-      creativity: "Creativity",
-      creativityCopy: "Finding new ways to express what matters.",
-      innovation: "Innovation",
-      innovationCopy: "Turning thoughtful ideas into meaningful experiences.",
-      discovery: "Discovery",
-      discoveryCopy: "Exploring possibilities beyond the familiar.",
-
-      collectionLabel: "03 / THE COLLECTION",
-      collectionEdition: "A CURATED EDIT",
-      collectionEyebrow: "THE ART OF EVERYDAY DETAILS",
-      collectionTitle: "Objects of<br>quiet distinction.",
-      collectionCopy: "A considered selection of beauty, accessories and little details that make everyday moments feel special.",
-
-      productCategoryOne: "BEAUTY",
-      productTypeOne: "THE BEAUTY EDIT",
-      productNameOne: "The Ritual",
-      productDescriptionOne: "A concept in everyday beauty.",
-
-      productCategoryTwo: "ACCESSORIES",
-      productTypeTwo: "THE ACCESSORY EDIT",
-      productNameTwo: "The Essential",
-      productDescriptionTwo: "A study in form and simplicity.",
-
-      productCategoryThree: "JEWELLERY",
-      productTypeThree: "THE DETAIL EDIT",
-      productNameThree: "The Finishing Touch",
-      productDescriptionThree: "Small details, considered differently.",
-
-      conceptLabel: "CONCEPT",
-
-      collectionNote: "An initial creative direction. Product selection and availability will be introduced in a future update.",
-
-      manifestoEyebrow: "THE CEE YA. PERSPECTIVE",
-      manifestoTitle: "We are not here to follow.<br>We are here to discover.",
-
-      contactLabel: "04 / CONTACT",
-      contactConnect: "LET'S CONNECT",
-      contactEyebrow: "HAVE AN IDEA IN MIND?",
-      contactTitle: "Let's start a<br>conversation.",
-      contactTalk: "LET'S TALK",
-
-      backToTop: "BACK TO TOP",
-      copyright: "© 2026 CEE YA. ALL RIGHTS RESERVED.",
-      footerLocation: "MADE IN MOROCCO",
-
-      pageTitle: "CEE YA. — Beyond the Ordinary",
-      pageDescription: "CEE YA. is an independent Moroccan creative digital studio exploring ideas, design and discovery.",
-
-      menuOpen: "Open menu",
-      menuClose: "Close menu"
-    },
-
-
-    fr: {
-      navHome: "Accueil",
-      navAbout: "À propos",
-      navExplore: "Explorer",
-      navCollection: "Collection",
-      navContact: "Contact",
-
-      heroEyebrow: "STUDIO CRÉATIF DIGITAL INDÉPENDANT",
-      heroTitle: "PENSER AU-DELÀ<br>DE L'ORDINAIRE.",
-      heroDescription: "Une nouvelle perspective sur la créativité, les idées et le monde numérique. Pensé avec intention. Conçu pour inspirer.",
-      heroButton: "DÉCOUVRIR CEE YA.",
-      scrollText: "DÉFILER POUR DÉCOUVRIR",
-
-      aboutLabel: "01 / À PROPOS",
-      aboutSub: "UN AUTRE POINT DE VUE",
-      aboutTitle: "Bien plus<br>qu'un espace digital.",
-      aboutCopy: "CEE YA. est un espace créatif marocain indépendant qui explore les idées, le design et de nouvelles possibilités. Un lieu où la curiosité rencontre l'intention et où chaque détail a un sens.",
-      aboutBrand: "CEE YA. — MAROC",
-
-      exploreLabel: "02 / EXPLORATIONS",
-      exploreDirections: "TROIS DIRECTIONS",
-      explorePerspective: "NOTRE PERSPECTIVE",
-      exploreTitle: "Des idées qui méritent<br>d'être découvertes.",
-
-      creativity: "Créativité",
-      creativityCopy: "Trouver de nouvelles façons d'exprimer l'essentiel.",
-      innovation: "Innovation",
-      innovationCopy: "Transformer des idées réfléchies en expériences porteuses de sens.",
-      discovery: "Découverte",
-      discoveryCopy: "Explorer des possibilités au-delà du connu.",
-
-      collectionLabel: "03 / LA COLLECTION",
-      collectionEdition: "UNE SÉLECTION SOIGNÉE",
-      collectionEyebrow: "L'ART DES DÉTAILS DU QUOTIDIEN",
-      collectionTitle: "Des objets<br>à l'élégance discrète.",
-      collectionCopy: "Une sélection réfléchie de beauté, d'accessoires et de petits détails qui rendent les instants du quotidien particuliers.",
-
-      productCategoryOne: "BEAUTÉ",
-      productTypeOne: "L'ÉDITION BEAUTÉ",
-      productNameOne: "Le Rituel",
-      productDescriptionOne: "Un concept autour de la beauté au quotidien.",
-
-      productCategoryTwo: "ACCESSOIRES",
-      productTypeTwo: "L'ÉDITION ACCESSOIRES",
-      productNameTwo: "L'Essentiel",
-      productDescriptionTwo: "Une étude de la forme et de la simplicité.",
-
-      productCategoryThree: "BIJOUX",
-      productTypeThree: "L'ÉDITION DÉTAILS",
-      productNameThree: "La Touche Finale",
-      productDescriptionThree: "Les petits détails, autrement.",
-
-      conceptLabel: "CONCEPT",
-
-      collectionNote: "Une première direction créative. La sélection des produits et leur disponibilité seront présentées lors d'une prochaine mise à jour.",
-
-      manifestoEyebrow: "LA VISION CEE YA.",
-      manifestoTitle: "Nous ne sommes pas là pour suivre.<br>Nous sommes là pour découvrir.",
-
-      contactLabel: "04 / CONTACT",
-      contactConnect: "RESTONS EN CONTACT",
-      contactEyebrow: "UNE IDÉE EN TÊTE ?",
-      contactTitle: "Commençons<br>une conversation.",
-      contactTalk: "PARLONS-EN",
-
-      backToTop: "RETOUR EN HAUT",
-      copyright: "© 2026 CEE YA. TOUS DROITS RÉSERVÉS.",
-      footerLocation: "FABRIQUÉ AU MAROC",
-
-      pageTitle: "CEE YA. — Au-delà de l'ordinaire",
-      pageDescription: "CEE YA. est un studio créatif digital marocain indépendant qui explore les idées, le design et la découverte.",
-
-      menuOpen: "Ouvrir le menu",
-      menuClose: "Fermer le menu"
-    },
-
-
-    ar: {
-      navHome: "الرئيسية",
-      navAbout: "من نحن",
-      navExplore: "اكتشف",
-      navCollection: "المجموعة",
-      navContact: "تواصل معنا",
-
-      heroEyebrow: "استوديو إبداعي رقمي مستقل",
-      heroTitle: "فكّر خارج<br>حدود المألوف.",
-      heroDescription: "رؤية جديدة للإبداع والأفكار والعالم الرقمي. نصنع باهتمام، ونصمم لنُلهم.",
-      heroButton: "اكتشف CEE YA.",
-      scrollText: "تابع لاكتشاف المزيد",
-
-      aboutLabel: "01 / من نحن",
-      aboutSub: "وجهة نظر مختلفة",
-      aboutTitle: "أكثر من مجرد<br>مساحة رقمية.",
-      aboutCopy: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار والتصميم والآفاق الجديدة. مساحة يلتقي فيها الفضول بالهدف، وتكتسب فيها كل التفاصيل معنى.",
-      aboutBrand: "CEE YA. — المغرب",
-
-      exploreLabel: "02 / استكشافات",
-      exploreDirections: "ثلاثة توجهات",
-      explorePerspective: "رؤيتنا",
-      exploreTitle: "أفكار تستحق<br>الاكتشاف.",
-
-      creativity: "الإبداع",
-      creativityCopy: "اكتشاف طرق جديدة للتعبير عما يستحق الاهتمام.",
-      innovation: "الابتكار",
-      innovationCopy: "تحويل الأفكار المدروسة إلى تجارب ذات معنى.",
-      discovery: "الاكتشاف",
-      discoveryCopy: "استكشاف آفاق تتجاوز حدود المألوف.",
-
-      collectionLabel: "03 / المجموعة",
-      collectionEdition: "اختيارات منتقاة بعناية",
-      collectionEyebrow: "فن التفاصيل اليومية",
-      collectionTitle: "أشياء تحمل<br>أناقة هادئة.",
-      collectionCopy: "مجموعة مختارة بعناية من مستلزمات الجمال والإكسسوارات والتفاصيل الصغيرة التي تضفي لمسة مميزة على الحياة اليومية.",
-
-      productCategoryOne: "الجمال",
-      productTypeOne: "اختيارات الجمال",
-      productNameOne: "طقس يومي",
-      productDescriptionOne: "تصور إبداعي للجمال اليومي.",
-
-      productCategoryTwo: "الإكسسوارات",
-      productTypeTwo: "اختيارات الإكسسوارات",
-      productNameTwo: "الأساسيات",
-      productDescriptionTwo: "تصور يجمع بين الشكل والبساطة.",
-
-      productCategoryThree: "المجوهرات",
-      productTypeThree: "اختيارات التفاصيل",
-      productNameThree: "اللمسة الأخيرة",
-      productDescriptionThree: "تفاصيل صغيرة برؤية مختلفة.",
-
-      conceptLabel: "تصور مبدئي",
-
-      collectionNote: "هذه مجرد رؤية إبداعية أولية. سيتم تقديم المنتجات الفعلية وتفاصيل توفرها في تحديث لاحق.",
-
-      manifestoEyebrow: "رؤية CEE YA.",
-      manifestoTitle: "لسنا هنا لنتبع الآخرين.<br>نحن هنا لنكتشف.",
-
-      contactLabel: "04 / التواصل",
-      contactConnect: "لنبقَ على تواصل",
-      contactEyebrow: "هل لديك فكرة؟",
-      contactTitle: "لنبدأ<br>حواراً جديداً.",
-      contactTalk: "تواصل معنا",
-
-      backToTop: "العودة إلى الأعلى",
-      copyright: "© 2026 CEE YA. جميع الحقوق محفوظة.",
-      footerLocation: "صُنع في المغرب",
-
-      pageTitle: "CEE YA. — خارج حدود المألوف",
-      pageDescription: "CEE YA. استوديو إبداعي رقمي مغربي مستقل يستكشف الأفكار والتصميم وآفاق الاكتشاف.",
-
-      menuOpen: "فتح القائمة",
-      menuClose: "إغلاق القائمة"
-    }
-
-  };
-
-
-  /* 02 — ELEMENTS */
-
-  const html = document.documentElement;
-  const body = document.body;
-
-  const languageButtons = document.querySelectorAll(".lang-btn");
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mobileMenu = document.querySelector(".mobile-menu");
-
-  const loader = document.querySelector(".loader");
-
-
-  /* 03 — LANGUAGE SYSTEM */
-
-  function setLanguage(language) {
-
-    if (!translations[language]) {
-      language = "en";
-    }
-
-    const dictionary = translations[language];
-
-    html.lang = language;
-    html.dir = language === "ar" ? "rtl" : "ltr";
-
-    body.classList.toggle("arabic", language === "ar");
-
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-
-      const key = element.dataset.i18n;
-
-      if (dictionary[key] !== undefined) {
-        element.innerHTML = dictionary[key];
-      }
-
-    });
-
-    document.title = dictionary.pageTitle;
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-      description.setAttribute("content", dictionary.pageDescription);
-    }
-
-    languageButtons.forEach(button => {
-
-      const active = button.dataset.lang === language;
-
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-pressed", String(active));
-
-    });
-
-    updateMenuLabel();
-
-    try {
-      localStorage.setItem("ceeya-language", language);
-    } catch (error) {
-      // Language switching still works if storage is unavailable.
-    }
-
+/* =====================================================
+   CEE YA. — LUXURY EDITORIAL EXPERIENCE
+   VERSION 14 — EN / FR / AR
+===================================================== */
+
+/* 01 — ROOT */
+
+:root {
+  --black: #0b0b0b;
+  --black-soft: #11110f;
+  --black-card: #151512;
+  --gold: #c9a96e;
+  --gold-light: #e0c99d;
+  --ivory: #f3efe7;
+  --muted: #99958d;
+  --line: rgba(201, 169, 110, 0.22);
+  --blush: #c7a99e;
+  --font-main: "DM Sans", sans-serif;
+  --font-editorial: "Playfair Display", serif;
+  --page-padding: clamp(22px, 7vw, 110px);
+}
+
+/* 02 — RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background: var(--black);
+}
+
+body {
+  background: var(--black);
+  color: var(--ivory);
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* 03 — LOADER */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.loader span {
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: 27px;
+  letter-spacing: 0.12em;
+}
+
+.loader .gold-dot {
+  color: var(--gold);
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* 04 — HEADER */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  min-height: 86px;
+  padding: 0 var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background: rgba(11, 11, 11, 0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.055);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.logo,
+.footer-logo {
+  flex-shrink: 0;
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.logo span,
+.footer-logo span {
+  color: var(--gold);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(17px, 2.5vw, 38px);
+}
+
+.desktop-nav a {
+  position: relative;
+  color: #c9c5bc;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  color: var(--gold-light);
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lang-btn {
+  min-width: 34px;
+  padding: 7px 9px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.menu-toggle {
+  display: none;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 1px;
+  margin: 7px auto;
+  background: var(--ivory);
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.active span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle.active span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* 05 — MOBILE MENU */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 100px 25px 40px;
+  background: var(--black);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: opacity 0.35s ease,
+              visibility 0.35s ease,
+              transform 0.35s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(28px, 8vw, 43px);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+/* 06 — SHARED ELEMENTS */
+
+.section {
+  padding: 125px var(--page-padding);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.23em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-label span:last-child {
+  color: var(--gold);
+}
+
+/* 07 — HERO */
+
+.hero {
+  position: relative;
+  min-height: 790px;
+  min-height: min(900px, 100svh);
+  display: flex;
+  align-items: center;
+  padding: 155px var(--page-padding) 130px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 75% 45%,
+    rgba(142, 111, 67, 0.10),
+    transparent 42%),
+    var(--black);
+}
+
+.hero::before {
+  position: absolute;
+  top: 18%;
+  right: 8%;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(201,169,110,0.08);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.hero::after {
+  position: absolute;
+  top: 23%;
+  right: 11%;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(201,169,110,0.07);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 950px;
+}
+
+.hero-content .eyebrow {
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  max-width: 950px;
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(55px, 9.4vw, 125px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.99;
+}
+
+.hero-description {
+  max-width: 475px;
+  margin-top: 32px;
+  color: #aaa69e;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.primary-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin-top: 42px;
+  padding: 0 26px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  transition: background 0.3s ease,
+              color 0.3s ease;
+}
+
+.primary-button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.hero-index {
+  position: absolute;
+  right: var(--page-padding);
+  bottom: 75px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 75px;
+  left: var(--page-padding);
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* 08 — ABOUT */
+
+.about {
+  background: #10100e;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 10%;
+  padding-top: 100px;
+}
+
+.about-heading .eyebrow {
+  margin-bottom: 28px;
+}
+
+.about-heading h2,
+.explore-intro h2,
+.collection-intro h2,
+.contact-content h2 {
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(43px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.about-copy {
+  max-width: 430px;
+  padding-bottom: 8px;
+}
+
+.about-copy p {
+  color: #aaa69e;
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.about-brand {
+  display: inline-block;
+  margin-top: 34px;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.17em;
+}
+
+/* 09 — EXPLORATIONS */
+
+.explore {
+  background: var(--black);
+}
+
+.explore-intro {
+  padding: 95px 0 65px;
+}
+
+.explore-intro .eyebrow {
+  margin-bottom: 25px;
+}
+
+.explore-intro h2 {
+  max-width: 720px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.explore-card {
+  position: relative;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 28px;
+  border-right: 1px solid var(--line);
+  transition: background 0.35s ease;
+}
+
+.explore-card:first-child {
+  border-left: 1px solid var(--line);
+}
+
+.explore-card:hover {
+  background: #151410;
+}
+
+.card-number {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.card-content h3 {
+  margin-bottom: 12px;
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 400;
+}
+
+.card-content p {
+  max-width: 230px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.card-index {
+  color: #716b60;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+/* 10 — COLLECTION */
+
+.collection {
+  background: #10100e;
+}
+
+.collection-intro {
+  max-width: 750px;
+  padding: 90px 0 65px;
+}
+
+.collection-intro .eyebrow {
+  margin-bottom: 25px;
+}
+
+.collection-description {
+  max-width: 460px;
+  margin-top: 25px;
+  color: #aaa69e;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-visual {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1b1916;
+}
+
+.visual-beauty {
+  background:
+    radial-gradient(ellipse at 50% 65%,
+    rgba(194, 156, 129, 0.25),
+    transparent 48%),
+    #25201c;
+}
+
+.visual-accessory {
+  background:
+    radial-gradient(ellipse at 50% 60%,
+    rgba(201, 169, 110, 0.16),
+    transparent 50%),
+    #191a17;
+}
+
+.visual-jewellery {
+  background:
+    radial-gradient(ellipse at 50% 60%,
+    rgba(206, 183, 145, 0.18),
+    transparent 48%),
+    #211e1a;
+}
+
+.visual-label {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  color: rgba(243,239,231,0.55);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.visual-category {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: var(--gold-light);
+  font-size: 8px;
+  letter-spacing: 0.17em;
+}
+
+/* Beauty concept visual */
+
+.beauty-object {
+  position: relative;
+  width: 130px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(15px 20px 16px rgba(0,0,0,0.35));
+  transform: rotate(-4deg);
+}
+
+.beauty-cap {
+  z-index: 2;
+  width: 48px;
+  height: 47px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(90deg, #8d7159, #d3b99a, #8b7058);
+}
+
+.beauty-bottle {
+  width: 112px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 9px 9px 15px 15px;
+  background: linear-gradient(100deg,
+    #9a7563, #d3b4a0 45%, #8f6e5d);
+  box-shadow: inset 8px 0 15px rgba(255,255,255,0.13),
+              inset -8px 0 15px rgba(0,0,0,0.15);
+}
+
+.beauty-bottle span {
+  color: #30231d;
+  font-family: var(--font-editorial);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.beauty-bottle small {
+  color: #49352b;
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+/* Accessory concept visual */
+
+.accessory-object {
+  position: relative;
+  width: 185px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  filter: drop-shadow(12px 22px 17px rgba(0,0,0,0.35));
+  transform: rotate(-7deg);
+}
+
+.accessory-handle {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 125px;
+  border: 12px solid #ad987b;
+  border-bottom: 0;
+  border-radius: 55px 55px 0 0;
+}
+
+.accessory-body {
+  position: relative;
+  z-index: 2;
+  width: 180px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 9px 9px 20px 20px;
+  background: linear-gradient(115deg,
+    #75604c, #c1a98b 48%, #79634e);
+  box-shadow: inset 10px 0 15px rgba(255,255,255,0.12);
+}
+
+.accessory-body span {
+  color: #382c22;
+  font-family: var(--font-editorial);
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* Jewellery concept visual */
+
+.jewellery-object {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(12px 20px 15px rgba(0,0,0,0.4));
+  transform: rotate(-18deg);
+}
+
+.jewel-ring {
+  width: 120px;
+  height: 120px;
+  border: 13px solid #b99b66;
+  border-right-color: #e4ce9e;
+  border-bottom-color: #806a43;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px rgba(255,255,255,0.3),
+              2px 3px 7px rgba(0,0,0,0.3);
+}
+
+.jewel-stone {
+  position: absolute;
+  top: 17px;
+  width: 37px;
+  height: 42px;
+  border: 2px solid #eadab7;
+  border-radius: 45% 45% 50% 50%;
+  background: linear-gradient(140deg, #fff3dc, #a88d67);
+  box-shadow: 0 0 22px rgba(226,198,148,0.22);
+}
+
+.product-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 2px 8px;
+}
+
+.product-type {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+
+.product-info h3 {
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(21px, 2.5vw, 29px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.product-description {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.product-status {
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+
+.collection-note {
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: #827d74;
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+/* 11 — MANIFESTO */
+
+.manifesto {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center,
+    rgba(158, 123, 73, 0.12),
+    transparent 65%),
+    #0b0b0b;
+}
+
+.manifesto::before,
+.manifesto::after {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border: 1px solid rgba(201,169,110,0.07);
+  border-radius: 50%;
+  content: "";
+}
+
+.manifesto::after {
+  width: 470px;
+  height: 470px;
+}
+
+.manifesto-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.manifesto-content .eyebrow {
+  margin-bottom: 30px;
+}
+
+.manifesto-content h2 {
+  color: var(--ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(33px, 5.4vw, 65px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.manifesto-signature {
+  display: inline-block;
+  margin-top: 38px;
+  color: var(--gold);
+  font-family: var(--font-editorial);
+  font-size: 17px;
+  letter-spacing: 0.17em;
+}
+
+/* 12 — CONTACT */
+
+.contact {
+  background: #10100e;
+}
+
+.contact-content {
+  padding: 100px 0 35px;
+}
+
+.contact-content .eyebrow {
+  margin-bottom: 27px;
+}
+
+.contact-content h2 {
+  font-size: clamp(45px, 7vw, 82px);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-top: 38px;
+  padding: 0 28px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* 13 — FOOTER */
+
+.footer {
+  padding: 45px var(--page-padding) 25px;
+  background: var(--black);
+}
+
+.footer-top,
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-top {
+  padding-bottom: 35px;
+  border-bottom: 1px solid var(--line);
+}
+
+.footer-logo {
+  font-size: 23px;
+}
+
+.back-to-top {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  min-height: 65px;
+  color: #77736c;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.signature-mark {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  opacity: 0.65;
+}
+
+.signature-mark i,
+.signature-mark b {
+  display: block;
+  width: 5px;
+  height: 15px;
+  border: 1px solid var(--gold);
+  transform: skew(-18deg);
+}
+
+.signature-mark b {
+  height: 20px;
+  transform: skew(18deg);
+}
+
+/* 14 — REVEAL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease,
+              transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 15 — ARABIC RTL */
+
+html[dir="rtl"] body,
+body.arabic {
+  font-family: var(--font-main);
+}
+
+html[dir="rtl"] .topbar {
+  direction: rtl;
+}
+
+html[dir="rtl"] .desktop-nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .header-right {
+  direction: ltr;
+}
+
+html[dir="rtl"] .section-label {
+  direction: rtl;
+}
+
+html[dir="rtl"] .about-layout {
+  direction: rtl;
+}
+
+html[dir="rtl"] .about-copy {
+  text-align: right;
+}
+
+html[dir="rtl"] .explore-grid,
+html[dir="rtl"] .collection-grid {
+  direction: rtl;
+}
+
+html[dir="rtl"] .product-info {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .visual-label {
+  right: 22px;
+  left: auto;
+}
+
+html[dir="rtl"] .visual-category {
+  left: 20px;
+  right: auto;
+}
+
+html[dir="rtl"] .manifesto-content,
+html[dir="rtl"] .contact-content {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-top,
+html[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+html[dir="rtl"] .scroll-indicator {
+  right: var(--page-padding);
+  left: auto;
+}
+
+html[dir="rtl"] .hero-index {
+  left: var(--page-padding);
+  right: auto;
+}
+
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+/* 16 — TABLET */
+
+@media (max-width: 1000px) {
+  .topbar {
+    gap: 18px;
   }
 
-
-  /* 04 — LANGUAGE BUTTON EVENTS */
-
-  languageButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      setLanguage(button.dataset.lang);
-
-    });
-
-  });
-
-
-  /* 05 — MOBILE MENU */
-
-  function closeMenu() {
-
-    if (!menuToggle || !mobileMenu) return;
-
-    mobileMenu.classList.remove("open");
-    menuToggle.classList.remove("active");
-
-    menuToggle.setAttribute("aria-expanded", "false");
-
-    body.classList.remove("menu-open");
-
-    updateMenuLabel();
-
+  .desktop-nav {
+    gap: 15px;
   }
 
-
-  function openMenu() {
-
-    if (!menuToggle || !mobileMenu) return;
-
-    mobileMenu.classList.add("open");
-    menuToggle.classList.add("active");
-
-    menuToggle.setAttribute("aria-expanded", "true");
-
-    body.classList.add("menu-open");
-
-    updateMenuLabel();
-
+  .desktop-nav a {
+    font-size: 9px;
   }
 
-
-  function updateMenuLabel() {
-
-    if (!menuToggle) return;
-
-    const language = html.lang || "en";
-
-    const isOpen = menuToggle.classList.contains("active");
-
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen
-        ? translations[language].menuClose
-        : translations[language].menuOpen
-    );
-
+  .header-right {
+    gap: 12px;
   }
 
-
-  if (menuToggle && mobileMenu) {
-
-    menuToggle.addEventListener("click", () => {
-
-      const isOpen = mobileMenu.classList.contains("open");
-
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-
-    });
-
-
-    mobileMenu.querySelectorAll("a").forEach(link => {
-
-      link.addEventListener("click", closeMenu);
-
-    });
-
-
-    document.addEventListener("keydown", event => {
-
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-
-    });
-
-
-    window.addEventListener("resize", () => {
-
-      if (window.innerWidth > 760) {
-        closeMenu();
-      }
-
-    });
-
+  .collection-grid {
+    gap: 14px;
   }
 
-
-  /* 06 — SCROLL REVEAL */
-
-  const revealElements = document.querySelectorAll(".reveal");
-
-  if ("IntersectionObserver" in window) {
-
-    const observer = new IntersectionObserver((entries, observerInstance) => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          observerInstance.unobserve(entry.target);
-
-        }
-
-      });
-
-    }, {
-      threshold: 0.12
-    });
-
-
-    revealElements.forEach(element => {
-
-      observer.observe(element);
-
-    });
-
-  } else {
-
-    revealElements.forEach(element => {
-
-      element.classList.add("visible");
-
-    });
-
+  .product-visual {
+    min-height: 340px;
   }
 
+  .about-layout {
+    gap: 6%;
+  }
+}
 
-  /* 07 — RESTORE SAVED LANGUAGE */
+/* 17 — MOBILE */
 
-  let savedLanguage = "en";
-
-  try {
-
-    const storedLanguage = localStorage.getItem("ceeya-language");
-
-    if (storedLanguage && translations[storedLanguage]) {
-      savedLanguage = storedLanguage;
-    }
-
-  } catch (error) {
-    savedLanguage = "en";
+@media (max-width: 760px) {
+  :root {
+    --page-padding: 24px;
   }
 
-  setLanguage(savedLanguage);
-
-
-  /* 08 — LOADER */
-
-  function hideLoader() {
-
-    if (loader) {
-      loader.classList.add("hidden");
-    }
-
+  .topbar {
+    min-height: 72px;
+    padding: 0 var(--page-padding);
   }
 
-
-  if (document.readyState === "complete") {
-
-    setTimeout(hideLoader, 700);
-
-  } else {
-
-    window.addEventListener("load", () => {
-
-      setTimeout(hideLoader, 700);
-
-    }, { once: true });
-
+  .logo {
+    font-size: 23px;
   }
 
-});
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .language-switcher {
+    gap: 1px;
+  }
+
+  .lang-btn {
+    min-width: 30px;
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .hero {
+    min-height: 780px;
+    min-height: 100svh;
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+
+  .hero::before {
+    top: 24%;
+    right: -120px;
+    width: 290px;
+    height: 290px;
+  }
+
+  .hero::after {
+    top: 27%;
+    right: -90px;
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-content .eyebrow {
+    max-width: 260px;
+    margin-bottom: 25px;
+    font-size: 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(49px, 11.5vw, 78px);
+    line-height: 1.03;
+  }
+
+  .hero-description {
+    max-width: 340px;
+    margin-top: 25px;
+    font-size: 12px;
+  }
+
+  .primary-button {
+    min-height: 48px;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  .hero-index {
+    bottom: 38px;
+  }
+
+  .scroll-indicator {
+    bottom: 38px;
+    font-size: 8px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 65px;
+  }
+
+  .about-heading h2,
+  .explore-intro h2,
+  .collection-intro h2 {
+    font-size: clamp(42px, 10vw, 65px);
+  }
+
+  .about-copy {
+    max-width: 100%;
+  }
+
+  .explore-intro {
+    padding: 65px 0 40px;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-card {
+    min-height: 220px;
+    padding: 24px 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+
+  .explore-card:last-child {
+    border-bottom: 0;
+  }
+
+  .card-content h3 {
+    font-size: 30px;
+  }
+
+  .collection-intro {
+    padding: 65px 0 40px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .product-visual {
+    min-height: 410px;
+  }
+
+  .product-info h3 {
+    font-size: 28px;
+  }
+
+  .collection-note {
+    margin-top: 35px;
+  }
+
+  .manifesto {
+    min-height: 430px;
+  }
+
+  .manifesto-content h2 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  .contact-content {
+    padding-top: 70px;
+  }
+
+  .contact-content h2 {
+    font-size: clamp(44px, 10vw, 68px);
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    font-size: 7px;
+  }
+}
+
+/* 18 — SMALL MOBILE */
+
+@media (max-width: 390px) {
+  :root {
+    --page-padding: 19px;
+  }
+
+  .topbar {
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+
+  .lang-btn {
+    min-width: 27px;
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+  }
+
+  .hero-description {
+    font-size: 11px;
+  }
+
+  .section-label {
+    font-size: 8px;
+  }
+
+  .product-visual {
+    min-height: 350px;
+  }
+
+  .footer-bottom {
+    column-gap: 12px;
+  }
+}
+
+/* 19 — REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
