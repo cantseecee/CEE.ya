@@ -2,6 +2,7 @@
 /* =========================================
    CEE YA. — MULTILINGUAL EXPERIENCE
    ENGLISH / FRENCH / ARABIC
+   VERSION 15
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,158 +15,228 @@ document.addEventListener("DOMContentLoaded", () => {
       navHome: "Home",
       navAbout: "About",
       navExplore: "Explore",
+      navCollection: "Collection",
       navContact: "Contact",
 
       heroEyebrow: "INDEPENDENT CREATIVE DIGITAL STUDIO",
-      heroTitle: "THINK BEYOND<br>THE ORDINARY<span>.</span>",
+      heroTitle: "THINK BEYOND<br>THE ORDINARY.",
       heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
-      heroButton: "EXPLORE CEE YA",
-      scrollText: "SCROLL TO DISCOVER ↓",
+      heroButton: "EXPLORE CEE YA.",
+      scrollText: "SCROLL TO DISCOVER",
 
       aboutLabel: "01 / ABOUT",
       aboutSub: "A DIFFERENT POINT OF VIEW",
-      aboutTitle: "More than<br>a digital space<span>.</span>",
-      aboutCopy: "CEE YA. is an independent Moroccan creative space exploring new ideas, modern culture and meaningful digital experiences.",
+      aboutTitle: "More than<br>a digital space.",
+      aboutCopy: "CEE YA. is an independent Moroccan creative space exploring ideas, design and new possibilities. A place where curiosity meets intention and every detail has a purpose.",
       aboutBrand: "CEE YA. — MOROCCO",
 
       exploreLabel: "02 / EXPLORATIONS",
       exploreDirections: "THREE DIRECTIONS",
       explorePerspective: "OUR PERSPECTIVE",
-      exploreTitle: "Ideas worth<br>discovering<span>.</span>",
+      exploreTitle: "Ideas worth<br>discovering.",
 
       creativity: "Creativity",
-      creativityCopy: "Ideas that challenge the ordinary and inspire new perspectives.",
-
+      creativityCopy: "Finding new ways to express what matters.",
       innovation: "Innovation",
-      innovationCopy: "Exploring digital possibilities and ideas that shape tomorrow.",
-
+      innovationCopy: "Turning thoughtful ideas into meaningful experiences.",
       discovery: "Discovery",
-      discoveryCopy: "Finding inspiration in unexpected places and everyday details.",
+      discoveryCopy: "Exploring possibilities beyond the familiar.",
+
+      collectionLabel: "03 / THE COLLECTION",
+      collectionEdition: "A CURATED EDIT",
+      collectionEyebrow: "THE ART OF EVERYDAY DETAILS",
+      collectionTitle: "Objects of<br>quiet distinction.",
+      collectionCopy: "A considered selection of beauty, accessories and little details that make everyday moments feel special.",
+
+      productCategoryOne: "BEAUTY",
+      productTypeOne: "THE BEAUTY EDIT",
+      productNameOne: "The Ritual",
+      productDescriptionOne: "A concept in everyday beauty.",
+
+      productCategoryTwo: "ACCESSORIES",
+      productTypeTwo: "THE ACCESSORY EDIT",
+      productNameTwo: "The Essential",
+      productDescriptionTwo: "A study in form and simplicity.",
+
+      productCategoryThree: "JEWELLERY",
+      productTypeThree: "THE DETAIL EDIT",
+      productNameThree: "The Finishing Touch",
+      productDescriptionThree: "Small details, considered differently.",
+
+      conceptLabel: "CONCEPT",
+
+      collectionNote: "An initial creative direction. Product selection and availability will be introduced in a future update.",
 
       manifestoEyebrow: "THE CEE YA. PERSPECTIVE",
-      manifestoTitle: "We are not here to follow.<br><em>We are here to discover.</em>",
+      manifestoTitle: "We are not here to follow.<br>We are here to discover.",
 
-      contactLabel: "03 / CONTACT",
+      contactLabel: "04 / CONTACT",
       contactConnect: "LET'S CONNECT",
       contactEyebrow: "HAVE AN IDEA IN MIND?",
-      contactTitle: "Let's start<br><em>a conversation.</em>",
+      contactTitle: "Let's start a<br>conversation.",
       contactTalk: "LET'S TALK",
 
-      backToTop: "BACK TO TOP ↑",
+      backToTop: "BACK TO TOP",
       copyright: "© 2026 CEE YA. ALL RIGHTS RESERVED.",
-      footerLocation: "MADE IN MOROCCO.",
+      footerLocation: "MADE IN MOROCCO",
 
       pageTitle: "CEE YA. — Beyond the Ordinary",
-      pageDescription: "CEE YA. is an independent Moroccan creative digital space exploring ideas, modern culture and meaningful digital experiences.",
+      pageDescription: "CEE YA. is an independent Moroccan creative digital studio exploring ideas, design and discovery.",
 
-      menuOpen: "Open navigation menu",
-      menuClose: "Close navigation menu"
+      menuOpen: "Open menu",
+      menuClose: "Close menu"
     },
-
 
     fr: {
       navHome: "Accueil",
       navAbout: "À propos",
       navExplore: "Explorer",
+      navCollection: "Collection",
       navContact: "Contact",
 
       heroEyebrow: "STUDIO CRÉATIF DIGITAL INDÉPENDANT",
-      heroTitle: "PENSEZ AU-DELÀ<br>DE L’ORDINAIRE<span>.</span>",
+      heroTitle: "PENSER AU-DELÀ<br>DE L'ORDINAIRE.",
       heroDescription: "Une nouvelle perspective sur la créativité, les idées et le monde numérique. Pensé avec intention. Conçu pour inspirer.",
-      heroButton: "DÉCOUVRIR CEE YA",
-      scrollText: "DÉFILER POUR DÉCOUVRIR ↓",
+      heroButton: "DÉCOUVRIR CEE YA.",
+      scrollText: "DÉFILER POUR DÉCOUVRIR",
 
       aboutLabel: "01 / À PROPOS",
       aboutSub: "UN AUTRE POINT DE VUE",
-      aboutTitle: "Bien plus<br>qu’un espace numérique<span>.</span>",
-      aboutCopy: "CEE YA. est un espace créatif indépendant marocain qui explore les idées nouvelles, la culture contemporaine et les expériences numériques porteuses de sens.",
+      aboutTitle: "Bien plus<br>qu'un espace digital.",
+      aboutCopy: "CEE YA. est un espace créatif marocain indépendant qui explore les idées, le design et de nouvelles possibilités. Un lieu où la curiosité rencontre l'intention et où chaque détail a un sens.",
       aboutBrand: "CEE YA. — MAROC",
 
       exploreLabel: "02 / EXPLORATIONS",
       exploreDirections: "TROIS DIRECTIONS",
-      explorePerspective: "NOTRE VISION",
-      exploreTitle: "Des idées à<br>découvrir<span>.</span>",
+      explorePerspective: "NOTRE PERSPECTIVE",
+      exploreTitle: "Des idées qui méritent<br>d'être découvertes.",
 
       creativity: "Créativité",
-      creativityCopy: "Des idées qui remettent en question l’ordinaire et inspirent de nouvelles perspectives.",
-
+      creativityCopy: "Trouver de nouvelles façons d'exprimer l'essentiel.",
       innovation: "Innovation",
-      innovationCopy: "Explorer les possibilités numériques et les idées qui façonnent demain.",
-
+      innovationCopy: "Transformer des idées réfléchies en expériences porteuses de sens.",
       discovery: "Découverte",
-      discoveryCopy: "Trouver l’inspiration dans les lieux inattendus et les détails du quotidien.",
+      discoveryCopy: "Explorer des possibilités au-delà du connu.",
+
+      collectionLabel: "03 / LA COLLECTION",
+      collectionEdition: "UNE SÉLECTION SOIGNÉE",
+      collectionEyebrow: "L'ART DES DÉTAILS DU QUOTIDIEN",
+      collectionTitle: "Des objets<br>à l'élégance discrète.",
+      collectionCopy: "Une sélection réfléchie de beauté, d'accessoires et de petits détails qui rendent les instants du quotidien particuliers.",
+
+      productCategoryOne: "BEAUTÉ",
+      productTypeOne: "L'ÉDITION BEAUTÉ",
+      productNameOne: "Le Rituel",
+      productDescriptionOne: "Un concept autour de la beauté au quotidien.",
+
+      productCategoryTwo: "ACCESSOIRES",
+      productTypeTwo: "L'ÉDITION ACCESSOIRES",
+      productNameTwo: "L'Essentiel",
+      productDescriptionTwo: "Une étude de la forme et de la simplicité.",
+
+      productCategoryThree: "BIJOUX",
+      productTypeThree: "L'ÉDITION DÉTAILS",
+      productNameThree: "La Touche Finale",
+      productDescriptionThree: "Les petits détails, autrement.",
+
+      conceptLabel: "CONCEPT",
+
+      collectionNote: "Une première direction créative. La sélection des produits et leur disponibilité seront présentées lors d'une prochaine mise à jour.",
 
       manifestoEyebrow: "LA VISION CEE YA.",
-      manifestoTitle: "Nous ne sommes pas ici pour suivre.<br><em>Nous sommes ici pour découvrir.</em>",
+      manifestoTitle: "Nous ne sommes pas là pour suivre.<br>Nous sommes là pour découvrir.",
 
-      contactLabel: "03 / CONTACT",
+      contactLabel: "04 / CONTACT",
       contactConnect: "RESTONS EN CONTACT",
       contactEyebrow: "UNE IDÉE EN TÊTE ?",
-      contactTitle: "Commençons<br><em>une conversation.</em>",
+      contactTitle: "Commençons<br>une conversation.",
       contactTalk: "PARLONS-EN",
 
-      backToTop: "RETOUR EN HAUT ↑",
+      backToTop: "RETOUR EN HAUT",
       copyright: "© 2026 CEE YA. TOUS DROITS RÉSERVÉS.",
-      footerLocation: "CRÉÉ AU MAROC.",
+      footerLocation: "FABRIQUÉ AU MAROC",
 
-      pageTitle: "CEE YA. — Au-delà de l’ordinaire",
-      pageDescription: "CEE YA. est un espace créatif indépendant marocain qui explore les nouvelles idées, la culture contemporaine et les expériences numériques porteuses de sens.",
+      pageTitle: "CEE YA. — Au-delà de l'ordinaire",
+      pageDescription: "CEE YA. est un studio créatif digital marocain indépendant qui explore les idées, le design et la découverte.",
 
-      menuOpen: "Ouvrir le menu de navigation",
-      menuClose: "Fermer le menu de navigation"
+      menuOpen: "Ouvrir le menu",
+      menuClose: "Fermer le menu"
     },
-
 
     ar: {
       navHome: "الرئيسية",
       navAbout: "من نحن",
       navExplore: "اكتشف",
+      navCollection: "المجموعة",
       navContact: "تواصل معنا",
 
       heroEyebrow: "استوديو إبداعي رقمي مستقل",
-      heroTitle: "فكّر أبعد<br>من المألوف<span>.</span>",
-      heroDescription: "رؤية جديدة للإبداع والأفكار والعالم الرقمي. نصنع باهتمام، ونصمّم لنُلهم.",
-      heroButton: "اكتشف CEE YA",
-      scrollText: "اكتشف المزيد ↓",
+      heroTitle: "فكّر خارج<br>حدود المألوف.",
+      heroDescription: "رؤية جديدة للإبداع والأفكار والعالم الرقمي. نصنع باهتمام، ونصمم لنُلهم.",
+      heroButton: "اكتشف CEE YA.",
+      scrollText: "تابع لاكتشاف المزيد",
 
       aboutLabel: "01 / من نحن",
-      aboutSub: "رؤية مختلفة",
-      aboutTitle: "أكثر من<br>مجرد مساحة رقمية<span>.</span>",
-      aboutCopy: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار الجديدة والثقافة الحديثة والتجارب الرقمية الهادفة.",
+      aboutSub: "وجهة نظر مختلفة",
+      aboutTitle: "أكثر من مجرد<br>مساحة رقمية.",
+      aboutCopy: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار والتصميم والآفاق الجديدة. مساحة يلتقي فيها الفضول بالهدف، وتكتسب فيها كل التفاصيل معنى.",
       aboutBrand: "CEE YA. — المغرب",
 
       exploreLabel: "02 / استكشافات",
-      exploreDirections: "ثلاثة اتجاهات",
+      exploreDirections: "ثلاثة توجهات",
       explorePerspective: "رؤيتنا",
-      exploreTitle: "أفكار تستحق<br>الاكتشاف<span>.</span>",
+      exploreTitle: "أفكار تستحق<br>الاكتشاف.",
 
       creativity: "الإبداع",
-      creativityCopy: "أفكار تتحدى المألوف وتلهم وجهات نظر جديدة.",
-
+      creativityCopy: "اكتشاف طرق جديدة للتعبير عما يستحق الاهتمام.",
       innovation: "الابتكار",
-      innovationCopy: "استكشاف الإمكانيات الرقمية والأفكار التي تصنع المستقبل.",
-
+      innovationCopy: "تحويل الأفكار المدروسة إلى تجارب ذات معنى.",
       discovery: "الاكتشاف",
-      discoveryCopy: "العثور على الإلهام في الأماكن غير المتوقعة والتفاصيل اليومية.",
+      discoveryCopy: "استكشاف آفاق تتجاوز حدود المألوف.",
+
+      collectionLabel: "03 / المجموعة",
+      collectionEdition: "اختيارات منتقاة بعناية",
+      collectionEyebrow: "فن التفاصيل اليومية",
+      collectionTitle: "أشياء تحمل<br>أناقة هادئة.",
+      collectionCopy: "مجموعة مختارة بعناية من مستلزمات الجمال والإكسسوارات والتفاصيل الصغيرة التي تضفي لمسة مميزة على الحياة اليومية.",
+
+      productCategoryOne: "الجمال",
+      productTypeOne: "اختيارات الجمال",
+      productNameOne: "طقس يومي",
+      productDescriptionOne: "تصور إبداعي للجمال اليومي.",
+
+      productCategoryTwo: "الإكسسوارات",
+      productTypeTwo: "اختيارات الإكسسوارات",
+      productNameTwo: "الأساسيات",
+      productDescriptionTwo: "تصور يجمع بين الشكل والبساطة.",
+
+      productCategoryThree: "المجوهرات",
+      productTypeThree: "اختيارات التفاصيل",
+      productNameThree: "اللمسة الأخيرة",
+      productDescriptionThree: "تفاصيل صغيرة برؤية مختلفة.",
+
+      conceptLabel: "تصور مبدئي",
+
+      collectionNote: "هذه مجرد رؤية إبداعية أولية. سيتم تقديم المنتجات الفعلية وتفاصيل توفرها في تحديث لاحق.",
 
       manifestoEyebrow: "رؤية CEE YA.",
-      manifestoTitle: "لسنا هنا لنتبع.<br><em>بل هنا لنكتشف.</em>",
+      manifestoTitle: "لسنا هنا لنتبع الآخرين.<br>نحن هنا لنكتشف.",
 
-      contactLabel: "03 / التواصل",
+      contactLabel: "04 / التواصل",
       contactConnect: "لنبقَ على تواصل",
       contactEyebrow: "هل لديك فكرة؟",
-      contactTitle: "لنبدأ<br><em>حواراً.</em>",
-      contactTalk: "لنتحدث",
+      contactTitle: "لنبدأ<br>حواراً جديداً.",
+      contactTalk: "تواصل معنا",
 
-      backToTop: "العودة إلى الأعلى ↑",
+      backToTop: "العودة إلى الأعلى",
       copyright: "© 2026 CEE YA. جميع الحقوق محفوظة.",
-      footerLocation: "صُنع في المغرب.",
+      footerLocation: "صُنع في المغرب",
 
-      pageTitle: "CEE YA. — ما وراء المألوف",
-      pageDescription: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار الجديدة والثقافة الحديثة والتجارب الرقمية الهادفة.",
+      pageTitle: "CEE YA. — خارج حدود المألوف",
+      pageDescription: "CEE YA. استوديو إبداعي رقمي مغربي مستقل يستكشف الأفكار والتصميم وآفاق الاكتشاف.",
 
-      menuOpen: "فتح قائمة التنقل",
-      menuClose: "إغلاق قائمة التنقل"
+      menuOpen: "فتح القائمة",
+      menuClose: "إغلاق القائمة"
     }
 
   };
@@ -173,9 +244,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* 02 — ELEMENTS */
 
-  const languageButtons = document.querySelectorAll(".lang");
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
+  const html = document.documentElement;
+  const body = document.body;
+
+  const languageButtons = document.querySelectorAll(".lang-btn");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  // IMPORTANT: HTML uses class="loader", not id="loader".
+  const loader = document.querySelector(".loader");
 
 
   /* 03 — LANGUAGE SYSTEM */
@@ -186,41 +263,32 @@ document.addEventListener("DOMContentLoaded", () => {
       language = "en";
     }
 
-    const content = translations[language];
-    const isArabic = language === "ar";
+    const dictionary = translations[language];
 
-    document.documentElement.lang = language;
-    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+    html.lang = language;
+    html.dir = language === "ar" ? "rtl" : "ltr";
 
-    document.body.classList.toggle("arabic", isArabic);
-
-    /* Translate all marked elements */
+    body.classList.toggle("arabic", language === "ar");
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
       const key = element.dataset.i18n;
 
-      if (Object.prototype.hasOwnProperty.call(content, key)) {
-        element.innerHTML = content[key];
+      if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
+        element.innerHTML = dictionary[key];
       }
 
     });
 
-    /* Update page title */
-
-    document.title = content.pageTitle;
-
-    /* Update SEO description */
+    document.title = dictionary.pageTitle;
 
     const description = document.querySelector(
       'meta[name="description"]'
     );
 
     if (description) {
-      description.setAttribute("content", content.pageDescription);
+      description.setAttribute("content", dictionary.pageDescription);
     }
-
-    /* Update language buttons */
 
     languageButtons.forEach(button => {
 
@@ -231,27 +299,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* Update menu accessibility */
-
-    if (menuToggle) {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? content.menuClose : content.menuOpen
-      );
-    }
-
-    /* Save preference */
+    updateMenuLabel();
 
     try {
       localStorage.setItem("ceeya-language", language);
     } catch (error) {
-      console.warn("Language preference could not be saved.");
+      // Language switching works even if storage is unavailable.
     }
 
   }
 
+
+  /* 04 — LANGUAGE BUTTON EVENTS */
 
   languageButtons.forEach(button => {
 
@@ -262,41 +321,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* 04 — MOBILE MENU */
+  /* 05 — MOBILE MENU */
 
-  function closeMenu() {
+  function updateMenuLabel() {
 
-    if (!menuToggle || !mobileMenu) return;
+    if (!menuToggle) return;
 
-    mobileMenu.classList.remove("open");
-    menuToggle.classList.remove("active");
-
-    menuToggle.setAttribute("aria-expanded", "false");
-
-    const language = document.documentElement.lang || "en";
-
-    menuToggle.setAttribute(
-      "aria-label",
-      translations[language].menuOpen
-    );
-
-  }
-
-
-  function toggleMenu() {
-
-    if (!menuToggle || !mobileMenu) return;
-
-    const isOpen = mobileMenu.classList.toggle("open");
-
-    menuToggle.classList.toggle("active", isOpen);
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
-    const language = document.documentElement.lang || "en";
+    const language = html.lang || "en";
+    const isOpen = menuToggle.classList.contains("active");
 
     menuToggle.setAttribute(
       "aria-label",
@@ -308,39 +340,90 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  function closeMenu() {
+
+    if (!menuToggle || !mobileMenu) return;
+
+    mobileMenu.classList.remove("open");
+    menuToggle.classList.remove("active");
+
+    menuToggle.setAttribute("aria-expanded", "false");
+
+    body.classList.remove("menu-open");
+
+    updateMenuLabel();
+
+  }
+
+
+  function openMenu() {
+
+    if (!menuToggle || !mobileMenu) return;
+
+    mobileMenu.classList.add("open");
+    menuToggle.classList.add("active");
+
+    menuToggle.setAttribute("aria-expanded", "true");
+
+    body.classList.add("menu-open");
+
+    updateMenuLabel();
+
+  }
+
+
   if (menuToggle && mobileMenu) {
 
-    menuToggle.addEventListener("click", toggleMenu);
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen = mobileMenu.classList.contains("open");
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+
+    });
 
     mobileMenu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeMenu();
+
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 900) closeMenu();
+
+      if (window.innerWidth > 760) {
+        closeMenu();
+      }
+
     });
 
   }
 
 
-  /* 05 — REVEAL ANIMATIONS */
+  /* 06 — SCROLL REVEAL */
 
   const revealElements = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
 
-    const observer = new IntersectionObserver((entries, currentObserver) => {
+    const observer = new IntersectionObserver((entries, observerInstance) => {
 
       entries.forEach(entry => {
 
         if (entry.isIntersecting) {
 
           entry.target.classList.add("visible");
-          currentObserver.unobserve(entry.target);
+
+          observerInstance.unobserve(entry.target);
 
         }
 
@@ -363,38 +446,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 06 — RESTORE SAVED LANGUAGE */
+  /* 07 — RESTORE SAVED LANGUAGE */
 
   let savedLanguage = "en";
 
   try {
-    const saved = localStorage.getItem("ceeya-language");
 
-    if (saved && translations[saved]) {
-      savedLanguage = saved;
+    const storedLanguage = localStorage.getItem("ceeya-language");
+
+    if (storedLanguage && translations[storedLanguage]) {
+      savedLanguage = storedLanguage;
     }
 
   } catch (error) {
-    console.warn("Saved language could not be loaded.");
+    savedLanguage = "en";
   }
 
   setLanguage(savedLanguage);
 
 
-  /* 07 — LOADER */
+  /* 08 — LOADER FIX */
 
-  const loader = document.getElementById("loader");
+  function hideLoader() {
 
-  if (loader) {
-
-    window.addEventListener("load", () => {
-
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 1000);
-
-    });
+    if (loader) {
+      loader.classList.add("hidden");
+    }
 
   }
+
+  // Fallback: hide the loader even if the load event already happened.
+  if (document.readyState === "complete") {
+
+    setTimeout(hideLoader, 700);
+
+  } else {
+
+    window.addEventListener("load", () => {
+      setTimeout(hideLoader, 700);
+    }, { once: true });
+
+  }
+
+  // Extra safety fallback in case another resource delays the load event.
+  setTimeout(hideLoader, 4000);
 
 });
