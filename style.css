@@ -955,3 +955,97 @@ a {
         transition: none;
     }
 }
+
+/* CEEYA SIGNATURE ABSTRACT VISUAL */
+
+.hero-orb {
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    top: 12%;
+    right: 9%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(201, 169, 110, 0.12),
+        transparent 68%
+    );
+    filter: none;
+    animation: signatureFloat 8s ease-in-out infinite alternate;
+}
+
+.orb-ring {
+    position: absolute;
+    inset: 35px;
+    border: 1px solid rgba(201, 169, 110, 0.55);
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgba(201, 169, 110, 0.08);
+}
+
+.ring-one {
+    transform: rotateX(65deg) rotateZ(-25deg);
+}
+
+.ring-two {
+    inset: 75px;
+    transform: rotateY(65deg) rotateZ(35deg);
+    border-color: rgba(232, 210, 165, 0.35);
+}
+
+.orb-core {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 25%,
+        #f5e4bd,
+        #c9a96e 38%,
+        #5c4320 75%,
+        #17110a
+    );
+    box-shadow:
+        0 0 35px rgba(201, 169, 110, 0.4),
+        0 0 100px rgba(201, 169, 110, 0.2);
+}
+
+.orb-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(201, 169, 110, 0.12),
+        transparent 65%
+    );
+    filter: blur(35px);
+}
+
+@keyframes signatureFloat {
+    from {
+        transform: translateY(-12px) rotate(-5deg);
+    }
+
+    to {
+        transform: translateY(18px) rotate(5deg);
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-orb {
+        width: 260px;
+        height: 260px;
+        top: 18%;
+        right: -65px;
+        opacity: 0.65;
+    }
+
+    .orb-core {
+        width: 65px;
+        height: 65px;
+    }
+}
