@@ -1,31 +1,37 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>CEE YA. — Beyond the Ordinary</title>
 
-  <meta name="description" content="CEE YA. is an independent Moroccan creative digital studio exploring ideas, innovation and new perspectives.">
+  <meta name="description" content="CEE YA. is an independent Moroccan creative digital space exploring ideas, modern culture and meaningful digital experiences.">
   <meta name="theme-color" content="#0b0b0b">
+
+  <meta property="og:title" content="CEE YA. — Beyond the Ordinary">
+  <meta property="og:description" content="A new perspective on creativity, ideas and the digital world.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cantseecee.github.io/CEE.ya/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 
-  <script src="script.js?v=12" defer></script>
+  <script src="script.js?v=13" defer></script>
 </head>
 
 <body>
 
-  <!-- PAGE LOADER -->
+  <!-- LOADER -->
   <div class="loader" id="loader">
-    <span class="loader-logo">CEE YA.</span>
+    <span class="loader-logo">CEE YA</span>
   </div>
+
 
   <!-- HEADER -->
   <header class="topbar" id="top">
@@ -34,7 +40,6 @@
       CEE YA<span>.</span>
     </a>
 
-    <!-- DESKTOP NAVIGATION -->
     <nav class="desktop-nav" aria-label="Main navigation">
 
       <a href="#home" data-i18n="navHome">Home</a>
@@ -47,27 +52,23 @@
 
     </nav>
 
-    <!-- RIGHT SIDE -->
+
     <div class="header-actions">
 
-      <!-- LANGUAGE SWITCHER -->
       <div class="language-switch" aria-label="Choose language">
 
-        <button class="lang active" type="button" data-lang="en">
-          EN
-        </button>
+        <button class="lang active" type="button"
+          data-lang="en" aria-pressed="true">EN</button>
 
-        <button class="lang" type="button" data-lang="fr">
-          FR
-        </button>
+        <button class="lang" type="button"
+          data-lang="fr" aria-pressed="false">FR</button>
 
-        <button class="lang" type="button" data-lang="ar">
-          عربي
-        </button>
+        <button class="lang" type="button"
+          data-lang="ar" aria-pressed="false">عربي</button>
 
       </div>
 
-      <!-- MOBILE MENU BUTTON -->
+
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -86,7 +87,8 @@
 
 
   <!-- MOBILE NAVIGATION -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <nav class="mobile-menu" id="mobileMenu"
+    aria-label="Mobile navigation">
 
     <a href="#home" data-i18n="navHome">Home</a>
 
@@ -99,9 +101,9 @@
   </nav>
 
 
-  <!-- HERO -->
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="home">
 
       <div class="hero-content reveal">
@@ -117,15 +119,22 @@
         </h1>
 
         <p class="hero-description" data-i18n="heroDescription">
-          A new perspective on creativity, innovation and the digital world.
+          A new perspective on creativity, ideas and the digital world.
+          Made with intention. Designed to inspire.
         </p>
 
         <a href="#explore" class="hero-button">
-          <span data-i18n="heroButton">EXPLORE CEE YA</span>
+
+          <span data-i18n="heroButton">
+            EXPLORE CEE YA
+          </span>
+
           <span class="button-arrow">↘</span>
+
         </a>
 
       </div>
+
 
       <div class="hero-bottom">
 
@@ -144,9 +153,13 @@
     <section class="intro section" id="about">
 
       <div class="section-label">
-        <span>01 / ABOUT</span>
+
+        <span data-i18n="aboutLabel">01 / ABOUT</span>
+
         <span>CEE YA.</span>
+
       </div>
+
 
       <div class="intro-grid">
 
@@ -164,15 +177,16 @@
 
         </div>
 
+
         <div class="intro-copy reveal">
 
           <p data-i18n="aboutCopy">
-            CEE YA. is an independent Moroccan creative digital studio.
-            A space built around ideas, curiosity and the desire to
-            explore new possibilities.
+            CEE YA. is an independent Moroccan creative space
+            exploring new ideas, modern culture and meaningful
+            digital experiences.
           </p>
 
-          <div class="intro-signature">
+          <div class="intro-signature" data-i18n="aboutBrand">
             CEE YA. — MOROCCO
           </div>
 
@@ -187,18 +201,28 @@
     <section class="explore section" id="explore">
 
       <div class="section-label">
-        <span>02 / EXPLORATIONS</span>
-        <span>THREE DIRECTIONS</span>
+
+        <span data-i18n="exploreLabel">
+          02 / EXPLORATIONS
+        </span>
+
+        <span data-i18n="exploreDirections">
+          THREE DIRECTIONS
+        </span>
+
       </div>
+
 
       <div class="explore-heading reveal">
 
-        <p class="eyebrow">OUR PERSPECTIVE</p>
+        <p class="eyebrow" data-i18n="explorePerspective">
+          OUR PERSPECTIVE
+        </p>
 
         <h2 data-i18n="exploreTitle">
-          Ideas without
+          Ideas worth
           <br>
-          boundaries<span>.</span>
+          discovering<span>.</span>
         </h2>
 
       </div>
@@ -206,7 +230,8 @@
 
       <div class="explore-grid">
 
-        <!-- CARD 01 -->
+
+        <!-- CREATIVITY -->
         <article class="explore-card reveal">
 
           <span class="card-number">01</span>
@@ -218,8 +243,8 @@
           </h3>
 
           <p data-i18n="creativityCopy">
-            Exploring original ideas and turning imagination into
-            meaningful experiences.
+            Ideas that challenge the ordinary and inspire
+            new perspectives.
           </p>
 
           <span class="card-footer">01 — 03</span>
@@ -227,7 +252,7 @@
         </article>
 
 
-        <!-- CARD 02 -->
+        <!-- INNOVATION -->
         <article class="explore-card reveal">
 
           <span class="card-number">02</span>
@@ -239,8 +264,8 @@
           </h3>
 
           <p data-i18n="innovationCopy">
-            Looking beyond the expected and discovering new ways
-            to move forward.
+            Exploring digital possibilities and ideas
+            that shape tomorrow.
           </p>
 
           <span class="card-footer">02 — 03</span>
@@ -248,7 +273,7 @@
         </article>
 
 
-        <!-- CARD 03 -->
+        <!-- DISCOVERY -->
         <article class="explore-card reveal">
 
           <span class="card-number">03</span>
@@ -260,8 +285,8 @@
           </h3>
 
           <p data-i18n="discoveryCopy">
-            Staying curious, exploring different perspectives and
-            finding inspiration everywhere.
+            Finding inspiration in unexpected places
+            and everyday details.
           </p>
 
           <span class="card-footer">03 — 03</span>
@@ -278,17 +303,19 @@
 
       <div class="manifesto-inner reveal">
 
-        <p class="eyebrow">THE CEE YA. PERSPECTIVE</p>
+        <p class="eyebrow" data-i18n="manifestoEyebrow">
+          THE CEE YA. PERSPECTIVE
+        </p>
 
         <h2 data-i18n="manifestoTitle">
-          Beyond ordinary.
+          We are not here to follow.
           <br>
-          Beyond expected.
-          <br>
-          <em>Always exploring.</em>
+          <em>We are here to discover.</em>
         </h2>
 
-        <span class="manifesto-mark">CEE YA.</span>
+        <span class="manifesto-mark">
+          CEE YA.
+        </span>
 
       </div>
 
@@ -299,28 +326,32 @@
     <section class="contact section" id="contact">
 
       <div class="section-label">
-        <span>03 / CONTACT</span>
-        <span>LET'S CONNECT</span>
+
+        <span data-i18n="contactLabel">03 / CONTACT</span>
+
+        <span data-i18n="contactConnect">LET'S CONNECT</span>
+
       </div>
+
 
       <div class="contact-content reveal">
 
         <p class="eyebrow" data-i18n="contactEyebrow">
-          HAVE SOMETHING IN MIND?
+          HAVE AN IDEA IN MIND?
         </p>
 
         <h2 data-i18n="contactTitle">
-          Let's create
+          Let's start
           <br>
-          something different<span>.</span>
+          <em>a conversation.</em>
         </h2>
 
-        <a
-          href="mailto:hello@ceeya.com"
-          class="contact-link"
-        >
-          <span>LET'S TALK</span>
+        <a href="mailto:hello@ceeya.com" class="contact-link">
+
+          <span data-i18n="contactTalk">LET'S TALK</span>
+
           <span>↗</span>
+
         </a>
 
       </div>
@@ -339,31 +370,32 @@
         CEE YA<span>.</span>
       </a>
 
-      <a href="#top" class="back-to-top">
+      <a href="#top" class="back-to-top"
+        data-i18n="backToTop">
         BACK TO TOP ↑
       </a>
 
     </div>
 
+
     <div class="footer-bottom">
 
-      <p>
+      <p data-i18n="copyright">
         © 2026 CEE YA. ALL RIGHTS RESERVED.
       </p>
 
-      <!-- DISCREET SALMATY SIGNATURE -->
+      <!-- DISCREET SIGNATURE -->
       <span class="salmaty-signature" aria-label="Salmaty">
         salmaty
       </span>
 
-      <p class="footer-location">
+      <p class="footer-location" data-i18n="footerLocation">
         MADE IN MOROCCO.
       </p>
 
     </div>
 
   </footer>
-
 
 </body>
 </html>
