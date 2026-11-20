@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0e0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Instrument+Serif:ital@0;1&family=Noto+Naskh+Arabic:wght@500&family=Noto+Sans+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,17 +21,22 @@
 <aside class="side" id="side" aria-label="Main navigation">
   <div>
     <a class="logo" href="#home">CEE YA.</a>
-    <p class="tagline">Beyond the ordinary · Morocco</p>
+    <p class="tagline" data-i18n="tagline">Beyond the ordinary · Morocco</p>
   </div>
   <ul class="menu">
-    <li><a href="#home" class="on">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#explore">Explore</a></li>
+    <li><a href="#home" class="on" data-i18n="nav_home">Home</a></li>
+    <li><a href="#about" data-i18n="nav_about">About</a></li>
+    <li><a href="#explore" data-i18n="nav_explore">Explore</a></li>
     <li><a href="#salmaty">Salmaty</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
   </ul>
   <div class="side-foot">
-    <a class="cta" href="mailto:hello@ceeya.com">Let's talk</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="ar">عربي</button>
+    </div>
+    <a class="cta" href="mailto:hello@ceeya.com" data-i18n="cta">Let's talk</a>
     <p class="small">© 2026 CEE YA.</p>
   </div>
 </aside>
@@ -39,32 +44,59 @@
 <main>
   <section id="home" class="hero">
     <div class="wrap">
-      <h1>Think beyond <em>the ordinary.</em></h1>
-      <p class="lead">CEE YA. is an independent Moroccan studio. We curate fashion accessories and digital ideas with a point of view of our own.</p>
-      <a class="btn" href="#salmaty">See what's coming</a>
+      <h1 data-i18n="hero_title">Think beyond <em>the ordinary.</em></h1>
+      <p class="lead" data-i18n="hero_lead">CEE YA. is an independent Moroccan studio. We curate fashion accessories and digital ideas with a point of view of our own.</p>
+      <a class="btn" href="#salmaty" data-i18n="hero_btn">See what's coming</a>
     </div>
   </section>
 
   <section id="about">
     <div class="wrap two">
-      <h2>More than a digital space.</h2>
-      <p class="lead">Started in Morocco in 2026. We look at what already exists and ask what could be better, then build it with care, one small detail at a time.</p>
+      <h2 data-i18n="about_title">More than a digital space.</h2>
+      <p class="lead" data-i18n="about_text">Started in Morocco in 2026. We look at what already exists and ask what could be better, then build it with care, one small detail at a time.</p>
     </div>
   </section>
 
   <section id="explore">
     <div class="wrap">
-      <h2>What we explore</h2>
+      <h2 data-i18n="explore_title">What we explore</h2>
       <div class="grid">
-        <div><h3>Creativity</h3><p>Ideas that challenge the familiar and inspire new ways of seeing.</p></div>
-        <div><h3>Innovation</h3><p>Digital experiences and the ideas shaping what comes next.</p></div>
-        <div><h3>Discovery</h3><p>Inspiration found in unexpected places and everyday details.</p></div>
+        <div><h3 data-i18n="c1_t">Creativity</h3><p data-i18n="c1_p">Ideas that challenge the familiar and inspire new ways of seeing.</p></div>
+        <div><h3 data-i18n="c2_t">Innovation</h3><p data-i18n="c2_p">Digital experiences and the ideas shaping what comes next.</p></div>
+        <div><h3 data-i18n="c3_t">Discovery</h3><p data-i18n="c3_p">Inspiration found in unexpected places and everyday details.</p></div>
       </div>
     </div>
   </section>
 
   <section id="salmaty">
     <div class="wrap">
-      <h2>Salmaty, our accessories line.</h2>
-      <p class="lead">Bags, jewelry, caps and wallets for everyday style. Cash on delivery across Morocco.</p>
+      <h2 data-i18n="sal_title">Salmaty, our accessories line.</h2>
+      <p class="lead" data-i18n="sal_lead">Bags, jewelry, caps and wallets for everyday style. Cash on delivery across Morocco.</p>
       <div class="grid">
+        <div><h3 data-i18n="p1_t">Bags</h3><p data-i18n="p1_p">Shoulder bags and small essentials.</p><span class="tag" data-i18n="soon">Coming soon</span></div>
+        <div><h3 data-i18n="p2_t">Jewelry</h3><p data-i18n="p2_p">Little pieces worth wearing daily.</p><span class="tag" data-i18n="soon">Coming soon</span></div>
+        <div><h3 data-i18n="p3_t">Caps</h3><p data-i18n="p3_p">Easy style for every day.</p><span class="tag" data-i18n="soon">Coming soon</span></div>
+        <div><h3 data-i18n="p4_t">Wallets</h3><p data-i18n="p4_p">Compact, simple, made to last.</p><span class="tag" data-i18n="soon">Coming soon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:0">
+    <div class="wrap">
+      <h2 data-i18n="contact_title">Have something in mind?</h2>
+      <p class="lead" data-i18n="contact_lead">Write to us about an idea, an order or a collaboration. We reply as soon as we can.</p>
+      <a class="btn" href="mailto:hello@ceeya.com" data-i18n="contact_btn">Email hello@ceeya.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="rights">© 2026 CEE YA. All rights reserved.</span>
+    <a href="#home" data-i18n="top">Back to top</a>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
