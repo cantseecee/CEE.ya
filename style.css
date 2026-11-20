@@ -1,0 +1,155 @@
+
+/* CEEYA - DESIGN SYSTEM */
+
+:root {
+    --black: #090909;
+    --gold: #c9a96e;
+    --white: #f5f2eb;
+    --gray: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+header h1 span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+
+#home {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#home > p:first-child {
+    color: var(--gold);
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+#home h2 {
+    font-size: clamp(38px, 8vw, 75px);
+    line-height: 1.1;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+#home h2 + p {
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+#home a {
+    color: var(--black);
+    background: var(--gold);
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background: var(--white);
+}
+
+/* ABOUT */
+
+#about {
+    padding: 90px 20px;
+    text-align: center;
+    background: #101010;
+}
+
+#about h2 {
+    color: var(--gold);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    color: var(--gray);
+    max-width: 550px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #222;
+    color: var(--gray);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    #home {
+        min-height: 65vh;
+    }
+}
