@@ -63,3 +63,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
   section{padding:4rem 0}
   .hero{padding:7rem 0 4rem;min-height:auto}
 }
+/* Language switcher */
+.lang{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
+.lang button{min-height:42px;border:1px solid var(--line);background:transparent;color:var(--mute);border-radius:10px;font:600 .9rem var(--sans);cursor:pointer;transition:.2s}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed=true]{color:var(--ink);border-color:var(--pink);background:rgba(244,166,192,.12)}
+
+/* Arabic / RTL */
+[dir=rtl] body{font-family:"Noto Sans Arabic",var(--sans),system-ui,sans-serif}
+[dir=rtl] h1,[dir=rtl] h2{font-family:"Noto Naskh Arabic",serif;font-weight:500;letter-spacing:0;line-height:1.35}
+[dir=rtl] .side{inset:0 0 0 auto;border-right:0;border-left:1px solid var(--line)}
+@media(min-width:901px){
+  [dir=rtl] main,[dir=rtl] footer{margin-left:0;margin-right:var(--side)}
+}
