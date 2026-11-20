@@ -1,9 +1,8 @@
-
-/* =========================================
+/* =====================================
    CEE YA. — MULTILINGUAL EXPERIENCE
-   ENGLISH / FRENCH / ARABIC
    VERSION 15
-========================================= */
+   ENGLISH / FRENCH / ARABIC
+===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroTitle: "THINK BEYOND<br>THE ORDINARY.",
       heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
       heroButton: "EXPLORE CEE YA.",
-      scrollText: "SCROLL TO DISCOVER",
+      scrollText: "SCROLL TO DISCOVER ↓",
 
       aboutLabel: "01 / ABOUT",
       aboutSub: "A DIFFERENT POINT OF VIEW",
@@ -76,15 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "Let's start a<br>conversation.",
       contactTalk: "LET'S TALK",
 
-      backToTop: "BACK TO TOP",
+      backToTop: "BACK TO TOP ↑",
       copyright: "© 2026 CEE YA. ALL RIGHTS RESERVED.",
       footerLocation: "MADE IN MOROCCO",
 
-      pageTitle: "CEE YA. — Beyond the Ordinary",
-      pageDescription: "CEE YA. is an independent Moroccan creative digital studio exploring ideas, design and discovery.",
-
       menuOpen: "Open menu",
-      menuClose: "Close menu"
+      menuClose: "Close menu",
+
+      pageTitle: "CEE YA. — Beyond the Ordinary",
+      pageDescription: "CEE YA. is an independent Moroccan creative space exploring ideas, design and discovery."
     },
 
     fr: {
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroTitle: "PENSER AU-DELÀ<br>DE L'ORDINAIRE.",
       heroDescription: "Une nouvelle perspective sur la créativité, les idées et le monde numérique. Pensé avec intention. Conçu pour inspirer.",
       heroButton: "DÉCOUVRIR CEE YA.",
-      scrollText: "DÉFILER POUR DÉCOUVRIR",
+      scrollText: "DÉFILER POUR DÉCOUVRIR ↓",
 
       aboutLabel: "01 / À PROPOS",
       aboutSub: "UN AUTRE POINT DE VUE",
@@ -152,15 +151,15 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "Commençons<br>une conversation.",
       contactTalk: "PARLONS-EN",
 
-      backToTop: "RETOUR EN HAUT",
+      backToTop: "RETOUR EN HAUT ↑",
       copyright: "© 2026 CEE YA. TOUS DROITS RÉSERVÉS.",
       footerLocation: "FABRIQUÉ AU MAROC",
 
-      pageTitle: "CEE YA. — Au-delà de l'ordinaire",
-      pageDescription: "CEE YA. est un studio créatif digital marocain indépendant qui explore les idées, le design et la découverte.",
-
       menuOpen: "Ouvrir le menu",
-      menuClose: "Fermer le menu"
+      menuClose: "Fermer le menu",
+
+      pageTitle: "CEE YA. — Au-delà de l'ordinaire",
+      pageDescription: "CEE YA. est un espace créatif marocain indépendant qui explore les idées, le design et la découverte."
     },
 
     ar: {
@@ -174,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroTitle: "فكّر خارج<br>حدود المألوف.",
       heroDescription: "رؤية جديدة للإبداع والأفكار والعالم الرقمي. نصنع باهتمام، ونصمم لنُلهم.",
       heroButton: "اكتشف CEE YA.",
-      scrollText: "تابع لاكتشاف المزيد",
+      scrollText: "تابع لاكتشاف المزيد ↓",
 
       aboutLabel: "01 / من نحن",
       aboutSub: "وجهة نظر مختلفة",
@@ -228,15 +227,15 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "لنبدأ<br>حواراً جديداً.",
       contactTalk: "تواصل معنا",
 
-      backToTop: "العودة إلى الأعلى",
+      backToTop: "العودة إلى الأعلى ↑",
       copyright: "© 2026 CEE YA. جميع الحقوق محفوظة.",
       footerLocation: "صُنع في المغرب",
 
-      pageTitle: "CEE YA. — خارج حدود المألوف",
-      pageDescription: "CEE YA. استوديو إبداعي رقمي مغربي مستقل يستكشف الأفكار والتصميم وآفاق الاكتشاف.",
-
       menuOpen: "فتح القائمة",
-      menuClose: "إغلاق القائمة"
+      menuClose: "إغلاق القائمة",
+
+      pageTitle: "CEE YA. — خارج حدود المألوف",
+      pageDescription: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار والتصميم وآفاق الاكتشاف."
     }
 
   };
@@ -250,9 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const languageButtons = document.querySelectorAll(".lang-btn");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
-
-  // IMPORTANT: HTML uses class="loader", not id="loader".
-  const loader = document.querySelector(".loader");
+  const loader = document.getElementById("loader");
 
 
   /* 03 — LANGUAGE SYSTEM */
@@ -268,8 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
     html.lang = language;
     html.dir = language === "ar" ? "rtl" : "ltr";
 
-    body.classList.toggle("arabic", language === "ar");
-
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
       const key = element.dataset.i18n;
@@ -282,9 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.title = dictionary.pageTitle;
 
-    const description = document.querySelector(
-      'meta[name="description"]'
-    );
+    const description = document.querySelector('meta[name="description"]');
 
     if (description) {
       description.setAttribute("content", dictionary.pageDescription);
@@ -304,13 +297,13 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem("ceeya-language", language);
     } catch (error) {
-      // Language switching works even if storage is unavailable.
+      // Language switching works without local storage.
     }
 
   }
 
 
-  /* 04 — LANGUAGE BUTTON EVENTS */
+  /* 04 — LANGUAGE BUTTONS */
 
   languageButtons.forEach(button => {
 
@@ -346,9 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mobileMenu.classList.remove("open");
     menuToggle.classList.remove("active");
-
     menuToggle.setAttribute("aria-expanded", "false");
-
     body.classList.remove("menu-open");
 
     updateMenuLabel();
@@ -362,9 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mobileMenu.classList.add("open");
     menuToggle.classList.add("active");
-
     menuToggle.setAttribute("aria-expanded", "true");
-
     body.classList.add("menu-open");
 
     updateMenuLabel();
@@ -391,19 +380,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("keydown", event => {
-
       if (event.key === "Escape") {
         closeMenu();
       }
-
     });
 
     window.addEventListener("resize", () => {
-
       if (window.innerWidth > 760) {
         closeMenu();
       }
-
     });
 
   }
@@ -420,11 +405,8 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
 
         if (entry.isIntersecting) {
-
           entry.target.classList.add("visible");
-
           observerInstance.unobserve(entry.target);
-
         }
 
       });
@@ -465,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage(savedLanguage);
 
 
-  /* 08 — LOADER FIX */
+  /* 08 — LOADER */
 
   function hideLoader() {
 
@@ -475,20 +457,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  // Fallback: hide the loader even if the load event already happened.
-  if (document.readyState === "complete") {
+  // Normal loading
+  window.addEventListener("load", hideLoader, { once: true });
 
-    setTimeout(hideLoader, 700);
-
-  } else {
-
-    window.addEventListener("load", () => {
-      setTimeout(hideLoader, 700);
-    }, { once: true });
-
-  }
-
-  // Extra safety fallback in case another resource delays the load event.
-  setTimeout(hideLoader, 4000);
+  // Fallback: never leave the screen stuck on the loader
+  window.setTimeout(hideLoader, 2500);
 
 });
