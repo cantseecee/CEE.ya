@@ -1,582 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="CEE YA. — An independent creative digital studio exploring ideas, innovation and new possibilities.">
-
-  <title>CEE YA. — Think Beyond The Ordinary</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-
-  <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CEE YA. — Fashion accessories from Morocco</title>
+<meta name="description" content="CEE YA. is an independent Moroccan studio curating bags, jewelry, caps and wallets. First pieces coming soon.">
+<meta name="theme-color" content="#0e0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="bar">
+  <a class="logo" href="#home">CEE YA.</a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="side"><span></span><span></span><span></span></button>
+</div>
+<div class="scrim" id="scrim"></div>
 
-  <!-- DESKTOP LEFT SIDEBAR -->
-  <aside class="left-sidebar">
+<aside class="side" id="side" aria-label="Main navigation">
+  <div>
+    <a class="logo" href="#home">CEE YA.</a>
+    <p class="tagline">Beyond the ordinary · Morocco</p>
+  </div>
+  <ul class="menu">
+    <li><a href="#home" class="on">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#explore">Explore</a></li>
+    <li><a href="#salmaty">Salmaty</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="side-foot">
+    <a class="cta" href="mailto:hello@ceeya.com">Let's talk</a>
+    <p class="small">© 2026 CEE YA.</p>
+  </div>
+</aside>
 
-    <a href="#home" class="sidebar-logo">CEE YA<span>.</span></a>
-
-    <div class="sidebar-caption">
-      INDEPENDENT<br>
-      CREATIVE<br>
-      DIGITAL STUDIO
+<main>
+  <section id="home" class="hero">
+    <div class="wrap">
+      <h1>Think beyond <em>the ordinary.</em></h1>
+      <p class="lead">CEE YA. is an independent Moroccan studio. We curate fashion accessories and digital ideas with a point of view of our own.</p>
+      <a class="btn" href="#salmaty">See what's coming</a>
     </div>
+  </section>
 
-    <div class="sidebar-bottom">
-      <span>EST. 2026</span>
-      <span>MOROCCO</span>
+  <section id="about">
+    <div class="wrap two">
+      <h2>More than a digital space.</h2>
+      <p class="lead">Started in Morocco in 2026. We look at what already exists and ask what could be better, then build it with care, one small detail at a time.</p>
     </div>
+  </section>
 
-  </aside>
-
-
-  <!-- DESKTOP RIGHT SIDEBAR -->
-  <aside class="right-sidebar">
-
-    <nav class="side-navigation">
-
-      <a href="#home"><span>01</span> HOME</a>
-      <a href="#about"><span>02</span> ABOUT</a>
-      <a href="#vision"><span>03</span> VISION</a>
-      <a href="#explorations"><span>04</span> EXPLORE</a>
-      <a href="#salmaty"><span>05</span> SALMATY</a>
-      <a href="#collection"><span>06</span> COLLECTION</a>
-
-    </nav>
-
-    <a href="#contact" class="sidebar-contact">
-      LET'S TALK <span>↗</span>
-    </a>
-
-  </aside>
-
-
-  <!-- MOBILE HEADER -->
-  <header class="mobile-header">
-
-    <a href="#home" class="mobile-logo">
-      CEE YA<span>.</span>
-    </a>
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobileMenu">
-
-      <span></span>
-      <span></span>
-
-    </button>
-
-  </header>
-
-
-  <!-- MOBILE MENU -->
-  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
-
-    <a href="#home">01 — HOME</a>
-    <a href="#about">02 — ABOUT</a>
-    <a href="#vision">03 — VISION</a>
-    <a href="#explorations">04 — EXPLORE</a>
-    <a href="#salmaty">05 — SALMATY</a>
-    <a href="#collection">06 — COLLECTION</a>
-    <a href="#contact">07 — CONTACT</a>
-
-    <p>CEE YA. — MOROCCO</p>
-
-  </nav>
-
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-      <div class="hero-content">
-
-        <p class="hero-eyebrow">
-          INDEPENDENT CREATIVE DIGITAL STUDIO
-        </p>
-
-        <h1 class="hero-title">
-          THINK<br>
-          BEYOND<br>
-          <span>THE ORDINARY.</span>
-        </h1>
-
-        <p class="hero-description">
-          A new perspective on creativity, innovation
-          and the digital world.
-        </p>
-
-        <a href="#explorations" class="hero-button">
-          EXPLORE CEE YA <span>↘</span>
-        </a>
-
+  <section id="explore">
+    <div class="wrap">
+      <h2>What we explore</h2>
+      <div class="grid">
+        <div><h3>Creativity</h3><p>Ideas that challenge the familiar and inspire new ways of seeing.</p></div>
+        <div><h3>Innovation</h3><p>Digital experiences and the ideas shaping what comes next.</p></div>
+        <div><h3>Discovery</h3><p>Inspiration found in unexpected places and everyday details.</p></div>
       </div>
-
-
-      <!-- ABSTRACT HERO VISUAL -->
-      <div class="hero-visual" aria-hidden="true">
-
-        <div class="visual-glow"></div>
-
-        <div class="visual-orbit orbit-one"></div>
-        <div class="visual-orbit orbit-two"></div>
-        <div class="visual-orbit orbit-three"></div>
-
-        <div class="sculpture sculpture-back"></div>
-        <div class="sculpture sculpture-left"></div>
-        <div class="sculpture sculpture-right"></div>
-
-        <div class="sculpture-core"></div>
-
-        <div class="visual-cross">✳</div>
-
-      </div>
-
-
-      <div class="hero-meta">
-
-        <span class="hero-index">01 / 07</span>
-
-        <span>SCROLL TO DISCOVER ↓</span>
-
-      </div>
-
-    </section>
-
-
-    <!-- MARQUEE -->
-    <section class="marquee" aria-label="Creative philosophy">
-
-      <div class="marquee-track">
-
-        <span>IDEAS ✦ CULTURE ✦ EXPRESSION ✦</span>
-        <span>IDEAS ✦ CULTURE ✦ EXPRESSION ✦</span>
-        <span>IDEAS ✦ CULTURE ✦ EXPRESSION ✦</span>
-
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-
-      <div class="section-heading">
-        <span>01 / WHO WE ARE</span>
-        <span>THE BEGINNING</span>
-      </div>
-
-      <div class="about-content">
-
-        <p class="eyebrow">A DIFFERENT POINT OF VIEW</p>
-
-        <h2>
-          BEYOND<br>
-          <em>ORDINARY.</em>
-        </h2>
-
-        <p class="about-description">
-          CEE YA. is an independent creative digital space
-          exploring ideas, design, innovation and new
-          possibilities.
-
-          We believe in looking beyond what already exists
-          and creating a perspective of our own.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- VISION -->
-    <section class="section vision" id="vision">
-
-      <div class="section-heading">
-        <span>02 / OUR VISION</span>
-        <span>THINK DIFFERENTLY</span>
-      </div>
-
-      <div class="vision-content">
-
-        <p class="eyebrow">THE IDEA BEHIND EVERYTHING</p>
-
-        <h2>
-          SEE THINGS<br>
-          <em>DIFFERENTLY.</em>
-        </h2>
-
-        <p>
-          Curiosity creates ideas.
-          Ideas create possibilities.
-          Possibilities create new directions.
-        </p>
-
-        <div class="vision-number">02</div>
-
-      </div>
-
-    </section>
-
-
-    <!-- EXPLORATIONS -->
-    <section class="section explorations" id="explorations">
-
-      <div class="section-heading">
-        <span>03 / WHAT WE EXPLORE</span>
-        <span>OUR INTERESTS</span>
-      </div>
-
-      <div class="explorations-intro">
-
-        <p class="eyebrow">A SPACE FOR NEW PERSPECTIVES</p>
-
-        <h2>
-          ENDLESS<br>
-          <em>POSSIBILITIES.</em>
-        </h2>
-
-      </div>
-
-
-      <div class="exploration-grid">
-
-        <article class="exploration-card">
-
-          <span class="card-number">01</span>
-
-          <div class="exploration-symbol">✧</div>
-
-          <h3>Creativity</h3>
-
-          <p>
-            Ideas that challenge the familiar
-            and inspire new ways of thinking.
-          </p>
-
-          <span class="card-link">DISCOVER MORE ↗</span>
-
-        </article>
-
-
-        <article class="exploration-card">
-
-          <span class="card-number">02</span>
-
-          <div class="exploration-symbol">◇</div>
-
-          <h3>Innovation</h3>
-
-          <p>
-            Exploring digital possibilities
-            and the ideas shaping tomorrow.
-          </p>
-
-          <span class="card-link">DISCOVER MORE ↗</span>
-
-        </article>
-
-
-        <article class="exploration-card">
-
-          <span class="card-number">03</span>
-
-          <div class="exploration-symbol">✦</div>
-
-          <h3>Discovery</h3>
-
-          <p>
-            Finding inspiration in unexpected
-            places and everyday details.
-          </p>
-
-          <span class="card-link">DISCOVER MORE ↗</span>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- SALMATY -->
-    <section class="section salmaty-section" id="salmaty">
-
-      <div class="section-heading">
-        <span>04 / THE FEMININE EDIT</span>
-        <span>A WORLD WITHIN CEE YA.</span>
-      </div>
-
-
-      <div class="salmaty-intro">
-
-        <div class="salmaty-emblem">
-
-          <span class="salmaty-flourish">✧ ❧ ✧</span>
-
-          <p class="salmaty-kicker">
-            A LITTLE WORLD OF HER OWN
-          </p>
-
-          <span class="salmaty-monogram" aria-hidden="true">S</span>
-
-          <h2 class="salmaty-wordmark">
-            SALMATY
-          </h2>
-
-          <span class="salmaty-flourish">✧ ❧ ✧</span>
-
-          <p class="salmaty-caption">
-            THE ART OF FEMININE EXPRESSION
-          </p>
-
-        </div>
-
-
-        <div class="salmaty-copy">
-
-          <p class="eyebrow">A SOFTER SIDE OF DISCOVERY</p>
-
-          <h3>
-            Made of<br>
-            <em>little details.</em>
-          </h3>
-
-          <p>
-            A feminine edit celebrating beauty,
-            personal style, thoughtful accessories
-            and the little things that make everyday
-            life feel special.
-          </p>
-
-          <span class="salmaty-signature">
-            A world of her own.
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="salmaty-grid">
-
-        <article class="salmaty-card">
-
-          <span>01 / BEAUTY</span>
-
-          <div class="salmaty-card-symbol">✧</div>
-
-          <h3>Beauty Rituals</h3>
-
-          <p>
-            Small moments. Beautiful details.
-          </p>
-
-        </article>
-
-
-        <article class="salmaty-card">
-
-          <span>02 / STYLE</span>
-
-          <div class="salmaty-card-symbol">❧</div>
-
-          <h3>Personal Style</h3>
-
-          <p>
-            Pieces that express who you are.
-          </p>
-
-        </article>
-
-
-        <article class="salmaty-card">
-
-          <span>03 / DETAILS</span>
-
-          <div class="salmaty-card-symbol">◇</div>
-
-          <h3>Little Treasures</h3>
-
-          <p>
-            Accessories worth discovering.
-          </p>
-
-        </article>
-
-      </div>
-
-
-      <p class="salmaty-footer-note">
-        CURATED WITH A FEMININE TOUCH
-      </p>
-
-    </section>
-
-
-    <!-- COLLECTION -->
-    <section class="section collection" id="collection">
-
-      <div class="section-heading">
-        <span>05 / THE COLLECTION</span>
-        <span>COMING SOON</span>
-      </div>
-
-      <div class="collection-intro">
-
-        <p class="eyebrow">A CURATED WORLD OF FINDS</p>
-
-        <h2>
-          DISCOVER<br>
-          <em>YOUR NEXT FAVOURITE.</em>
-        </h2>
-
-        <p>
-          A selection of ideas, objects and everyday
-          essentials. Curated with a different perspective.
-        </p>
-
-      </div>
-
-
-      <div class="collection-grid">
-
-        <article class="collection-card">
-
-          <div class="collection-visual visual-one">
-            <span>01</span>
-            <div class="collection-art">✧</div>
-          </div>
-
-          <div class="collection-card-info">
-            <h3>Everyday Objects</h3>
-            <span>COMING SOON ↗</span>
-          </div>
-
-        </article>
-
-
-        <article class="collection-card">
-
-          <div class="collection-visual visual-two">
-            <span>02</span>
-            <div class="collection-art">◇</div>
-          </div>
-
-          <div class="collection-card-info">
-            <h3>Modern Essentials</h3>
-            <span>COMING SOON ↗</span>
-          </div>
-
-        </article>
-
-
-        <article class="collection-card">
-
-          <div class="collection-visual visual-three">
-            <span>03</span>
-            <div class="collection-art">❧</div>
-          </div>
-
-          <div class="collection-card-info">
-            <h3>Curated Finds</h3>
-            <span>COMING SOON ↗</span>
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-
-      <div class="section-heading">
-        <span>06 / GET IN TOUCH</span>
-        <span>START A CONVERSATION</span>
-      </div>
-
-      <div class="contact-content">
-
-        <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
-
-        <h2>
-          LET'S CREATE<br>
-          <em>SOMETHING DIFFERENT.</em>
-        </h2>
-
-        <p>
-          Every idea starts somewhere.
-          Let's make the next one count.
-        </p>
-
-        <a href="mailto:hello@ceeya.com" class="contact-button">
-          LET'S TALK <span>↗</span>
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-      <div class="footer-top">
-
-        <a href="#home" class="footer-logo">
-          CEE YA<span>.</span>
-        </a>
-
-        <p>THINK BEYOND THE ORDINARY.</p>
-
-        <a href="#home" class="back-to-top">
-          BACK TO TOP ↑
-        </a>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <p>
-          © 2026 CEE YA. ALL RIGHTS RESERVED.
-        </p>
-
-        <span class="hidden-signature" aria-label="Hidden signature">
-          s.
-        </span>
-
-        <p>MADE WITH INTENTION.</p>
-
-      </div>
-
-    </footer>
-
-
-  </main>
-
-</body>
-</html>
+    </div>
+  </section>
+
+  <section id="salmaty">
+    <div class="wrap">
+      <h2>Salmaty, our accessories line.</h2>
+      <p class="lead">Bags, jewelry, caps and wallets for everyday style. Cash on delivery across Morocco.</p>
+      <div class="grid">
