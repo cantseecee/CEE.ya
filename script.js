@@ -1,21 +1,12 @@
-
-/* =========================================
-   CEEYA — INTERACTIVE EXPERIENCE
-========================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 1. CURRENT YEAR
-
+    // UPDATE FOOTER YEAR
     const yearElement = document.getElementById("year");
-
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-
-    // 2. SCROLL REVEAL
-
+    // SCROLL REVEAL
     const revealSelectors = [
         ".hero-content",
         ".hero-index",
@@ -33,92 +24,58 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     if ("IntersectionObserver" in window) {
-
-        const observer = new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
+        const revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
 
         revealElements.forEach(function (element) {
             element.classList.add("reveal");
-            observer.observe(element);
+            revealObserver.observe(element);
         });
-
     } else {
-
         revealElements.forEach(function (element) {
             element.classList.add("visible");
         });
-
     }
 
+    // SMOOTH SCROLL
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-    // 3. SMOOTH NAVIGATION
-
-    const navigationLinks = document.querySelectorAll(
-        'a[href^="#"]'
-    );
-
-    navigationLinks.forEach(function (link) {
-
+    anchorLinks.forEach(function (link) {
         link.addEventListener("click", function (event) {
-
             const targetId = link.getAttribute("href");
 
-            if (!targetId || targetId === "#") {
-                return;
-            }
+            if (!targetId || targetId === "#") return;
 
             const target = document.querySelector(targetId);
 
             if (target) {
-
                 event.preventDefault();
 
                 target.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
                 });
-
             }
-
         });
-
     });
 
-
-    // 4. HEADER SCROLL EFFECT
-
+    // HEADER SCROLL EFFECT
     const header = document.querySelector(".header");
 
     function updateHeader() {
-
-        if (!header) {
-            return;
-        }
+        if (!header) return;
 
         if (window.scrollY > 40) {
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
         }
-
     }
 
     window.addEventListener("scroll", updateHeader, {
@@ -127,24 +84,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateHeader();
 
+    // ACTIVE NAVIGATION
+    const navLinks = document.querySelectorAll(
+        ".navigation a[href^='#']"
+    );
 
-    // 5. EXPLORATION CARD ANIMATION
+    const sections = document.querySelectorAll(
+        "section[id]"
+    );
 
+    function setActiveLink(sectionId) {
+        navLinks.forEach(function (link) {
+            const isActive =
+                link.getAttribute("href") === "#" + sectionId;
+
+            link.classList.toggle("active", isActive);
+        });
+    }
+
+    if ("IntersectionObserver" in window && navLinks.length) {
+        const sectionObserver = new IntersectionObserver(
+            function (entries) {
+                const visibleSections = entries
+                    .filter(function (entry) {
+                        return entry.isIntersecting;
+                    })
+                    .sort(function (a, b) {
+                        return b.intersectionRatio - a.intersectionRatio;
+                    });
+
+                if (visibleSections.length) {
+                    setActiveLink(visibleSections[0].target.id);
+                }
+            },
+            {
+                rootMargin: "-25% 0px -60% 0px",
+                threshold: [0, 0.1, 0.25, 0.5]
+            }
+        );
+
+        sections.forEach(function (section) {
+            sectionObserver.observe(section);
+        });
+    }
+
+    // EXPLORATION CARDS
     const cards = document.querySelectorAll(".exploration-card");
 
     cards.forEach(function (card, index) {
-
         card.style.transitionDelay = (index * 100) + "ms";
-
     });
 
-
-    // 6. MARQUEE PAUSE ON HOVER
-
+    // MARQUEE PAUSE
     const marquee = document.querySelector(".marquee-track");
 
     if (marquee) {
-
         marquee.addEventListener("mouseenter", function () {
             marquee.style.animationPlayState = "paused";
         });
@@ -153,23 +147,11 @@ document.addEventListener("DOMContentLoaded", function () {
             marquee.style.animationPlayState = "running";
         });
 
+        document.addEventListener("visibilitychange", function () {
+            marquee.style.animationPlayState =
+                document.hidden ? "paused" : "running";
+        });
     }
-
-
-    // 7. ACCESSIBILITY
-
-    document.addEventListener("visibilitychange", function () {
-
-        if (document.hidden && marquee) {
-            marquee.style.animationPlayState = "paused";
-        } else if (marquee) {
-            marquee.style.animationPlayState = "running";
-        }
-
-    });
-
-
-    // 8. INITIALIZATION
 
     console.log("CEEYA — Digital experience initialized.");
 
