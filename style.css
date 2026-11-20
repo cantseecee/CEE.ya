@@ -1010,3 +1010,93 @@ button {
     transition-duration: .01ms !important;
   }
 }
+
+/* ==================================
+   FINAL INTERACTIONS
+================================== */
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ACTIVE NAVIGATION */
+
+.side-navigation a.active {
+  color: var(--gold);
+}
+
+.mobile-menu a.active {
+  color: var(--gold);
+}
+
+/* CURSOR GLOW */
+
+.cursor-glow {
+  position: fixed;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  background: radial-gradient(
+    circle,
+    rgba(201,166,107,.055),
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  transition: left .12s ease, top .12s ease;
+}
+
+/* BUTTON INTERACTION */
+
+.hero-button,
+.contact-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-button::after,
+.contact-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(201,166,107,.08);
+  transform: translateX(-110%);
+  transition: transform .4s ease;
+}
+
+.hero-button.button-hover::after,
+.contact-button.button-hover::after {
+  transform: translateX(0);
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .cursor-glow {
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .cursor-glow {
+    display: none;
+  }
+}
