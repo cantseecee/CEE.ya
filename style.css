@@ -1774,3 +1774,162 @@ button {
   line-height: 2;
 }
 
+/* =====================================================
+   CEE YA. — VERSION 19
+   PART 2/2 — MOBILE / RTL REFINEMENT
+===================================================== */
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .collection {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .collection-grid {
+    gap: 15px;
+  }
+
+  .product-visual {
+    height: 280px;
+  }
+
+  .product-info {
+    padding: 25px 20px 28px;
+  }
+
+  .product-info h3 {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .collection {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .collection::before {
+    top: 20%;
+    right: -250px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .collection-intro {
+    padding-bottom: 22px;
+  }
+
+  .collection-intro::after {
+    width: 55px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .product-card {
+    max-width: 520px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-visual {
+    height: 320px;
+  }
+
+  .product-info {
+    padding: 26px 24px 30px;
+  }
+
+  .product-info h3 {
+    font-size: 30px;
+  }
+
+  .collection-note {
+    margin-top: 32px;
+    padding-top: 18px;
+    font-size: 9px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .product-visual {
+    height: 285px;
+  }
+
+  .product-info {
+    padding: 23px 20px 26px;
+  }
+
+  .product-info h3 {
+    font-size: 27px;
+  }
+
+  .visual-label {
+    left: 19px;
+    top: 20px;
+  }
+
+  .visual-category {
+    right: 19px;
+    bottom: 19px;
+  }
+}
+
+/* ARABIC / RTL */
+
+[dir="rtl"] .collection::before {
+  right: auto;
+  left: -180px;
+}
+
+[dir="rtl"] .collection-intro::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .visual-label {
+  left: auto;
+  right: 25px;
+}
+
+[dir="rtl"] .visual-category {
+  right: auto;
+  left: 25px;
+}
+
+[dir="rtl"] .product-info {
+  text-align: right;
+}
+
+[dir="rtl"] .product-info::before {
+  left: auto;
+  right: 26px;
+}
+
+[dir="rtl"] .collection-note {
+  text-align: center;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-visual,
+  .product-visual::before,
+  .product-visual::after {
+    transition: none !important;
+  }
+}
+
+/* END VERSION 19 */
+
+
