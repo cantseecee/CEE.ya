@@ -1,36 +1,88 @@
 
-// CEEYA - MAIN JAVASCRIPT
+/* =================================
+   CEEYA — INTERACTIVE EXPERIENCE
+================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // SMOOTH SCROLL
-    const links = document.querySelectorAll('a[href^="#"]');
+    // 1. PRELOADER
+    const preloader = document.querySelector(".preloader");
 
-    links.forEach(function (link) {
+    window.addEventListener("load", function () {
+        if (preloader) {
+            setTimeout(function () {
+                preloader.style.display = "none";
+            }, 2300);
+        }
+    });
+
+
+    // 2. SCROLL REVEAL
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(function (element) {
+            observer.observe(element);
+        });
+
+    } else {
+
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
+
+    }
+
+
+    // 3. CURRENT YEAR
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+
+    // 4. SMOOTH NAVIGATION
+    const navigationLinks = document.querySelectorAll('a[href^="#"]');
+
+    navigationLinks.forEach(function (link) {
+
         link.addEventListener("click", function (event) {
 
-            const target = document.querySelector(
-                link.getAttribute("href")
-            );
+            const targetId = link.getAttribute("href");
+            const target = document.querySelector(targetId);
 
             if (target) {
                 event.preventDefault();
 
                 target.scrollIntoView({
-                    behavior: "smooth"
+                    behavior: "smooth",
+                    block: "start"
                 });
             }
+
         });
+
     });
 
-    // CURRENT YEAR
-    const footer = document.querySelector("footer p");
 
-    if (footer) {
-        footer.textContent =
-            `© ${new Date().getFullYear()} CEEYA. ALL RIGHTS RESERVED.`;
-    }
-
-    console.log("CEEYA website initialized successfully.");
+    // 5. CONSOLE MESSAGE
+    console.log("CEEYA — Experience initialized successfully.");
 
 });
