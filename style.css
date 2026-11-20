@@ -1,7 +1,7 @@
 
-/* =================================
-   CEEYA — PREMIUM DESIGN SYSTEM
-================================= */
+/* =====================================
+   CEEYA — PREMIUM DIGITAL EXPERIENCE
+===================================== */
 
 :root {
     --black: #080808;
@@ -9,7 +9,7 @@
     --gold: #c9a96e;
     --white: #f5f2eb;
     --gray: #929292;
-    --border: rgba(255,255,255,0.10);
+    --border: rgba(255, 255, 255, 0.10);
 }
 
 * {
@@ -54,20 +54,18 @@ a {
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 7px;
-    animation: preloaderExit 0.8s ease 1.5s forwards;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .gold,
 .logo span {
     color: var(--gold);
-}
-
-@keyframes preloaderExit {
-    to {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
 }
 
 
@@ -83,7 +81,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(8,8,8,0.92);
+    background: rgba(8, 8, 8, 0.94);
     backdrop-filter: blur(15px);
 }
 
@@ -137,7 +135,7 @@ a {
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: rgba(201,169,110,0.08);
+    background: rgba(201, 169, 110, 0.08);
     filter: blur(120px);
     top: 5%;
     left: 50%;
@@ -170,8 +168,9 @@ a {
     font-weight: 700;
 }
 
-.hero h1 > span {
+.hero-highlight {
     display: block;
+    white-space: nowrap;
 }
 
 .hero-description {
@@ -196,7 +195,7 @@ a {
 .primary-button:hover {
     background: var(--white);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(201,169,110,0.15);
+    box-shadow: 0 10px 30px rgba(201, 169, 110, 0.15);
 }
 
 .primary-button span {
@@ -258,7 +257,7 @@ a {
     background:
         radial-gradient(
             ellipse at 90% 50%,
-            rgba(201,169,110,0.05),
+            rgba(201, 169, 110, 0.05),
             transparent 55%
         ),
         var(--dark);
@@ -291,7 +290,7 @@ a {
     background:
         radial-gradient(
             ellipse at 80% 50%,
-            rgba(201,169,110,0.08),
+            rgba(201, 169, 110, 0.08),
             transparent 60%
         );
 }
@@ -375,7 +374,12 @@ a {
     }
 
     .hero h1 {
+        font-size: clamp(32px, 8vw, 55px);
         letter-spacing: -1.5px;
+    }
+
+    .hero-highlight {
+        white-space: normal;
     }
 
     .hero .eyebrow {
