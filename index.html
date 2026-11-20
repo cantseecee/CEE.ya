@@ -4,214 +4,366 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0b">
-  <meta name="description" content="CEE YA. — An independent Moroccan creative digital studio exploring ideas, culture, design and modern discoveries.">
+
   <title>CEE YA. — Beyond the Ordinary</title>
+
+  <meta name="description" content="CEE YA. is an independent Moroccan creative digital studio exploring ideas, innovation and new perspectives.">
+  <meta name="theme-color" content="#0b0b0b">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
-<script src="script.js?v=11" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=12">
+
+  <script src="script.js?v=12" defer></script>
 </head>
 
 <body>
+
+  <!-- PAGE LOADER -->
   <div class="loader" id="loader">
-    <span>CEE YA.</span>
+    <span class="loader-logo">CEE YA.</span>
   </div>
 
-  <header class="topbar">
-    <a class="logo" href="#home">CEE YA<span>.</span></a>
+  <!-- HEADER -->
+  <header class="topbar" id="top">
 
-    <nav class="desktop-nav">
+    <a href="#home" class="logo" aria-label="CEE YA Home">
+      CEE YA<span>.</span>
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+
       <a href="#home" data-i18n="navHome">Home</a>
+
       <a href="#about" data-i18n="navAbout">About</a>
+
       <a href="#explore" data-i18n="navExplore">Explore</a>
-      <a href="#salmaty">SALMATY</a>
+
       <a href="#contact" data-i18n="navContact">Contact</a>
+
     </nav>
 
+    <!-- RIGHT SIDE -->
     <div class="header-actions">
+
+      <!-- LANGUAGE SWITCHER -->
       <div class="language-switch" aria-label="Choose language">
-        <button class="lang active" data-lang="en">EN</button>
-        <button class="lang" data-lang="fr">FR</button>
-        <button class="lang" data-lang="ar">AR</button>
+
+        <button class="lang active" type="button" data-lang="en">
+          EN
+        </button>
+
+        <button class="lang" type="button" data-lang="fr">
+          FR
+        </button>
+
+        <button class="lang" type="button" data-lang="ar">
+          عربي
+        </button>
+
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
       </button>
+
     </div>
+
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
+
+  <!-- MOBILE NAVIGATION -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+
     <a href="#home" data-i18n="navHome">Home</a>
+
     <a href="#about" data-i18n="navAbout">About</a>
+
     <a href="#explore" data-i18n="navExplore">Explore</a>
-    <a href="#salmaty">SALMATY</a>
+
     <a href="#contact" data-i18n="navContact">Contact</a>
-  </div>
 
+  </nav>
+
+
+  <!-- HERO -->
   <main>
-    <section class="hero" id="home">
-      <div class="hero-meta">
-        <span>INDEPENDENT CREATIVE DIGITAL STUDIO</span>
-        <span>MOROCCO · EST. 2026</span>
-      </div>
 
-      <div class="hero-content">
-        <p class="eyebrow" data-i18n="heroEyebrow">A DIFFERENT POINT OF VIEW</p>
-        <h1 data-i18n="heroTitle">Think beyond <em>the ordinary.</em></h1>
-        <p class="hero-description" data-i18n="heroDescription">
-          A new perspective on creativity, ideas and the digital world.
-          Built with intention. Designed to inspire.
+    <section class="hero" id="home">
+
+      <div class="hero-content reveal">
+
+        <p class="hero-eyebrow" data-i18n="heroEyebrow">
+          INDEPENDENT CREATIVE DIGITAL STUDIO
         </p>
-        <a href="#explore" class="primary-button">
-          <span data-i18n="heroButton">DISCOVER CEE YA</span>
-          <span>↗</span>
+
+        <h1 data-i18n="heroTitle">
+          THINK BEYOND
+          <br>
+          THE ORDINARY<span>.</span>
+        </h1>
+
+        <p class="hero-description" data-i18n="heroDescription">
+          A new perspective on creativity, innovation and the digital world.
+        </p>
+
+        <a href="#explore" class="hero-button">
+          <span data-i18n="heroButton">EXPLORE CEE YA</span>
+          <span class="button-arrow">↘</span>
         </a>
+
       </div>
 
       <div class="hero-bottom">
-        <span>01 — 05</span>
-        <span data-i18n="scrollText">SCROLL TO DISCOVER ↓</span>
+
+        <span class="hero-index">01 — 04</span>
+
+        <span class="scroll-text" data-i18n="scrollText">
+          SCROLL TO DISCOVER ↓
+        </span>
+
       </div>
 
-      <div class="hero-decoration">C.</div>
     </section>
 
+
+    <!-- ABOUT -->
     <section class="intro section" id="about">
+
       <div class="section-label">
         <span>01 / ABOUT</span>
         <span>CEE YA.</span>
       </div>
 
       <div class="intro-grid">
-        <h2 data-i18n="aboutTitle">More than a digital space.</h2>
-        <div>
-          <p class="large-copy" data-i18n="aboutCopy">
-            CEE YA. is an independent Moroccan creative space exploring
-            new ideas, modern culture and meaningful digital experiences.
+
+        <div class="intro-heading reveal">
+
+          <p class="eyebrow" data-i18n="aboutSub">
+            A DIFFERENT POINT OF VIEW
           </p>
-          <p class="muted-copy" data-i18n="aboutSub">
-            We believe in looking closer, thinking differently and
-            creating with purpose. Every detail has a reason.
-          </p>
+
+          <h2 data-i18n="aboutTitle">
+            More than
+            <br>
+            a digital space<span>.</span>
+          </h2>
+
         </div>
+
+        <div class="intro-copy reveal">
+
+          <p data-i18n="aboutCopy">
+            CEE YA. is an independent Moroccan creative digital studio.
+            A space built around ideas, curiosity and the desire to
+            explore new possibilities.
+          </p>
+
+          <div class="intro-signature">
+            CEE YA. — MOROCCO
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
+
+    <!-- EXPLORE -->
     <section class="explore section" id="explore">
+
       <div class="section-label">
-        <span>02 / OUR WORLD</span>
-        <span>THREE PERSPECTIVES</span>
+        <span>02 / EXPLORATIONS</span>
+        <span>THREE DIRECTIONS</span>
       </div>
 
-      <h2 data-i18n="exploreTitle">Ideas worth exploring.</h2>
+      <div class="explore-heading reveal">
+
+        <p class="eyebrow">OUR PERSPECTIVE</p>
+
+        <h2 data-i18n="exploreTitle">
+          Ideas without
+          <br>
+          boundaries<span>.</span>
+        </h2>
+
+      </div>
+
 
       <div class="explore-grid">
-        <article class="explore-card">
+
+        <!-- CARD 01 -->
+        <article class="explore-card reveal">
+
           <span class="card-number">01</span>
+
           <div class="card-symbol">✳</div>
-          <h3 data-i18n="creativity">Creativity</h3>
-          <p data-i18n="creativityCopy">Ideas that challenge the familiar and inspire new perspectives.</p>
-          <span class="card-arrow">↗</span>
-        </article>
 
-        <article class="explore-card">
-          <span class="card-number">02</span>
-          <div class="card-symbol">◇</div>
-          <h3 data-i18n="innovation">Innovation</h3>
-          <p data-i18n="innovationCopy">Exploring digital possibilities and the ideas shaping tomorrow.</p>
-          <span class="card-arrow">↗</span>
-        </article>
+          <h3 data-i18n="creativity">
+            Creativity
+          </h3>
 
-        <article class="explore-card">
-          <span class="card-number">03</span>
-          <div class="card-symbol">✧</div>
-          <h3 data-i18n="discovery">Discovery</h3>
-          <p data-i18n="discoveryCopy">Finding inspiration in unexpected places and everyday details.</p>
-          <span class="card-arrow">↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="salmaty section" id="salmaty">
-      <div class="salmaty-inner">
-        <div class="section-label">
-          <span>03 / A DISTINCT EXPRESSION</span>
-          <span>BY CEE YA.</span>
-        </div>
-
-        <div class="salmaty-heading">
-          <p class="salmaty-kicker">A NEW CHAPTER</p>
-          <h2>SALMATY<span>®</span></h2>
-          <p data-i18n="salmatyIntro">
-            An expression of everyday style. A feminine perspective
-            shaped by detail, character and individuality.
+          <p data-i18n="creativityCopy">
+            Exploring original ideas and turning imagination into
+            meaningful experiences.
           </p>
-        </div>
 
-        <div class="salmaty-grid">
-          <article class="salmaty-card">
-            <span>01</span>
-            <h3 data-i18n="bags">Bags</h3>
-            <p data-i18n="comingSoon">Coming soon</p>
-          </article>
-          <article class="salmaty-card">
-            <span>02</span>
-            <h3 data-i18n="jewelry">Jewelry</h3>
-            <p data-i18n="comingSoon">Coming soon</p>
-          </article>
-          <article class="salmaty-card">
-            <span>03</span>
-            <h3 data-i18n="caps">Caps</h3>
-            <p data-i18n="comingSoon">Coming soon</p>
-          </article>
-          <article class="salmaty-card">
-            <span>04</span>
-            <h3 data-i18n="wallets">Wallets</h3>
-            <p data-i18n="comingSoon">Coming soon</p>
-          </article>
-        </div>
+          <span class="card-footer">01 — 03</span>
 
-        <div class="salmaty-footer">
-          <span>SOON, IN ITS OWN TIME.</span>
-          <span>SALMATY · MOROCCO</span>
-        </div>
+        </article>
+
+
+        <!-- CARD 02 -->
+        <article class="explore-card reveal">
+
+          <span class="card-number">02</span>
+
+          <div class="card-symbol">↗</div>
+
+          <h3 data-i18n="innovation">
+            Innovation
+          </h3>
+
+          <p data-i18n="innovationCopy">
+            Looking beyond the expected and discovering new ways
+            to move forward.
+          </p>
+
+          <span class="card-footer">02 — 03</span>
+
+        </article>
+
+
+        <!-- CARD 03 -->
+        <article class="explore-card reveal">
+
+          <span class="card-number">03</span>
+
+          <div class="card-symbol">◇</div>
+
+          <h3 data-i18n="discovery">
+            Discovery
+          </h3>
+
+          <p data-i18n="discoveryCopy">
+            Staying curious, exploring different perspectives and
+            finding inspiration everywhere.
+          </p>
+
+          <span class="card-footer">03 — 03</span>
+
+        </article>
+
       </div>
+
     </section>
 
+
+    <!-- MANIFESTO -->
     <section class="manifesto section">
-      <span class="manifesto-label">04 / OUR PHILOSOPHY</span>
-      <h2 data-i18n="manifestoTitle">
-        Not here to follow.<br>
-        <em>Here to discover.</em>
-      </h2>
-      <span class="manifesto-mark">CEE YA.</span>
+
+      <div class="manifesto-inner reveal">
+
+        <p class="eyebrow">THE CEE YA. PERSPECTIVE</p>
+
+        <h2 data-i18n="manifestoTitle">
+          Beyond ordinary.
+          <br>
+          Beyond expected.
+          <br>
+          <em>Always exploring.</em>
+        </h2>
+
+        <span class="manifesto-mark">CEE YA.</span>
+
+      </div>
+
     </section>
 
+
+    <!-- CONTACT -->
     <section class="contact section" id="contact">
+
       <div class="section-label">
-        <span>05 / CONTACT</span>
+        <span>03 / CONTACT</span>
         <span>LET'S CONNECT</span>
       </div>
 
-      <div class="contact-content">
-        <p class="eyebrow" data-i18n="contactEyebrow">HAVE SOMETHING IN MIND?</p>
-        <h2 data-i18n="contactTitle">Let's start<br><em>a conversation.</em></h2>
-        <a class="contact-link" href="mailto:hello@ceeya.com">
-          hello@ceeya.com <span>↗</span>
+      <div class="contact-content reveal">
+
+        <p class="eyebrow" data-i18n="contactEyebrow">
+          HAVE SOMETHING IN MIND?
+        </p>
+
+        <h2 data-i18n="contactTitle">
+          Let's create
+          <br>
+          something different<span>.</span>
+        </h2>
+
+        <a
+          href="mailto:hello@ceeya.com"
+          class="contact-link"
+        >
+          <span>LET'S TALK</span>
+          <span>↗</span>
         </a>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <a class="logo" href="#home">CEE YA<span>.</span></a>
-    <p>INDEPENDENT BY NATURE. CURIOUS BY DESIGN.</p>
-    <span>© 2026 CEE YA. ALL RIGHTS RESERVED.</span>
+
+    <div class="footer-top">
+
+      <a href="#home" class="footer-logo">
+        CEE YA<span>.</span>
+      </a>
+
+      <a href="#top" class="back-to-top">
+        BACK TO TOP ↑
+      </a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 CEE YA. ALL RIGHTS RESERVED.
+      </p>
+
+      <!-- DISCREET SALMATY SIGNATURE -->
+      <span class="salmaty-signature" aria-label="Salmaty">
+        salmaty
+      </span>
+
+      <p class="footer-location">
+        MADE IN MOROCCO.
+      </p>
+
+    </div>
+
   </footer>
+
+
 </body>
 </html>
