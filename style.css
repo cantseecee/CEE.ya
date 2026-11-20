@@ -1,59 +1,27 @@
 
 /* =========================================
-   CEE YA. — LUXURY DIGITAL EXPERIENCE
-   Main stylesheet
+   CEE YA. — COMPLETE DESIGN SYSTEM
+   Luxury / Minimal / Editorial
 ========================================= */
 
-/* ---------- 01. RESET ---------- */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  background: #0b0b0b;
-  color: #f5f1e9;
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-}
-
-::selection {
-  background: #c9ad78;
-  color: #0b0b0b;
-}
-
-
-/* ---------- 02. VARIABLES ---------- */
+/* 01 — DESIGN TOKENS */
 
 :root {
   --bg: #0b0b0b;
-  --panel: #121212;
-  --panel-light: #181818;
+  --bg-soft: #101010;
+  --panel: #141414;
+  --panel-hover: #191816;
 
   --gold: #c9ad78;
   --gold-light: #e3d1a9;
 
   --white: #f5f1e9;
   --muted: #96918a;
+  --muted-dark: #77736d;
 
   --border: rgba(201, 173, 120, 0.19);
+  --soft-border: rgba(255, 255, 255, 0.07);
 
   --sans: "DM Sans", sans-serif;
   --serif: "Playfair Display", serif;
@@ -63,25 +31,76 @@ button {
 }
 
 
-/* ---------- 03. LOADER ---------- */
+/* 02 — RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+::selection {
+  background: var(--gold);
+  color: #111;
+}
+
+
+/* 03 — LOADER */
 
 .loader {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--bg);
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  animation: loaderExit 1s ease 0.8s forwards;
+  justify-content: center;
+
+  background: var(--bg);
+
+  animation: loaderExit 0.8s ease 0.7s forwards;
   pointer-events: none;
 }
 
 .loader-logo {
-  color: var(--white);
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 29px;
   letter-spacing: 7px;
+  color: var(--white);
 }
 
 .loader-logo::after {
@@ -97,25 +116,27 @@ button {
 }
 
 
-/* ---------- 04. HEADER ---------- */
+/* 04 — HEADER */
 
 .topbar {
   height: var(--header-height);
   width: 100%;
+
   padding: 0 var(--side-space);
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  background: rgba(11, 11, 11, 0.92);
+  background: rgba(11, 11, 11, 0.93);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  border-bottom: 1px solid var(--soft-border);
 }
 
 .logo,
@@ -140,8 +161,8 @@ button {
 
 .desktop-nav a {
   color: #aaa49b;
-  font-size: 11px;
-  letter-spacing: 1.7px;
+  font-size: 10px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -153,11 +174,11 @@ button {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 
-/* ---------- 05. LANGUAGE SWITCH ---------- */
+/* 05 — LANGUAGE SWITCHER */
 
 .language-switch {
   display: flex;
@@ -168,6 +189,7 @@ button {
 
   border: 1px solid rgba(201, 173, 120, 0.28);
   border-radius: 30px;
+
   background: #121212;
 }
 
@@ -199,20 +221,21 @@ button {
 }
 
 
-/* ---------- 06. MOBILE MENU BUTTON ---------- */
+/* 06 — MENU BUTTON */
 
 .menu-toggle {
-  width: 35px;
-  height: 35px;
-
   display: none;
+
+  width: 36px;
+  height: 36px;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 6px;
 
-  background: transparent;
   border: 0;
+  background: transparent;
 
   cursor: pointer;
 }
@@ -221,7 +244,9 @@ button {
   display: block;
   width: 24px;
   height: 1px;
+
   background: var(--gold);
+
   transition: transform 0.3s ease;
 }
 
@@ -234,18 +259,19 @@ button {
 }
 
 
-/* ---------- 07. MOBILE NAVIGATION ---------- */
+/* 07 — MOBILE MENU */
 
 .mobile-menu {
   display: none;
 }
 
 
-/* ---------- 08. HERO ---------- */
+/* 08 — HERO */
 
 .hero {
   min-height: calc(100svh - var(--header-height));
-  padding: 130px var(--side-space) 55px;
+
+  padding: 130px var(--side-space) 90px;
 
   position: relative;
 
@@ -270,38 +296,46 @@ button {
 .hero-eyebrow,
 .eyebrow {
   color: var(--gold);
+
   font-size: 10px;
   letter-spacing: 3px;
+  line-height: 1.8;
+
   text-transform: uppercase;
-  margin-bottom: 28px;
+
+  margin-bottom: 27px;
 }
 
 .hero h1 {
   font-family: var(--serif);
+
   font-size: clamp(55px, 9.5vw, 130px);
   font-weight: 400;
+
   line-height: 0.98;
   letter-spacing: -4px;
 }
 
 .hero h1 span,
 .intro h2 span,
-.contact h2 span,
-.explore-heading h2 span {
+.explore-heading h2 span,
+.contact h2 span {
   color: var(--gold);
 }
 
 .hero-description {
-  max-width: 480px;
+  max-width: 490px;
   margin-top: 35px;
 
   color: var(--muted);
+
   font-size: 14px;
-  line-height: 1.9;
+  line-height: 2;
 }
 
 .hero-button {
   width: fit-content;
+
   margin-top: 42px;
   padding: 15px 23px;
 
@@ -310,6 +344,7 @@ button {
   gap: 35px;
 
   border: 1px solid var(--gold);
+
   color: var(--white);
 
   font-size: 10px;
@@ -324,12 +359,14 @@ button {
 }
 
 .button-arrow {
-  font-size: 17px;
   color: var(--gold);
+  font-size: 18px;
+  transition: transform 0.3s ease;
 }
 
 .hero-button:hover .button-arrow {
   color: #111;
+  transform: translate(3px, 3px);
 }
 
 .hero-bottom {
@@ -340,14 +377,16 @@ button {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  color: #777;
+  color: var(--muted-dark);
+
   font-size: 9px;
   letter-spacing: 2px;
 }
 
 
-/* ---------- 09. SHARED SECTIONS ---------- */
+/* 09 — SHARED SECTION STYLE */
 
 .section {
   padding: 115px var(--side-space);
@@ -355,27 +394,32 @@ button {
 
 .section-label {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
 
   padding-bottom: 20px;
+
   border-bottom: 1px solid var(--border);
 
   color: var(--muted);
+
   font-size: 9px;
   letter-spacing: 2px;
+  line-height: 1.8;
 }
 
 
-/* ---------- 10. ABOUT ---------- */
+/* 10 — ABOUT */
 
 .intro {
-  background: #101010;
+  background: var(--bg-soft);
 }
 
 .intro-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
+
   gap: 90px;
   align-items: end;
 
@@ -386,32 +430,37 @@ button {
 .explore-heading h2,
 .contact h2 {
   font-family: var(--serif);
+
   font-size: clamp(42px, 6vw, 76px);
   font-weight: 400;
-  line-height: 1.1;
+
+  line-height: 1.15;
   letter-spacing: -1.5px;
 }
 
 .intro-copy {
-  max-width: 450px;
+  max-width: 470px;
   padding-bottom: 5px;
 }
 
 .intro-copy p {
   color: #aaa49b;
+
   font-size: 14px;
   line-height: 2.1;
 }
 
 .intro-signature {
   margin-top: 35px;
+
   color: var(--gold);
+
   font-size: 9px;
   letter-spacing: 3px;
 }
 
 
-/* ---------- 11. EXPLORE ---------- */
+/* 11 — EXPLORE */
 
 .explore {
   background: var(--bg);
@@ -423,7 +472,7 @@ button {
 
 .explore-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -438,7 +487,8 @@ button {
   align-items: flex-start;
 
   background: var(--panel);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border: 1px solid var(--soft-border);
 
   transition:
     transform 0.4s ease,
@@ -448,13 +498,15 @@ button {
 
 .explore-card:hover {
   transform: translateY(-7px);
+
   border-color: var(--border);
-  background: #171614;
+  background: var(--panel-hover);
 }
 
 .card-number,
 .card-footer {
-  color: #777;
+  color: var(--muted-dark);
+
   font-size: 9px;
   letter-spacing: 2px;
 }
@@ -463,22 +515,25 @@ button {
   margin: 38px 0 20px;
 
   color: var(--gold);
+
   font-family: var(--serif);
   font-size: 42px;
 }
 
 .explore-card h3 {
   color: var(--white);
+
   font-family: var(--serif);
   font-size: 26px;
   font-weight: 400;
 }
 
 .explore-card p {
-  margin-top: 15px;
   max-width: 290px;
+  margin-top: 15px;
 
   color: var(--muted);
+
   font-size: 12px;
   line-height: 1.9;
 }
@@ -489,7 +544,7 @@ button {
 }
 
 
-/* ---------- 12. MANIFESTO ---------- */
+/* 12 — MANIFESTO */
 
 .manifesto {
   min-height: 500px;
@@ -506,7 +561,7 @@ button {
       rgba(201, 173, 120, 0.09),
       transparent 65%
     ),
-    #101010;
+    var(--bg-soft);
 }
 
 .manifesto-inner {
@@ -515,9 +570,11 @@ button {
 
 .manifesto h2 {
   font-family: var(--serif);
+
   font-size: clamp(36px, 6vw, 72px);
   font-weight: 400;
-  line-height: 1.3;
+
+  line-height: 1.35;
 }
 
 .manifesto h2 em {
@@ -530,12 +587,13 @@ button {
   margin-top: 45px;
 
   color: var(--gold);
+
   font-size: 10px;
   letter-spacing: 5px;
 }
 
 
-/* ---------- 13. CONTACT ---------- */
+/* 13 — CONTACT */
 
 .contact {
   background: var(--bg);
@@ -551,6 +609,7 @@ button {
 
 .contact-link {
   width: fit-content;
+
   margin-top: 45px;
   padding-bottom: 12px;
 
@@ -561,6 +620,7 @@ button {
   border-bottom: 1px solid var(--gold);
 
   color: var(--white);
+
   font-size: 11px;
   letter-spacing: 2px;
 
@@ -577,12 +637,13 @@ button {
 }
 
 
-/* ---------- 14. FOOTER ---------- */
+/* 14 — FOOTER */
 
 .footer {
   padding: 45px var(--side-space) 25px;
 
   background: #080808;
+
   border-top: 1px solid var(--border);
 }
 
@@ -600,8 +661,10 @@ button {
 
 .back-to-top {
   color: var(--muted);
+
   font-size: 9px;
   letter-spacing: 2px;
+
   transition: color 0.3s ease;
 }
 
@@ -612,7 +675,7 @@ button {
 .footer-bottom {
   padding-top: 22px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--soft-border);
 
   display: flex;
   align-items: center;
@@ -621,20 +684,25 @@ button {
 }
 
 .footer-bottom p {
-  color: #777;
+  color: var(--muted-dark);
+
   font-size: 8px;
   letter-spacing: 1.5px;
 }
 
-/* SALMATY — discreet signature only */
+
+/* 15 — SALMATY SIGNATURE */
 
 .salmaty-signature {
   color: #b78396;
+
   font-family: var(--serif);
   font-size: 13px;
   font-style: italic;
   letter-spacing: 1px;
+
   opacity: 0.55;
+
   transition: opacity 0.3s ease;
 }
 
@@ -643,11 +711,12 @@ button {
 }
 
 
-/* ---------- 15. REVEAL ANIMATION ---------- */
+/* 16 — REVEAL ANIMATION */
 
 .reveal {
   opacity: 0;
   transform: translateY(25px);
+
   transition:
     opacity 0.8s ease,
     transform 0.8s ease;
@@ -659,7 +728,7 @@ button {
 }
 
 
-/* ---------- 16. ARABIC DIRECTION ---------- */
+/* 17 — ARABIC */
 
 body.arabic {
   font-family: var(--sans);
@@ -668,28 +737,38 @@ body.arabic {
 
 body.arabic .hero-content,
 body.arabic .intro-grid,
+body.arabic .explore-heading,
 body.arabic .contact-content {
   text-align: right;
 }
 
-body.arabic .hero h1 {
+body.arabic .hero h1,
+body.arabic .intro h2,
+body.arabic .explore-heading h2,
+body.arabic .contact h2,
+body.arabic .manifesto h2 {
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-body.arabic .desktop-nav,
-body.arabic .mobile-menu {
-  direction: rtl;
-}
-
-body.arabic .hero-meta,
 body.arabic .hero-bottom,
-body.arabic .section-label {
+body.arabic .section-label,
+body.arabic .footer-bottom {
   direction: rtl;
 }
 
+body.arabic .intro-signature,
+body.arabic .manifesto-mark {
+  direction: ltr;
+  text-align: right;
+}
 
-/* ---------- 17. TABLET ---------- */
+body.arabic .mobile-menu {
+  text-align: right;
+}
+
+
+/* 18 — TABLET */
 
 @media (max-width: 950px) {
 
@@ -716,7 +795,7 @@ body.arabic .section-label {
 }
 
 
-/* ---------- 18. MOBILE ---------- */
+/* 19 — MOBILE NAVIGATION */
 
 @media (max-width: 900px) {
 
@@ -733,6 +812,7 @@ body.arabic .section-label {
 
     position: fixed;
     z-index: 999;
+
     top: var(--header-height);
     left: 0;
     right: 0;
@@ -743,6 +823,7 @@ body.arabic .section-label {
     padding: 20px var(--side-space);
 
     background: #10100f;
+
     border-bottom: 1px solid var(--border);
 
     transform: translateY(-120%);
@@ -758,6 +839,7 @@ body.arabic .section-label {
 
   .mobile-menu.open {
     transform: translateY(0);
+
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -767,10 +849,13 @@ body.arabic .section-label {
     padding: 17px 0;
 
     color: var(--white);
+
     font-size: 12px;
     letter-spacing: 2px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid var(--soft-border);
+
+    transition: color 0.3s ease;
   }
 
   .mobile-menu a:hover {
@@ -797,7 +882,7 @@ body.arabic .section-label {
 }
 
 
-/* ---------- 19. SMALL MOBILE ---------- */
+/* 20 — SMALL MOBILE */
 
 @media (max-width: 600px) {
 
@@ -906,7 +991,7 @@ body.arabic .section-label {
 }
 
 
-/* ---------- 20. VERY SMALL SCREENS ---------- */
+/* 21 — VERY SMALL SCREENS */
 
 @media (max-width: 370px) {
 
@@ -930,7 +1015,7 @@ body.arabic .section-label {
 }
 
 
-/* ---------- 21. REDUCED MOTION ---------- */
+/* 22 — REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
 
