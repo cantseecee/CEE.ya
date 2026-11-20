@@ -1,11 +1,12 @@
 
 /* =========================================
-   CEE YA. — INTERACTIONS & TRANSLATIONS
+   CEE YA. — MULTILINGUAL EXPERIENCE
+   ENGLISH / FRENCH / ARABIC
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ---------- 01. TRANSLATIONS ---------- */
+  /* 01 — TRANSLATIONS */
 
   const translations = {
 
@@ -16,30 +17,49 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
 
       heroEyebrow: "INDEPENDENT CREATIVE DIGITAL STUDIO",
-      heroTitle: 'THINK BEYOND<br>THE ORDINARY<span>.</span>',
-      heroDescription: "A new perspective on creativity, innovation and the digital world.",
+      heroTitle: "THINK BEYOND<br>THE ORDINARY<span>.</span>",
+      heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
       heroButton: "EXPLORE CEE YA",
       scrollText: "SCROLL TO DISCOVER ↓",
 
+      aboutLabel: "01 / ABOUT",
       aboutSub: "A DIFFERENT POINT OF VIEW",
       aboutTitle: "More than<br>a digital space<span>.</span>",
-      aboutCopy: "CEE YA. is an independent Moroccan creative digital studio. A space built around ideas, curiosity and the desire to explore new possibilities.",
+      aboutCopy: "CEE YA. is an independent Moroccan creative space exploring new ideas, modern culture and meaningful digital experiences.",
+      aboutBrand: "CEE YA. — MOROCCO",
 
-      exploreTitle: "Ideas without<br>boundaries<span>.</span>",
+      exploreLabel: "02 / EXPLORATIONS",
+      exploreDirections: "THREE DIRECTIONS",
+      explorePerspective: "OUR PERSPECTIVE",
+      exploreTitle: "Ideas worth<br>discovering<span>.</span>",
 
       creativity: "Creativity",
-      creativityCopy: "Exploring original ideas and turning imagination into meaningful experiences.",
+      creativityCopy: "Ideas that challenge the ordinary and inspire new perspectives.",
 
       innovation: "Innovation",
-      innovationCopy: "Looking beyond the expected and discovering new ways to move forward.",
+      innovationCopy: "Exploring digital possibilities and ideas that shape tomorrow.",
 
       discovery: "Discovery",
-      discoveryCopy: "Staying curious, exploring different perspectives and finding inspiration everywhere.",
+      discoveryCopy: "Finding inspiration in unexpected places and everyday details.",
 
-      manifestoTitle: 'Beyond ordinary.<br>Beyond expected.<br><em>Always exploring.</em>',
+      manifestoEyebrow: "THE CEE YA. PERSPECTIVE",
+      manifestoTitle: "We are not here to follow.<br><em>We are here to discover.</em>",
 
-      contactEyebrow: "HAVE SOMETHING IN MIND?",
-      contactTitle: "Let's create<br>something different<span>.</span>"
+      contactLabel: "03 / CONTACT",
+      contactConnect: "LET'S CONNECT",
+      contactEyebrow: "HAVE AN IDEA IN MIND?",
+      contactTitle: "Let's start<br><em>a conversation.</em>",
+      contactTalk: "LET'S TALK",
+
+      backToTop: "BACK TO TOP ↑",
+      copyright: "© 2026 CEE YA. ALL RIGHTS RESERVED.",
+      footerLocation: "MADE IN MOROCCO.",
+
+      pageTitle: "CEE YA. — Beyond the Ordinary",
+      pageDescription: "CEE YA. is an independent Moroccan creative digital space exploring ideas, modern culture and meaningful digital experiences.",
+
+      menuOpen: "Open navigation menu",
+      menuClose: "Close navigation menu"
     },
 
 
@@ -50,30 +70,49 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
 
       heroEyebrow: "STUDIO CRÉATIF DIGITAL INDÉPENDANT",
-      heroTitle: 'PENSER AU-DELÀ<br>DE L’ORDINAIRE<span>.</span>',
-      heroDescription: "Une nouvelle perspective sur la créativité, l’innovation et le monde numérique.",
-      heroButton: "EXPLORER CEE YA",
+      heroTitle: "PENSEZ AU-DELÀ<br>DE L’ORDINAIRE<span>.</span>",
+      heroDescription: "Une nouvelle perspective sur la créativité, les idées et le monde numérique. Pensé avec intention. Conçu pour inspirer.",
+      heroButton: "DÉCOUVRIR CEE YA",
       scrollText: "DÉFILER POUR DÉCOUVRIR ↓",
 
+      aboutLabel: "01 / À PROPOS",
       aboutSub: "UN AUTRE POINT DE VUE",
-      aboutTitle: "Bien plus<br>qu’un espace digital<span>.</span>",
-      aboutCopy: "CEE YA. est un studio créatif digital indépendant marocain. Un espace construit autour des idées, de la curiosité et du désir d’explorer de nouvelles possibilités.",
+      aboutTitle: "Bien plus<br>qu’un espace numérique<span>.</span>",
+      aboutCopy: "CEE YA. est un espace créatif indépendant marocain qui explore les idées nouvelles, la culture contemporaine et les expériences numériques porteuses de sens.",
+      aboutBrand: "CEE YA. — MAROC",
 
-      exploreTitle: "Des idées sans<br>frontières<span>.</span>",
+      exploreLabel: "02 / EXPLORATIONS",
+      exploreDirections: "TROIS DIRECTIONS",
+      explorePerspective: "NOTRE VISION",
+      exploreTitle: "Des idées à<br>découvrir<span>.</span>",
 
       creativity: "Créativité",
-      creativityCopy: "Explorer des idées originales et transformer l’imagination en expériences significatives.",
+      creativityCopy: "Des idées qui remettent en question l’ordinaire et inspirent de nouvelles perspectives.",
 
       innovation: "Innovation",
-      innovationCopy: "Voir au-delà des attentes et découvrir de nouvelles façons d’avancer.",
+      innovationCopy: "Explorer les possibilités numériques et les idées qui façonnent demain.",
 
       discovery: "Découverte",
-      discoveryCopy: "Rester curieux, explorer différentes perspectives et trouver l’inspiration partout.",
+      discoveryCopy: "Trouver l’inspiration dans les lieux inattendus et les détails du quotidien.",
 
-      manifestoTitle: 'Au-delà de l’ordinaire.<br>Au-delà des attentes.<br><em>Toujours explorer.</em>',
+      manifestoEyebrow: "LA VISION CEE YA.",
+      manifestoTitle: "Nous ne sommes pas ici pour suivre.<br><em>Nous sommes ici pour découvrir.</em>",
 
+      contactLabel: "03 / CONTACT",
+      contactConnect: "RESTONS EN CONTACT",
       contactEyebrow: "UNE IDÉE EN TÊTE ?",
-      contactTitle: "Créons<br>quelque chose de différent<span>.</span>"
+      contactTitle: "Commençons<br><em>une conversation.</em>",
+      contactTalk: "PARLONS-EN",
+
+      backToTop: "RETOUR EN HAUT ↑",
+      copyright: "© 2026 CEE YA. TOUS DROITS RÉSERVÉS.",
+      footerLocation: "CRÉÉ AU MAROC.",
+
+      pageTitle: "CEE YA. — Au-delà de l’ordinaire",
+      pageDescription: "CEE YA. est un espace créatif indépendant marocain qui explore les nouvelles idées, la culture contemporaine et les expériences numériques porteuses de sens.",
+
+      menuOpen: "Ouvrir le menu de navigation",
+      menuClose: "Fermer le menu de navigation"
     },
 
 
@@ -81,41 +120,65 @@ document.addEventListener("DOMContentLoaded", () => {
       navHome: "الرئيسية",
       navAbout: "من نحن",
       navExplore: "اكتشف",
-      navContact: "اتصل بنا",
+      navContact: "تواصل معنا",
 
       heroEyebrow: "استوديو إبداعي رقمي مستقل",
-      heroTitle: 'فكّر خارج<br>المألوف<span>.</span>',
-      heroDescription: "رؤية جديدة للإبداع والابتكار والعالم الرقمي.",
+      heroTitle: "فكّر أبعد<br>من المألوف<span>.</span>",
+      heroDescription: "رؤية جديدة للإبداع والأفكار والعالم الرقمي. نصنع باهتمام، ونصمّم لنُلهم.",
       heroButton: "اكتشف CEE YA",
-      scrollText: "مرّر لاكتشاف المزيد ↓",
+      scrollText: "اكتشف المزيد ↓",
 
-      aboutSub: "وجهة نظر مختلفة",
-      aboutTitle: "أكثر من<br>مجرد فضاء رقمي<span>.</span>",
-      aboutCopy: "CEE YA. استوديو إبداعي رقمي مغربي مستقل. فضاء يجمع الأفكار والفضول والرغبة في اكتشاف إمكانيات جديدة.",
+      aboutLabel: "01 / من نحن",
+      aboutSub: "رؤية مختلفة",
+      aboutTitle: "أكثر من<br>مجرد مساحة رقمية<span>.</span>",
+      aboutCopy: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار الجديدة والثقافة الحديثة والتجارب الرقمية الهادفة.",
+      aboutBrand: "CEE YA. — المغرب",
 
-      exploreTitle: "أفكار بلا<br>حدود<span>.</span>",
+      exploreLabel: "02 / استكشافات",
+      exploreDirections: "ثلاثة اتجاهات",
+      explorePerspective: "رؤيتنا",
+      exploreTitle: "أفكار تستحق<br>الاكتشاف<span>.</span>",
 
       creativity: "الإبداع",
-      creativityCopy: "اكتشاف أفكار أصلية وتحويل الخيال إلى تجارب ذات معنى.",
+      creativityCopy: "أفكار تتحدى المألوف وتلهم وجهات نظر جديدة.",
 
       innovation: "الابتكار",
-      innovationCopy: "تجاوز المتوقع واكتشاف طرق جديدة للتقدم.",
+      innovationCopy: "استكشاف الإمكانيات الرقمية والأفكار التي تصنع المستقبل.",
 
       discovery: "الاكتشاف",
-      discoveryCopy: "الحفاظ على الفضول واستكشاف وجهات نظر مختلفة والعثور على الإلهام في كل مكان.",
+      discoveryCopy: "العثور على الإلهام في الأماكن غير المتوقعة والتفاصيل اليومية.",
 
-      manifestoTitle: 'ما وراء المألوف.<br>ما وراء المتوقع.<br><em>دائماً نكتشف.</em>',
+      manifestoEyebrow: "رؤية CEE YA.",
+      manifestoTitle: "لسنا هنا لنتبع.<br><em>بل هنا لنكتشف.</em>",
 
+      contactLabel: "03 / التواصل",
+      contactConnect: "لنبقَ على تواصل",
       contactEyebrow: "هل لديك فكرة؟",
-      contactTitle: "لنصنع<br>شيئاً مختلفاً<span>.</span>"
+      contactTitle: "لنبدأ<br><em>حواراً.</em>",
+      contactTalk: "لنتحدث",
+
+      backToTop: "العودة إلى الأعلى ↑",
+      copyright: "© 2026 CEE YA. جميع الحقوق محفوظة.",
+      footerLocation: "صُنع في المغرب.",
+
+      pageTitle: "CEE YA. — ما وراء المألوف",
+      pageDescription: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار الجديدة والثقافة الحديثة والتجارب الرقمية الهادفة.",
+
+      menuOpen: "فتح قائمة التنقل",
+      menuClose: "إغلاق قائمة التنقل"
     }
 
   };
 
 
-  /* ---------- 02. LANGUAGE SYSTEM ---------- */
+  /* 02 — ELEMENTS */
 
   const languageButtons = document.querySelectorAll(".lang");
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+
+  /* 03 — LANGUAGE SYSTEM */
 
   function setLanguage(language) {
 
@@ -123,40 +186,63 @@ document.addEventListener("DOMContentLoaded", () => {
       language = "en";
     }
 
-    const selectedTranslations = translations[language];
+    const content = translations[language];
+    const isArabic = language === "ar";
 
     document.documentElement.lang = language;
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
 
-    document.documentElement.dir =
-      language === "ar" ? "rtl" : "ltr";
+    document.body.classList.toggle("arabic", isArabic);
 
-    document.body.classList.toggle(
-      "arabic",
-      language === "ar"
-    );
+    /* Translate all marked elements */
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
       const key = element.dataset.i18n;
 
-      if (Object.prototype.hasOwnProperty.call(selectedTranslations, key)) {
-        element.innerHTML = selectedTranslations[key];
+      if (Object.prototype.hasOwnProperty.call(content, key)) {
+        element.innerHTML = content[key];
       }
 
     });
 
+    /* Update page title */
+
+    document.title = content.pageTitle;
+
+    /* Update SEO description */
+
+    const description = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (description) {
+      description.setAttribute("content", content.pageDescription);
+    }
+
+    /* Update language buttons */
+
     languageButtons.forEach(button => {
 
-      const isActive = button.dataset.lang === language;
+      const active = button.dataset.lang === language;
 
-      button.classList.toggle("active", isActive);
-
-      button.setAttribute(
-        "aria-pressed",
-        String(isActive)
-      );
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
 
     });
+
+    /* Update menu accessibility */
+
+    if (menuToggle) {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? content.menuClose : content.menuOpen
+      );
+    }
+
+    /* Save preference */
 
     try {
       localStorage.setItem("ceeya-language", language);
@@ -170,18 +256,13 @@ document.addEventListener("DOMContentLoaded", () => {
   languageButtons.forEach(button => {
 
     button.addEventListener("click", () => {
-
       setLanguage(button.dataset.lang);
-
     });
 
   });
 
 
-  /* ---------- 03. MOBILE MENU ---------- */
-
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
+  /* 04 — MOBILE MENU */
 
   function closeMenu() {
 
@@ -191,7 +272,13 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.remove("active");
 
     menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    const language = document.documentElement.lang || "en";
+
+    menuToggle.setAttribute(
+      "aria-label",
+      translations[language].menuOpen
+    );
 
   }
 
@@ -209,9 +296,13 @@ document.addEventListener("DOMContentLoaded", () => {
       String(isOpen)
     );
 
+    const language = document.documentElement.lang || "en";
+
     menuToggle.setAttribute(
       "aria-label",
-      isOpen ? "Close navigation menu" : "Open navigation menu"
+      isOpen
+        ? translations[language].menuClose
+        : translations[language].menuOpen
     );
 
   }
@@ -222,89 +313,67 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", toggleMenu);
 
     mobileMenu.querySelectorAll("a").forEach(link => {
-
       link.addEventListener("click", closeMenu);
-
     });
 
     document.addEventListener("keydown", event => {
-
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-
+      if (event.key === "Escape") closeMenu();
     });
 
     window.addEventListener("resize", () => {
-
-      if (window.innerWidth > 900) {
-        closeMenu();
-      }
-
+      if (window.innerWidth > 900) closeMenu();
     });
 
   }
 
 
-  /* ---------- 04. REVEAL ANIMATIONS ---------- */
+  /* 05 — REVEAL ANIMATIONS */
 
   const revealElements = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
 
-    const observer = new IntersectionObserver(
-      (entries, currentObserver) => {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
 
-        entries.forEach(entry => {
+      entries.forEach(entry => {
 
-          if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
 
-            entry.target.classList.add("visible");
+          entry.target.classList.add("visible");
+          currentObserver.unobserve(entry.target);
 
-            currentObserver.unobserve(entry.target);
+        }
 
-          }
+      });
 
-        });
-
-      },
-      {
-        threshold: 0.12
-      }
-    );
+    }, {
+      threshold: 0.12
+    });
 
     revealElements.forEach(element => {
-
       observer.observe(element);
-
     });
 
   } else {
 
     revealElements.forEach(element => {
-
       element.classList.add("visible");
-
     });
 
   }
 
 
-  /* ---------- 05. FOOTER YEAR ---------- */
-
-  const footerYear = document.querySelector(".footer-year");
-
-  if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
-  }
-
-
-  /* ---------- 06. RESTORE LANGUAGE ---------- */
+  /* 06 — RESTORE SAVED LANGUAGE */
 
   let savedLanguage = "en";
 
   try {
-    savedLanguage = localStorage.getItem("ceeya-language") || "en";
+    const saved = localStorage.getItem("ceeya-language");
+
+    if (saved && translations[saved]) {
+      savedLanguage = saved;
+    }
+
   } catch (error) {
     console.warn("Saved language could not be loaded.");
   }
@@ -312,22 +381,20 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage(savedLanguage);
 
 
-  /* ---------- 07. LOADER ---------- */
+  /* 07 — LOADER */
 
-  window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
 
-    const loader = document.getElementById("loader");
+  if (loader) {
 
-    if (loader) {
+    window.addEventListener("load", () => {
 
       setTimeout(() => {
-
         loader.style.display = "none";
+      }, 1000);
 
-      }, 1300);
+    });
 
-    }
-
-  });
+  }
 
 });
