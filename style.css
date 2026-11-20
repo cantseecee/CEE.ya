@@ -1355,3 +1355,82 @@ a:focus-visible {
         text-align: center;
     }
 }
+/* CEEYA — MOBILE RESPONSIVE POLISH */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 16px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation {
+        gap: 14px;
+    }
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .header-cta {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 11vw, 68px);
+        line-height: 0.98;
+    }
+
+    .hero-orb {
+        opacity: 0.55;
+        transform: scale(0.75);
+    }
+
+    .section-label {
+        font-size: 10px;
+    }
+
+    .explorations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exploration-card {
+        min-height: 280px;
+    }
+
+    .footer {
+        padding: 55px 6% 25px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .header {
+        gap: 8px;
+    }
+
+    .navigation {
+        gap: 9px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .header-cta {
+        padding: 9px 10px;
+        font-size: 8px;
+    }
+
+}
