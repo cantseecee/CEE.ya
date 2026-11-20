@@ -1231,3 +1231,71 @@ a {
     }
 }
 
+/* NAVIGATION POLISH */
+
+.navigation a {
+    position: relative;
+    padding: 8px 0;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+    width: 100%;
+}
+
+.navigation a.active {
+    color: var(--gold-light);
+}
+
+
+/* SECTION REVEAL POLISH */
+
+.reveal {
+    will-change: opacity, transform;
+}
+
+.section-label {
+    transition: color 0.3s ease;
+}
+
+.section-label:hover {
+    color: var(--gold-light);
+}
+
+
+/* BUTTON FOCUS */
+
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 5px;
+}
+
+
+/* SMOOTH VISUAL FINISH */
+
+::selection {
+    background: var(--gold);
+    color: var(--black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navigation a::after {
+        transition: none;
+    }
+
+    .reveal {
+        will-change: auto;
+    }
+}
+ 
