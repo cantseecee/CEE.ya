@@ -23,12 +23,6 @@
       innovationCopy: "Exploring digital possibilities and the ideas shaping tomorrow.",
       discovery: "Discovery",
       discoveryCopy: "Finding inspiration in unexpected places and everyday details.",
-      salmatyIntro: "An expression of everyday style. A feminine perspective shaped by detail, character and individuality.",
-      bags: "Bags",
-      jewelry: "Jewelry",
-      caps: "Caps",
-      wallets: "Wallets",
-      comingSoon: "Coming soon",
       manifestoTitle: 'Not here to follow.<br><em>Here to discover.</em>',
       contactEyebrow: "HAVE SOMETHING IN MIND?",
       contactTitle: 'Let’s start<br><em>a conversation.</em>'
@@ -45,21 +39,15 @@
       heroButton: "DÉCOUVRIR CEE YA",
       scrollText: "DÉFILER POUR DÉCOUVRIR ↓",
       aboutTitle: "Bien plus qu’un espace numérique.",
-      aboutCopy: "CEE YA. est un espace créatif indépendant marocain qui explore les nouvelles idées, la culture moderne et les expériences numériques.",
-      aboutSub: "Nous croyons en l’observation, la réflexion différente et la création avec intention. Chaque détail a sa raison.",
+      aboutCopy: "CEE YA. est un espace créatif indépendant marocain qui explore les nouvelles idées, la culture moderne et les expériences numériques porteuses de sens.",
+      aboutSub: "Nous croyons en l'observation, la réflexion différente et la création avec intention. Chaque détail a sa raison.",
       exploreTitle: "Des idées à explorer.",
       creativity: "Créativité",
-      creativityCopy: "Des idées qui remettent en question l’habituel et inspirent de nouvelles perspectives.",
+      creativityCopy: "Des idées qui remettent en question l'habituel et inspirent de nouvelles perspectives.",
       innovation: "Innovation",
       innovationCopy: "Explorer les possibilités numériques et les idées qui façonnent demain.",
       discovery: "Découverte",
-      discoveryCopy: "Trouver l’inspiration dans les endroits inattendus et les détails du quotidien.",
-      salmatyIntro: "Une expression du style quotidien. Une perspective féminine façonnée par le détail, le caractère et l’individualité.",
-      bags: "Sacs",
-      jewelry: "Bijoux",
-      caps: "Casquettes",
-      wallets: "Portefeuilles",
-      comingSoon: "Bientôt disponible",
+      discoveryCopy: "Trouver l'inspiration dans les endroits inattendus et les détails du quotidien.",
       manifestoTitle: 'Pas ici pour suivre.<br><em>Ici pour découvrir.</em>',
       contactEyebrow: "UNE IDÉE EN TÊTE ?",
       contactTitle: 'Commençons<br><em>une conversation.</em>'
@@ -85,93 +73,81 @@
       innovationCopy: "استكشاف الإمكانيات الرقمية والأفكار التي تصنع المستقبل.",
       discovery: "الاكتشاف",
       discoveryCopy: "العثور على الإلهام في الأماكن غير المتوقعة والتفاصيل اليومية.",
-      salmatyIntro: "تعبير عن الأسلوب اليومي. رؤية أنثوية تصنعها التفاصيل والشخصية والتفرّد.",
-      bags: "حقائب",
-      jewelry: "مجوهرات",
-      caps: "قبعات",
-      wallets: "محافظ",
-      comingSoon: "قريباً",
       manifestoTitle: 'لسنا هنا لنتبع.<br><em>بل هنا لنكتشف.</em>',
       contactEyebrow: "هل لديك فكرة؟",
       contactTitle: 'لنبدأ<br><em>حواراً.</em>'
     }
   };
 
-  const languageButtons = document.querySelectorAll(".lang");
-  const menuToggle = document.getElementById("menuToggle");
+  const buttons = document.querySelectorAll(".lang");
+  const menuButton = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
-  function setLanguage(language) {
-    const dictionary = translations[language];
-
+  function setLanguage(lang) {
+    const dictionary = translations[lang];
     if (!dictionary) return;
 
-    document.documentElement.lang = language;
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-    document.body.dir = language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.body.dir = lang === "ar" ? "rtl" : "ltr";
+    document.body.classList.toggle("arabic", lang === "ar");
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
-      const key = element.dataset.i18n;
-
-      if (dictionary[key] !== undefined) {
+      const key = element.getAttribute("data-i18n");
+      if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
         element.innerHTML = dictionary[key];
       }
     });
 
-    languageButtons.forEach(button => {
-      const selected = button.dataset.lang === language;
-
-      button.classList.toggle("active", selected);
-      button.setAttribute("aria-pressed", String(selected));
+    buttons.forEach(button => {
+      const active = button.dataset.lang === lang;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
     });
 
     try {
-      localStorage.setItem("ceeya-language", language);
-    } catch (error) {
-      // Language selection still works if storage is unavailable.
-    }
+      localStorage.setItem("ceeya-language", lang);
+    } catch (_) {}
   }
 
-  languageButtons.forEach(button => {
+  buttons.forEach(button => {
     button.addEventListener("click", () => {
       setLanguage(button.dataset.lang);
     });
   });
 
-  let savedLanguage = "en";
-
+  let initialLanguage = "en";
   try {
-    savedLanguage = localStorage.getItem("ceeya-language") || "en";
-  } catch (error) {
-    savedLanguage = "en";
-  }
+    initialLanguage = localStorage.getItem("ceeya-language") || "en";
+  } catch (_) {}
 
-  setLanguage(translations[savedLanguage] ? savedLanguage : "en");
+  setLanguage(translations[initialLanguage] ? initialLanguage : "en");
 
-  // MOBILE MENU
+  // MOBILE NAVIGATION
 
   function closeMenu() {
-    if (!menuToggle || !mobileMenu) return;
+    if (!menuButton || !mobileMenu) return;
 
     mobileMenu.classList.remove("open");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open menu");
+    menuButton.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open menu");
     document.body.classList.remove("menu-open");
   }
 
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.toggle("open");
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener("click", () => {
+      const open = !mobileMenu.classList.contains("open");
 
-      menuToggle.classList.toggle("open", isOpen);
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
+      mobileMenu.classList.toggle("open", open);
+      menuButton.classList.toggle("open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute(
         "aria-label",
-        isOpen ? "Close menu" : "Open menu"
+        open ? "Close menu" : "Open menu"
       );
 
-      document.body.classList.toggle("menu-open", isOpen);
+      document.body.classList.toggle("menu-open", open);
     });
 
     mobileMenu.querySelectorAll("a").forEach(link => {
@@ -183,19 +159,15 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 700) closeMenu();
+      if (window.innerWidth > 900) closeMenu();
     });
   }
 
-  // SCROLL REVEAL
+  // SCROLL ANIMATIONS
 
   const revealElements = document.querySelectorAll(
-    ".section-label, .intro-grid, .explore-card, .salmaty-heading, .salmaty-card, .manifesto h2, .contact-content"
+    ".section-label, .intro-grid, .explore-card, .manifesto h2, .contact-content"
   );
-
-  revealElements.forEach(element => {
-    element.classList.add("reveal");
-  });
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(entries => {
@@ -205,26 +177,16 @@
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.12
-    });
+    }, { threshold: 0.12 });
 
-    revealElements.forEach(element => observer.observe(element));
+    revealElements.forEach(element => {
+      element.classList.add("reveal");
+      observer.observe(element);
+    });
   } else {
     revealElements.forEach(element => {
       element.classList.add("visible");
     });
-  }
-
-  // FOOTER YEAR
-
-  const footerYear = document.querySelector(".footer > span");
-
-  if (footerYear) {
-    footerYear.textContent = footerYear.textContent.replace(
-      "2026",
-      new Date().getFullYear()
-    );
   }
 
 })();
