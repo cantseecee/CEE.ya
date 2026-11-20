@@ -1127,3 +1127,15 @@ button:focus-visible {
         transform: none;
     }
 }
+/* LOADER SAFETY FIX */
+#loader {
+    animation: forceHideLoader 0s 5s forwards;
+}
+
+@keyframes forceHideLoader {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
