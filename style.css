@@ -1298,4 +1298,60 @@ a:focus-visible {
         will-change: auto;
     }
 }
- 
+ /* CEEYA — PREMIUM FOOTER */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(201, 169, 110, 0.08),
+            transparent 65%
+        ),
+        #080808;
+}
+
+.footer-logo {
+    color: var(--white);
+    letter-spacing: 0.12em;
+    transition: color 0.4s ease;
+}
+
+.footer-logo:hover {
+    color: var(--gold-light);
+}
+
+.footer-tagline {
+    color: var(--gray);
+    letter-spacing: 0.18em;
+}
+
+.footer a {
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #777;
+}
+
+.footer-bottom span {
+    transition: color 0.3s ease;
+}
+
+.footer-bottom span:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 650px) {
+    .footer {
+        text-align: center;
+    }
+}
