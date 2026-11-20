@@ -1599,3 +1599,178 @@ button {
 /* =====================================================
    END — CEE YA. VERSION 18
 ===================================================== */
+
+/* =====================================================
+   CEE YA. — VERSION 19
+   COLLECTION VISUAL UPGRADE
+   PART 1/2
+===================================================== */
+
+/* COLLECTION ATMOSPHERE */
+
+.collection {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.collection::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: -180px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(201, 169, 110, 0.075),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.collection-intro {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.collection-intro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* PRODUCT CARDS */
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    #171613,
+    #0e0e0d 75%
+  );
+  border: 1px solid rgba(201, 169, 110, 0.13);
+  transition:
+    transform 0.6s cubic-bezier(.2,.7,.2,1),
+    border-color 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(201, 169, 110, 0.48);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.28);
+}
+
+/* VISUAL AREA */
+
+.product-visual {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(201, 169, 110, 0.13),
+      transparent 58%
+    ),
+    linear-gradient(145deg, #1c1a16, #111110);
+  transition: background 0.6s ease;
+}
+
+.product-visual::before {
+  width: 235px;
+  height: 235px;
+  border-color: rgba(201, 169, 110, 0.19);
+  transition:
+    transform 0.9s ease,
+    border-color 0.6s ease;
+}
+
+.product-visual::after {
+  width: 185px;
+  height: 185px;
+  border-color: rgba(201, 169, 110, 0.11);
+  transition: transform 0.9s ease;
+}
+
+.product-card:hover .product-visual::before {
+  transform: scale(1.08);
+  border-color: rgba(201, 169, 110, 0.38);
+}
+
+.product-card:hover .product-visual::after {
+  transform: scale(0.92);
+}
+
+/* SMALL EDITORIAL LABELS */
+
+.visual-label {
+  top: 25px;
+  left: 25px;
+  color: rgba(243, 239, 231, 0.72);
+  letter-spacing: 2.5px;
+}
+
+.visual-category {
+  right: 25px;
+  bottom: 24px;
+  letter-spacing: 2.5px;
+}
+
+/* PRODUCT DETAILS */
+
+.product-info {
+  position: relative;
+  padding: 30px 26px 32px;
+}
+
+.product-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 26px;
+  width: 30px;
+  height: 1px;
+  background: rgba(201, 169, 110, 0.65);
+}
+
+.product-type {
+  margin-bottom: 15px;
+  font-size: 8px;
+  letter-spacing: 2.8px;
+}
+
+.product-info h3 {
+  font-size: 32px;
+  letter-spacing: -0.5px;
+}
+
+.product-description {
+  max-width: 260px;
+  line-height: 2;
+}
+
+.product-status {
+  margin-top: 24px;
+  letter-spacing: 2.5px;
+}
+
+/* COLLECTION NOTE */
+
+.collection-note {
+  max-width: 550px;
+  margin: 42px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  line-height: 2;
+}
+
