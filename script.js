@@ -1,53 +1,84 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // UPDATE FOOTER YEAR
+    // 01 — LOADER
+    const loader = document.getElementById("loader");
+
+    function hideLoader() {
+        if (loader) {
+            loader.classList.add("hidden");
+        }
+    }
+
+    window.addEventListener("load", hideLoader);
+
+    // Fallback if the page takes too long to load
+    setTimeout(hideLoader, 2500);
+
+
+    // 02 — FOOTER YEAR
     const yearElement = document.getElementById("year");
+
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-    // SCROLL REVEAL
-    const revealSelectors = [
-        ".hero-content",
-        ".hero-index",
-        ".section-label",
-        ".about-layout",
-        ".vision-visual",
-        ".explorations-heading",
-        ".exploration-card",
-        ".explorations-note",
-        ".contact-content"
-    ];
 
-    const revealElements = document.querySelectorAll(
-        revealSelectors.join(", ")
-    );
+    // 03 — MOBILE MENU
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    if ("IntersectionObserver" in window) {
-        const revealObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
+    function closeMenu() {
+        if (!menuToggle || !mobileMenu) return;
 
-        revealElements.forEach(function (element) {
-            element.classList.add("reveal");
-            revealObserver.observe(element);
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("open");
+        document.body.classList.remove("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+    }
+
+    if (menuToggle && mobileMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = mobileMenu.classList.toggle("open");
+
+            menuToggle.classList.toggle("active", isOpen);
+            document.body.classList.toggle("menu-open", isOpen);
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
+
         });
-    } else {
-        revealElements.forEach(function (element) {
-            element.classList.add("visible");
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 650) {
+                closeMenu();
+            }
         });
     }
 
-    // SMOOTH SCROLL
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-    anchorLinks.forEach(function (link) {
+    // 04 — SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
         link.addEventListener("click", function (event) {
+
             const targetId = link.getAttribute("href");
 
             if (!targetId || targetId === "#") return;
@@ -61,51 +92,76 @@ document.addEventListener("DOMContentLoaded", function () {
                     behavior: "smooth",
                     block: "start"
                 });
+
+                history.replaceState(null, "", targetId);
             }
+
         });
+
     });
 
-    // HEADER SCROLL EFFECT
-    const header = document.querySelector(".header");
 
-    function updateHeader() {
-        if (!header) return;
+    // 05 — SCROLL REVEAL
+    const revealSelectors = [
+        ".about-content",
+        ".vision-content",
+        ".explorations-heading",
+        ".exploration-card",
+        ".collection-heading",
+        ".product-card",
+        ".contact-content",
+        ".section-top"
+    ];
 
-        if (window.scrollY > 40) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    }
-
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
-
-    updateHeader();
-
-    // ACTIVE NAVIGATION
-    const navLinks = document.querySelectorAll(
-        ".navigation a[href^='#']"
+    const revealElements = document.querySelectorAll(
+        revealSelectors.join(", ")
     );
 
-    const sections = document.querySelectorAll(
-        "section[id]"
-    );
+    if ("IntersectionObserver" in window) {
 
-    function setActiveLink(sectionId) {
-        navLinks.forEach(function (link) {
-            const isActive =
-                link.getAttribute("href") === "#" + sectionId;
+        const revealObserver = new IntersectionObserver(
+            function (entries, observer) {
 
-            link.classList.toggle("active", isActive);
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -35px 0px"
+            }
+        );
+
+        revealElements.forEach(function (element, index) {
+
+            element.classList.add("reveal");
+
+            element.style.transitionDelay =
+                (index % 3) * 100 + "ms";
+
+            revealObserver.observe(element);
+
         });
+
     }
 
-    if ("IntersectionObserver" in window && navLinks.length) {
-        const sectionObserver = new IntersectionObserver(
+
+    // 06 — ACTIVE SECTION TRACKING
+    const sections = document.querySelectorAll("main section[id]");
+
+    const sectionObserver = "IntersectionObserver" in window
+        ? new IntersectionObserver(
             function (entries) {
-                const visibleSections = entries
+
+                const visible = entries
                     .filter(function (entry) {
                         return entry.isIntersecting;
                     })
@@ -113,32 +169,31 @@ document.addEventListener("DOMContentLoaded", function () {
                         return b.intersectionRatio - a.intersectionRatio;
                     });
 
-                if (visibleSections.length) {
-                    setActiveLink(visibleSections[0].target.id);
+                if (visible.length) {
+                    document.body.dataset.activeSection =
+                        visible[0].target.id;
                 }
+
             },
             {
-                rootMargin: "-25% 0px -60% 0px",
-                threshold: [0, 0.1, 0.25, 0.5]
+                rootMargin: "-30% 0px -55% 0px",
+                threshold: [0, 0.15, 0.35, 0.6]
             }
-        );
+        )
+        : null;
 
+    if (sectionObserver) {
         sections.forEach(function (section) {
             sectionObserver.observe(section);
         });
     }
 
-    // EXPLORATION CARDS
-    const cards = document.querySelectorAll(".exploration-card");
 
-    cards.forEach(function (card, index) {
-        card.style.transitionDelay = (index * 100) + "ms";
-    });
-
-    // MARQUEE PAUSE
+    // 07 — MARQUEE PAUSE
     const marquee = document.querySelector(".marquee-track");
 
     if (marquee) {
+
         marquee.addEventListener("mouseenter", function () {
             marquee.style.animationPlayState = "paused";
         });
@@ -148,11 +203,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         document.addEventListener("visibilitychange", function () {
+
             marquee.style.animationPlayState =
                 document.hidden ? "paused" : "running";
+
         });
+
     }
 
-    console.log("CEEYA — Digital experience initialized.");
+
+    // 08 — HEADER / SCROLL STATE
+    function updateScrollState() {
+
+        document.body.classList.toggle(
+            "is-scrolled",
+            window.scrollY > 40
+        );
+
+    }
+
+    window.addEventListener("scroll", updateScrollState, {
+        passive: true
+    });
+
+    updateScrollState();
+
+
+    // 09 — INITIALIZE
+    console.log("CEE YA. — Obsidian Luxury initialized.");
 
 });
