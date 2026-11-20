@@ -909,3 +909,49 @@ a {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* SCROLL REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* STAGGERED CARD REVEAL */
+
+.exploration-card.reveal {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        border-color 0.4s ease;
+}
+
+.exploration-card.reveal.visible {
+    transform: translateY(0);
+}
+
+/* SCROLLED HEADER */
+
+.header.scrolled {
+    background: rgba(8, 8, 8, 0.97);
+    border-bottom-color: rgba(201, 169, 110, 0.25);
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
