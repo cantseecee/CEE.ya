@@ -1932,4 +1932,201 @@ button {
 
 /* END VERSION 19 */
 
+/* =====================================================
+   CEE YA. — VERSION 20
+   HERO EDITORIAL REFINEMENT
+===================================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+  background:
+    radial-gradient(
+      ellipse at 78% 45%,
+      rgba(201, 169, 110, 0.09),
+      transparent 38%
+    ),
+    linear-gradient(
+      115deg,
+      #090909 20%,
+      #10100e 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 150px 8% 120px;
+}
+
+.hero-topline,
+.hero-bottomline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: rgba(243, 239, 231, 0.5);
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.hero-topline {
+  margin-bottom: 85px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.hero .eyebrow {
+  margin-bottom: 25px;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 3.5px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin-bottom: 30px;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(65px, 10vw, 125px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+
+.hero-description {
+  max-width: 420px;
+  margin-bottom: 38px;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.hero-bottomline {
+  max-width: 100%;
+  margin-top: 100px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.hero-decoration {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  border-radius: 50%;
+}
+
+.hero-decoration-one {
+  top: 20%;
+  right: -140px;
+  width: 480px;
+  height: 480px;
+}
+
+.hero-decoration-two {
+  top: 26%;
+  right: -85px;
+  width: 370px;
+  height: 370px;
+  border-color: rgba(201, 169, 110, 0.09);
+}
+
+.hero-index {
+  display: none;
+}
+
+.scroll-indicator {
+  z-index: 3;
+  bottom: 35px;
+  color: rgba(243, 239, 231, 0.55);
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    padding: 135px 7% 110px;
+  }
+
+  .hero-topline {
+    margin-bottom: 75px;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 12vw, 82px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    max-width: 340px;
+    font-size: 12px;
+  }
+
+  .hero-bottomline {
+    margin-top: 75px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .hero-decoration-one {
+    top: 28%;
+    right: -260px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .hero-decoration-two {
+    top: 33%;
+    right: -220px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .scroll-indicator {
+    bottom: 22px;
+    font-size: 7px;
+  }
+
+}
+
+/* RTL */
+
+[dir="rtl"] .hero-topline,
+[dir="rtl"] .hero-bottomline {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-decoration-one,
+[dir="rtl"] .hero-decoration-two {
+  right: auto;
+  left: -140px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .hero-decoration-one {
+    left: -260px;
+  }
+
+  [dir="rtl"] .hero-decoration-two {
+    left: -220px;
+  }
+}
+
+/* END VERSION 20 */
+
+
 
