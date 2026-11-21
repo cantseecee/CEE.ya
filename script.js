@@ -1,6 +1,6 @@
 /* =====================================================
    CEE YA. — MASTER INTERACTION
-   VERSION 20
+   VERSION 21
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
 
@@ -99,15 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
       identitySub: "THE CEE YA. SYSTEM",
       identityTitle: "A quiet,<br>warm signature.",
       logoTitle: "LOGO",
-      logoCopy: "A serif wordmark with a gold full stop. The monogram is used on small formats.",
+      logoCopy: "A serif wordmark with a gold full stop. The CY. monogram is used on small formats and social media.",
       paletteTitle: "COLOURS",
-      paletteCopy: "Noir leads. Gold and Blush are accents, used with restraint.",
+      paletteCopy: "Black leads. Gold is the accent, Ivory carries the text, Muted supports.",
       typeTitle: "TYPOGRAPHY",
-      typeCopy: "Cormorant Garamond for headlines, Manrope for details. Amiri and Cairo for Arabic.",
-      voiceTitle: "VOICE",
-      voiceOne: "Quiet.",
-      voiceTwo: "Considered.",
-      voiceThree: "Moroccan.",
+      typeCopy: "Amiri and Cairo are used for Arabic.",
+      signatureTitle: "SIGNATURE",
+      signatureCopy: "A handwritten mark for packaging and thank-you cards.",
 
       orderLabel: "05 / HOW TO ORDER",
       orderSub: "SIMPLE AND SAFE",
@@ -214,15 +212,13 @@ document.addEventListener("DOMContentLoaded", () => {
       identitySub: "LE SYSTÈME CEE YA.",
       identityTitle: "Une signature<br>discrète et chaleureuse.",
       logoTitle: "LOGO",
-      logoCopy: "Un logotype serif avec un point doré. Le monogramme sert pour les petits formats.",
+      logoCopy: "Un logotype serif avec un point doré. Le monogramme CY. sert pour les petits formats et les réseaux sociaux.",
       paletteTitle: "COULEURS",
-      paletteCopy: "Le noir domine. L'or et le rose poudré sont des accents, utilisés avec retenue.",
+      paletteCopy: "Le noir domine. L'or est l'accent, l'ivoire porte le texte, le gris soutient.",
       typeTitle: "TYPOGRAPHIE",
-      typeCopy: "Cormorant Garamond pour les titres, Manrope pour les détails. Amiri et Cairo pour l'arabe.",
-      voiceTitle: "TON",
-      voiceOne: "Discrète.",
-      voiceTwo: "Réfléchie.",
-      voiceThree: "Marocaine.",
+      typeCopy: "Amiri et Cairo sont utilisées pour l'arabe.",
+      signatureTitle: "SIGNATURE",
+      signatureCopy: "Une marque manuscrite pour les emballages et les cartes de remerciement.",
 
       orderLabel: "05 / COMMENT COMMANDER",
       orderSub: "SIMPLE ET SÛR",
@@ -329,15 +325,13 @@ document.addEventListener("DOMContentLoaded", () => {
       identitySub: "هوية CEE YA.",
       identityTitle: "توقيع هادئ<br>ودافئ.",
       logoTitle: "الشعار",
-      logoCopy: "كتابة بخط سيريف مع نقطة ذهبية. يُستخدم الرمز المختصر في المساحات الصغيرة.",
+      logoCopy: "كتابة بخط سيريف مع نقطة ذهبية. يُستخدم الرمز المختصر CY. في المساحات الصغيرة ووسائل التواصل.",
       paletteTitle: "الألوان",
-      paletteCopy: "الأسود هو الأساس. الذهبي والوردي لمسات تُستخدم باعتدال.",
+      paletteCopy: "الأسود هو الأساس. الذهبي لمسة التميّز، والعاجي للنص، والرمادي للدعم.",
       typeTitle: "الخطوط",
-      typeCopy: "Cormorant Garamond للعناوين، وManrope للتفاصيل. وAmiri وCairo للعربية.",
-      voiceTitle: "الأسلوب",
-      voiceOne: "هادئة.",
-      voiceTwo: "مدروسة.",
-      voiceThree: "مغربية.",
+      typeCopy: "يُستخدم خطا Amiri وCairo للعربية.",
+      signatureTitle: "التوقيع",
+      signatureCopy: "علامة بخط اليد للتغليف وبطاقات الشكر.",
 
       orderLabel: "05 / كيف تطلب",
       orderSub: "بسيط وآمن",

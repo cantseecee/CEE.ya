@@ -1,6 +1,6 @@
 /* =====================================================
    CEE YA. — MASTER BRAND EXPERIENCE
-   VERSION 28
+   VERSION 29
    DARK LUXURY / EDITORIAL / RESPONSIVE
 ===================================================== */
 
@@ -15,18 +15,16 @@
   --gold: #c9a96e;
   --gold-light: #e5d0a6;
 
-  --ivory: #f3efe7;
-  --muted: #a19d95;
-  --muted-dark: #8a867d;
+  --ivory: #f5f2eb;
+  --muted: #888888;
+  --muted-dark: #7a7a7a;
 
   --line: rgba(243, 239, 231, 0.13);
   --line-gold: rgba(201, 169, 110, 0.35);
 
-  --blush: #b98f91;
-  --blush-light: #e3bcbe;
-
-  --serif: "Cormorant Garamond", "Amiri", Georgia, serif;
-  --sans: "Manrope", "Cairo", Arial, sans-serif;
+  --serif: "Playfair Display", "Amiri", Georgia, serif;
+  --sans: "Montserrat", "Cairo", Arial, sans-serif;
+  --label: "Space Grotesk", "Cairo", Arial, sans-serif;
 
   --container: 1440px;
   --side-space: clamp(22px, 7vw, 110px);
@@ -161,7 +159,7 @@ svg {
 .loader-mark {
   font-family: var(--serif);
   font-size: 34px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   color: var(--ivory);
 }
 
@@ -188,9 +186,9 @@ svg {
 .wordmark,
 .footer-wordmark {
   font-family: var(--serif);
-  font-size: 29px;
+  font-size: 27px;
   font-weight: 500;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.05em;
   color: var(--ivory);
   white-space: nowrap;
 }
@@ -362,10 +360,10 @@ svg {
 .hero h1 {
   margin-top: 32px;
   font-family: var(--serif);
-  font-size: clamp(90px, 15vw, 205px);
+  font-size: clamp(60px, 9.5vw, 138px);
   font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.72;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
   color: var(--ivory);
 }
 
@@ -419,7 +417,7 @@ svg {
   position: absolute;
   inset: 4%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(185, 143, 145, 0.24), transparent 68%);
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.16), transparent 68%);
 }
 
 .hero-visual svg {
@@ -542,10 +540,10 @@ svg {
 
 .section-heading {
   font-family: var(--serif);
-  font-size: clamp(55px, 8vw, 105px);
+  font-size: clamp(42px, 6.2vw, 88px);
   font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
 }
 
 .about-copy {
@@ -705,7 +703,7 @@ svg {
 
 .direction-card h3 {
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
   color: var(--ivory);
 }
@@ -832,7 +830,7 @@ svg {
 .product-card h3 {
   margin-top: 13px;
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 400;
 }
 
@@ -902,39 +900,47 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 34px 26px;
+  padding: 30px 26px;
   border: 1px solid var(--line);
   background: var(--black);
 }
 
+.logo-text {
+  min-width: 0;
+}
+
 .logo-big {
+  display: block;
   font-family: var(--serif);
-  font-size: clamp(34px, 5vw, 56px);
-  letter-spacing: 0.11em;
+  font-size: clamp(34px, 4.6vw, 54px);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
-.logo-big span,
-.logo-mono span {
+.logo-big span {
   color: var(--gold);
 }
 
+.logo-est {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
 .logo-mono {
-  display: grid;
-  place-items: center;
-  width: 78px;
-  height: 78px;
+  width: 84px;
+  height: 84px;
   flex-shrink: 0;
-  border: 1px solid var(--line-gold);
   border-radius: 50%;
-  font-family: var(--serif);
-  font-size: 26px;
 }
 
 .palette {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .swatch {
@@ -961,38 +967,61 @@ svg {
   letter-spacing: 0.06em;
 }
 
-.type-sample {
+.type-list {
+  display: grid;
+  gap: 18px;
+}
+
+.type-row {
   display: flex;
   align-items: baseline;
-  gap: 22px;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.type-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .type-aa {
-  font-family: var(--serif);
-  font-size: 96px;
-  line-height: 0.9;
+  flex: 0 0 82px;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.type-aa.serif {
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 .type-aa.sans {
-  font-family: var(--sans);
-  font-size: 66px;
-  color: var(--gold-light);
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-.voice-list {
-  list-style: none;
+.type-aa.label {
+  font-family: "Space Grotesk", Arial, sans-serif;
 }
 
-.voice-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.4vw, 40px);
-  line-height: 1.1;
+.type-row b {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
 
-.voice-list li:last-child {
-  border-bottom: 0;
+.type-row small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.signature-img {
+  mix-blend-mode: lighten;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-inline: auto;
 }
 
 
@@ -1035,7 +1064,7 @@ svg {
 .step h3 {
   margin-top: 26px;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
 }
 
@@ -1070,10 +1099,10 @@ svg {
 .manifesto h2 {
   margin-top: 35px;
   font-family: var(--serif);
-  font-size: clamp(42px, 7vw, 82px);
+  font-size: clamp(34px, 5.6vw, 68px);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
 }
 
 .manifesto-rule {
@@ -1219,6 +1248,36 @@ svg {
 
 .footer-monogram span {
   color: var(--gold);
+}
+
+
+/* LABEL FONT — Space Grotesk for accents and labels */
+
+.eyebrow,
+.section-label,
+.desktop-nav a,
+.lang-btn,
+.primary-button,
+.scroll-cue,
+.hero-index,
+.card-number,
+.micro-signature,
+.stat span,
+.concept-tag,
+.badge,
+.product-meta,
+.id-title,
+.logo-est,
+.swatch small,
+.contact-link,
+.contact-email,
+.contact-soon,
+.manifesto-tagline,
+.footer-location,
+.back-to-top,
+.footer-bottom,
+.collection-note {
+  font-family: var(--label);
 }
 
 
@@ -1381,7 +1440,7 @@ html[dir="rtl"] .contact-link i {
     border-bottom: 1px solid var(--line);
     color: var(--ivory);
     font-family: var(--serif);
-    font-size: 28px;
+    font-size: 26px;
     transition: color var(--transition);
   }
 
@@ -1395,9 +1454,10 @@ html[dir="rtl"] .contact-link i {
   }
 
   .hero-visual {
-    opacity: 0.35;
+    opacity: 0.22;
     width: clamp(240px, 58vw, 380px);
     right: -4%;
+    top: 58%;
   }
 
   html[dir="rtl"] .hero-visual {
@@ -1430,8 +1490,8 @@ html[dir="rtl"] .contact-link i {
   }
 
   .hero h1 {
-    font-size: clamp(80px, 17vw, 130px);
-    line-height: 0.78;
+    font-size: clamp(54px, 15vw, 110px);
+    line-height: 1;
   }
 
   .hero-description {
@@ -1474,7 +1534,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .section-heading {
-    font-size: clamp(57px, 12vw, 85px);
+    font-size: clamp(40px, 10.5vw, 70px);
   }
 
   .explore-intro,
@@ -1515,7 +1575,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .product-card h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .product-meta {
@@ -1537,7 +1597,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .manifesto h2 {
-    font-size: clamp(42px, 10vw, 65px);
+    font-size: clamp(32px, 8.4vw, 54px);
   }
 
   .contact-content {
@@ -1569,8 +1629,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .palette {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px 8px;
+    gap: 8px;
   }
 
   .logo-stage {
@@ -1596,7 +1655,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .hero h1 {
-    font-size: 76px;
+    font-size: 50px;
   }
 
   .hero-description {
@@ -1604,7 +1663,7 @@ html[dir="rtl"] .contact-link i {
   }
 
   .section-heading {
-    font-size: 53px;
+    font-size: 38px;
   }
 
   .product-visual {
