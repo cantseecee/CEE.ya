@@ -1,6 +1,7 @@
+
 /* =====================================================
    CEE YA. — MASTER BRAND EXPERIENCE
-   VERSION 26
+   VERSION 27
    DARK LUXURY / EDITORIAL / RESPONSIVE
 ===================================================== */
 
@@ -246,13 +247,17 @@ svg {
   color: var(--gold-light);
 }
 
+/* MENU TOGGLE — REFINED SIZE */
+
 .menu-toggle {
   width: 28px;
   height: 28px;
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
+  padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -260,6 +265,7 @@ svg {
 }
 
 .menu-toggle span {
+  display: block;
   width: 19px;
   height: 1px;
   background: var(--ivory);
@@ -268,6 +274,10 @@ svg {
 
 .menu-toggle.active span:first-child {
   transform: translateY(3px) rotate(45deg);
+}
+
+.menu-toggle.active span:last-child {
+  transform: translateY(-3px) rotate(-45deg);
 }
 
 
@@ -831,8 +841,6 @@ svg {
     box-shadow 800ms ease;
 }
 
-/* Initial position before entering the viewport */
-
 .product-card .beauty-object,
 .product-card .bag-object {
   transform: translateY(18px) scale(.96);
@@ -842,8 +850,6 @@ svg {
   transform: translateY(18px) rotate(-20deg) scale(.94);
 }
 
-/* Reveal when the product enters the viewport */
-
 .product-card.product-visible .beauty-object,
 .product-card.product-visible .bag-object {
   transform: translateY(0) scale(1);
@@ -852,8 +858,6 @@ svg {
 .product-card.product-visible .ring-object {
   transform: translateY(0) rotate(-20deg) scale(1);
 }
-
-/* Desktop hover */
 
 .product-card:hover .beauty-object {
   transform: translateY(-9px) rotate(-3deg) scale(1);
@@ -1155,6 +1159,14 @@ html[dir="rtl"] .back-to-top {
 
   .menu-toggle {
     display: flex;
+    width: 28px;
+    height: 28px;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    width: 19px;
+    height: 1px;
   }
 
   .mobile-menu {
