@@ -2205,4 +2205,80 @@ button {
 
 /* END VERSION 21 — PART 1 */
 
+/* =====================================================
+   CEE YA. — VERSION 21
+   EXPLORATIONS REFINEMENT
+===================================================== */
+
+.explorations-section {
+  position: relative;
+  overflow: hidden;
+  background: #090909;
+}
+
+.explorations-section .exploration-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.035),
+    rgba(255, 255, 255, 0.008)
+  );
+  border: 1px solid rgba(201, 169, 110, 0.16);
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease,
+    background 0.5s ease;
+}
+
+.explorations-section .exploration-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(201, 169, 110, 0.48);
+  background: rgba(201, 169, 110, 0.035);
+}
+
+.explorations-section .exploration-card h3 {
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 400;
+}
+
+.explorations-section .exploration-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.explorations-section .exploration-card::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(201, 169, 110, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.6s ease;
+}
+
+.explorations-section .exploration-card:hover::after {
+  transform: scale(1.25);
+}
+
+[dir="rtl"] .explorations-section .exploration-card::after {
+  right: auto;
+  left: -45px;
+}
+
+@media (max-width: 768px) {
+  .explorations-section .exploration-card:hover {
+    transform: none;
+  }
+}
+
+/* END VERSION 21 — PART 2 */
+
+
 
