@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutLabel: "01 / ABOUT",
       aboutSub: "A DIFFERENT POINT OF VIEW",
       aboutTitle: "More than<br>a digital space.",
-      aboutCopy: "CEE YA. is an independent Moroccan creative space exploring ideas, design and new possibilities. A place where curiosity meets intention and every detail has a purpose.",
+      aboutCopy: "CEE YA. is an independent Moroccan creative studio exploring ideas, creativity and the possibilities of the digital world. Driven by curiosity, shaped by intention, and built to see beyond the obvious.",
       aboutBrand: "CEE YA. — MOROCCO",
 
       exploreLabel: "02 / EXPLORATIONS",
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutLabel: "01 / À PROPOS",
       aboutSub: "UN AUTRE POINT DE VUE",
       aboutTitle: "Bien plus<br>qu'un espace digital.",
-      aboutCopy: "CEE YA. est un espace créatif marocain indépendant qui explore les idées, le design et de nouvelles possibilités. Un lieu où la curiosité rencontre l'intention et où chaque détail a un sens.",
+      aboutCopy: "CEE YA. est un studio créatif marocain indépendant qui explore les idées, la créativité et les possibilités du monde numérique. Guidé par la curiosité, façonné par l'intention et animé par le désir de voir au-delà de l'évidence.",
       aboutBrand: "CEE YA. — MAROC",
 
       exploreLabel: "02 / EXPLORATIONS",
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutLabel: "01 / من نحن",
       aboutSub: "وجهة نظر مختلفة",
       aboutTitle: "أكثر من<br>مجرد مساحة رقمية.",
-      aboutCopy: "CEE YA. مساحة إبداعية مغربية مستقلة تستكشف الأفكار والتصميم والاحتمالات الجديدة. مساحة يلتقي فيها الفضول بالهدف، وتكتسب فيها كل التفاصيل معنى خاصاً.",
+      aboutCopy: "CEE YA. استوديو إبداعي مغربي مستقل يستكشف الأفكار والإبداع وآفاق العالم الرقمي. يقوده الفضول، وتصقله الرؤية، وتوجّهه الرغبة في تجاوز المألوف.",
       aboutBrand: "CEE YA. — المغرب",
 
       exploreLabel: "02 / استكشافات",
