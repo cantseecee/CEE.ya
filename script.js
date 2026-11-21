@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
       footerLocation: "MADE IN MOROCCO"
     },
 
-
     fr: {
       navHome: "Accueil",
       navAbout: "À propos",
@@ -151,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
       copyright: "© 2026 CEE YA. TOUS DROITS RÉSERVÉS.",
       footerLocation: "FAIT AU MAROC"
     },
-
 
     ar: {
       navHome: "الرئيسية",
@@ -405,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 07 — LOADER FIX */
+  /* 07 — LOADER */
 
   const loader = document.querySelector(".loader");
 
@@ -435,7 +433,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 08 — FOOTER YEAR */
+  /* 08 — FOOTER */
 
   const copyright = document.querySelector('[data-i18n="copyright"]');
 
@@ -444,7 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 09 — ACCESSIBILITY */
+  /* 09 — SMOOTH ANCHOR NAVIGATION */
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
 
