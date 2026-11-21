@@ -1,11 +1,9 @@
 
 /* =====================================================
    CEE YA. — REFINED LUXURY EDITORIAL
-   FINAL CONSOLIDATED VERSION 22
+   FINAL CONSOLIDATED VERSION 23
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
 
 
 /* 01 — ROOT */
@@ -26,7 +24,6 @@
   --font-editorial: "Cormorant Garamond", serif;
   --font-navigation: "Montserrat", sans-serif;
 
-  /* Compatibility aliases */
   --font-sans: var(--font-main);
   --font-serif: var(--font-editorial);
 
@@ -455,7 +452,6 @@ img {
 .primary-button {
   width: fit-content;
   min-height: 56px;
-  margin-top: 0;
   padding: 0 30px;
   display: inline-flex;
   align-items: center;
@@ -779,8 +775,18 @@ img {
   background: var(--gold);
 }
 
+/* Supports the heading wrapper if added later */
 .collection-heading {
   max-width: 600px;
+}
+
+.collection-intro .eyebrow {
+  margin-bottom: 15px;
+}
+
+.collection-intro h2 {
+  max-width: 650px;
+  margin-bottom: 0;
 }
 
 .collection-description {
@@ -1631,6 +1637,22 @@ img {
   text-align: right;
 }
 
+[dir="rtl"] body {
+  font-family: var(--font-main);
+}
+
+[dir="rtl"] .topbar {
+  direction: rtl;
+}
+
+[dir="rtl"] .header-right {
+  direction: ltr;
+}
+
+[dir="rtl"] .desktop-nav {
+  direction: rtl;
+}
+
 [dir="rtl"] .section-label {
   flex-direction: row-reverse;
   letter-spacing: 1px;
@@ -1643,6 +1665,11 @@ img {
 [dir="rtl"] .explore-grid,
 [dir="rtl"] .collection-grid {
   direction: rtl;
+}
+
+[dir="rtl"] .hero-content {
+  direction: rtl;
+  text-align: right;
 }
 
 [dir="rtl"] .hero-topline,
@@ -1664,6 +1691,11 @@ img {
 [dir="rtl"] .collection::before {
   right: auto;
   left: -180px;
+}
+
+[dir="rtl"] .collection-intro {
+  direction: rtl;
+  align-items: flex-end;
 }
 
 [dir="rtl"] .collection-intro::after {
@@ -1706,12 +1738,19 @@ img {
 }
 
 [dir="rtl"] .mobile-menu {
+  left: auto;
+  right: 0;
   text-align: right;
 }
 
 [dir="rtl"] .footer-top,
 [dir="rtl"] .footer-bottom {
   direction: rtl;
+}
+
+[dir="rtl"] .contact-content {
+  direction: rtl;
+  text-align: right;
 }
 
 [dir="rtl"] .contact-link {
@@ -1745,6 +1784,10 @@ img {
 
   [dir="rtl"] .collection::before {
     left: -250px;
+  }
+
+  [dir="rtl"] .collection-intro {
+    align-items: flex-start;
   }
 
   [dir="rtl"] .explore-card::before,
@@ -1797,5 +1840,5 @@ img {
 
 
 /* =====================================================
-   END — CEE YA. VERSION 22
+   END — CEE YA. VERSION 23
 ===================================================== */
