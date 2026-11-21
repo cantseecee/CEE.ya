@@ -1,7 +1,7 @@
 
 /* =====================================================
    CEE YA. — MULTILINGUAL EXPERIENCE
-   VERSION 15
+   VERSION 16
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
 
@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreLabel: "02 / EXPLORATIONS",
       exploreDirections: "THREE DIRECTIONS",
       explorePerspective: "OUR PERSPECTIVE",
-      exploreTitle: "Ideas worth<br>discovering.",
+      exploreTitle: "Ideas beyond<br>the expected.",
 
       creativity: "Creativity",
-      creativityCopy: "Finding new ways to express what matters.",
+      creativityCopy: "Seeing familiar things from unfamiliar perspectives.",
       innovation: "Innovation",
-      innovationCopy: "Turning thoughtful ideas into meaningful experiences.",
+      innovationCopy: "Transforming original thinking into meaningful experiences.",
       discovery: "Discovery",
-      discoveryCopy: "Exploring possibilities beyond the familiar.",
+      discoveryCopy: "Finding possibilities where others see the ordinary.",
 
       collectionLabel: "03 / THE COLLECTION",
       collectionEdition: "A CURATED EDIT",
@@ -103,14 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreLabel: "02 / EXPLORATIONS",
       exploreDirections: "TROIS DIRECTIONS",
       explorePerspective: "NOTRE PERSPECTIVE",
-      exploreTitle: "Des idées à<br>découvrir.",
+      exploreTitle: "Des idées au-delà<br>de l'attendu.",
 
       creativity: "Créativité",
-      creativityCopy: "Trouver de nouvelles façons d'exprimer l'essentiel.",
+      creativityCopy: "Voir les choses familières sous des angles inattendus.",
       innovation: "Innovation",
-      innovationCopy: "Transformer des idées réfléchies en expériences significatives.",
+      innovationCopy: "Transformer une pensée originale en expériences porteuses de sens.",
       discovery: "Découverte",
-      discoveryCopy: "Explorer des possibilités au-delà du familier.",
+      discoveryCopy: "Trouver des possibilités là où d'autres voient l'ordinaire.",
 
       collectionLabel: "03 / LA COLLECTION",
       collectionEdition: "UNE SÉLECTION SIGNATURE",
@@ -173,14 +173,14 @@ document.addEventListener("DOMContentLoaded", () => {
       exploreLabel: "02 / استكشافات",
       exploreDirections: "ثلاثة اتجاهات",
       explorePerspective: "رؤيتنا",
-      exploreTitle: "أفكار تستحق<br>الاكتشاف.",
+      exploreTitle: "أفكار تتجاوز<br>المتوقع.",
 
       creativity: "الإبداع",
-      creativityCopy: "اكتشاف طرق جديدة للتعبير عمّا يستحق الاهتمام.",
+      creativityCopy: "رؤية الأشياء المألوفة من زوايا غير مألوفة.",
       innovation: "الابتكار",
-      innovationCopy: "تحويل الأفكار المدروسة إلى تجارب ذات معنى.",
+      innovationCopy: "تحويل التفكير الأصيل إلى تجارب ذات معنى.",
       discovery: "الاكتشاف",
-      discoveryCopy: "استكشاف آفاق تتجاوز حدود المألوف.",
+      discoveryCopy: "العثور على إمكانيات حيث يرى الآخرون الأشياء المعتادة.",
 
       collectionLabel: "03 / المجموعة",
       collectionEdition: "اختيارات منتقاة",
@@ -476,6 +476,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.classList.add("js-ready");
 
-  console.log("CEE YA. — Version 15 ready.");
+  console.log("CEE YA. — Version 16 ready.");
 
 });
