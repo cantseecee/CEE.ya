@@ -1,11 +1,13 @@
 
 /* =====================================================
    CEE YA. — MASTER INTERACTION
-   VERSION 17
+   VERSION 18
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  "use strict";
 
   /* 01 — TRANSLATIONS */
 
@@ -84,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu: "Close menu"
     },
 
-
     fr: {
       navHome: "Accueil",
       navAbout: "À propos",
@@ -157,7 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu"
     },
-
 
     ar: {
       navHome: "الرئيسية",
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  /* 02 — ELEMENTS */
+  /* 02 — ELEMENT REFERENCES */
 
   const languageButtons = document.querySelectorAll(".lang-btn");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -247,24 +247,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* 03 — LANGUAGE SYSTEM */
 
+  function updateMenuLabel() {
+
+    if (!menuToggle) return;
+
+    const isOpen = menuToggle.classList.contains("active");
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen
+        ? translations[currentLanguage].closeMenu
+        : translations[currentLanguage].openMenu
+    );
+
+  }
+
+
   function setLanguage(language) {
 
-    if (!translations[language]) return;
+    if (!Object.prototype.hasOwnProperty.call(translations, language)) {
+      return;
+    }
 
     currentLanguage = language;
 
     const dictionary = translations[language];
+    const isArabic = language === "ar";
 
     document.documentElement.lang = language;
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
 
-    document.body.classList.toggle("arabic", language === "ar");
+    document.body.classList.toggle("arabic", isArabic);
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
 
       const key = element.dataset.i18n;
 
-      if (dictionary[key] !== undefined) {
+      if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
         element.innerHTML = dictionary[key];
       }
 
@@ -284,27 +303,26 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem("ceeya-language", language);
     } catch (error) {
-      // Language selection still works if storage is unavailable.
+      // The language system remains functional without storage.
     }
 
   }
 
-
-  /* 04 — RESTORE LANGUAGE */
 
   function restoreLanguage() {
 
     let savedLanguage = "en";
 
     try {
+
       const storedLanguage = localStorage.getItem("ceeya-language");
 
-      if (storedLanguage && translations[storedLanguage]) {
+      if (Object.prototype.hasOwnProperty.call(translations, storedLanguage)) {
         savedLanguage = storedLanguage;
       }
 
     } catch (error) {
-      savedLanguage = "en";
+      // English is used as the default language.
     }
 
     setLanguage(savedLanguage);
@@ -314,29 +332,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   languageButtons.forEach((button) => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
       setLanguage(button.dataset.lang);
+
     });
 
   });
 
 
-  /* 05 — MOBILE MENU */
-
-  function updateMenuLabel() {
-
-    if (!menuToggle) return;
-
-    const isOpen = menuToggle.classList.contains("active");
-
-    const label = isOpen
-      ? translations[currentLanguage].closeMenu
-      : translations[currentLanguage].openMenu;
-
-    menuToggle.setAttribute("aria-label", label);
-
-  }
-
+  /* 04 — MOBILE MENU */
 
   function openMenu() {
 
@@ -354,7 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  function closeMenu() {
+  function closeMenu(restoreFocus = false) {
 
     if (!menuToggle || !mobileMenu) return;
 
@@ -367,10 +374,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateMenuLabel();
 
+    if (restoreFocus) {
+      menuToggle.focus();
+    }
+
   }
 
 
   if (menuToggle && mobileMenu) {
+
+    menuToggle.setAttribute("aria-expanded", "false");
+
+    if (mobileMenu.id) {
+      menuToggle.setAttribute("aria-controls", mobileMenu.id);
+    }
+
+    mobileMenu.hidden = true;
 
     menuToggle.addEventListener("click", () => {
 
@@ -384,19 +403,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+
     mobileMenu.querySelectorAll("a").forEach((link) => {
 
-      link.addEventListener("click", closeMenu);
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
 
     });
 
-    document.addEventListener("keydown", (event) => {
 
-      if (event.key === "Escape") {
+    document.addEventListener("click", (event) => {
+
+      const isOpen = menuToggle.classList.contains("active");
+
+      if (!isOpen) return;
+
+      const clickedInsideMenu = mobileMenu.contains(event.target);
+      const clickedToggle = menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedToggle) {
         closeMenu();
       }
 
     });
+
+
+    document.addEventListener("keydown", (event) => {
+
+      if (event.key === "Escape") {
+        closeMenu(true);
+      }
+
+    });
+
 
     window.addEventListener("resize", () => {
 
@@ -409,23 +449,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 06 — REVEAL ANIMATIONS */
+  /* 05 — REVEAL ANIMATIONS */
 
   const revealElements = document.querySelectorAll(".reveal");
 
-  if ("IntersectionObserver" in window) {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+
+    revealElements.forEach((element) => {
+      element.classList.add("visible");
+    });
+
+  } else {
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
 
       entries.forEach((entry) => {
 
-        if (entry.isIntersecting) {
+        if (!entry.isIntersecting) return;
 
-          entry.target.classList.add("visible");
+        entry.target.classList.add("visible");
 
-          observer.unobserve(entry.target);
-
-        }
+        observer.unobserve(entry.target);
 
       });
 
@@ -434,68 +483,87 @@ document.addEventListener("DOMContentLoaded", () => {
       rootMargin: "0px 0px -35px 0px"
     });
 
+
     revealElements.forEach((element) => {
       revealObserver.observe(element);
-    });
-
-  } else {
-
-    revealElements.forEach((element) => {
-      element.classList.add("visible");
     });
 
   }
 
 
-  /* 07 — LOADER */
+  /* 06 — LOADER */
+
+  let loaderHidden = false;
+  let loaderFallback;
+
 
   function hideLoader() {
+
+    if (loaderHidden) return;
+
+    loaderHidden = true;
+
+    window.clearTimeout(loaderFallback);
 
     if (!loader) return;
 
     loader.classList.add("hidden");
 
     window.setTimeout(() => {
-      loader.remove();
+
+      if (loader.isConnected) {
+        loader.remove();
+      }
+
     }, 800);
 
   }
 
 
-  window.addEventListener("load", hideLoader);
+  window.addEventListener("load", hideLoader, { once: true });
 
-  window.setTimeout(hideLoader, 2500);
+  loaderFallback = window.setTimeout(hideLoader, 2500);
 
 
-  /* 08 — SMOOTH ANCHOR SCROLL */
+  /* 07 — SMOOTH ANCHOR SCROLL */
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     link.addEventListener("click", (event) => {
 
-      const targetId = link.getAttribute("href");
+      const href = link.getAttribute("href");
 
-      if (!targetId || targetId === "#") return;
+      if (!href || href === "#") return;
 
-      const target = document.querySelector(targetId);
+      let targetId;
+
+      try {
+        targetId = decodeURIComponent(href.slice(1));
+      } catch (error) {
+        return;
+      }
+
+      const target = document.getElementById(targetId);
 
       if (!target) return;
 
       event.preventDefault();
 
       target.scrollIntoView({
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-          ? "auto"
-          : "smooth",
+        behavior: reduceMotion ? "auto" : "smooth",
         block: "start"
       });
+
+      if (window.location.hash !== href) {
+        history.replaceState(null, "", href);
+      }
 
     });
 
   });
 
 
-  /* 09 — INITIALIZE */
+  /* 08 — INITIALIZE */
 
   restoreLanguage();
 
