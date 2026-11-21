@@ -1,7 +1,6 @@
-
 /* =====================================================
    CEE YA. — MASTER INTERACTION
-   VERSION 19
+   VERSION 20
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
 
@@ -9,74 +8,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
   "use strict";
 
+  /* 00 — YOUR CONTACT DETAILS
+     Fill these in when they are ready. Empty = the button stays hidden.
+     whatsapp : number with country code, digits only (example: "212612345678")
+     instagram: your handle (example: "ceeya.ma")
+     email    : your professional email (example: "contact@ceeya.ma") */
+
+  const SITE = {
+    whatsapp: "",
+    instagram: "",
+    email: ""
+  };
+
+
   /* 01 — TRANSLATIONS */
 
   const translations = {
 
     en: {
+      titleTag: "CEE YA. — OWN THE UNSEEN.",
+      metaDescription: "CEE YA. is a Moroccan fashion accessories brand: bags, jewellery, caps and wallets with a quiet signature. Cash on delivery across Morocco.",
+      skipLink: "Skip to content",
+
       navHome: "Home",
       navAbout: "About",
-      navExplore: "Explore",
       navCollection: "Collection",
+      navBrand: "Brand",
       navContact: "Contact",
 
-      heroEyebrow: "INDEPENDENT CREATIVE DIGITAL STUDIO",
+      heroEyebrow: "MOROCCAN FASHION ACCESSORIES",
       heroTitle: "OWN THE<br>UNSEEN.",
-      heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
-      heroButton: "EXPLORE CEE YA.",
+      heroDescription: "Bags, jewellery, caps and wallets with a quiet signature. Chosen with intention, delivered across Morocco.",
+      heroButton: "DISCOVER THE COLLECTION",
       scrollText: "SCROLL TO DISCOVER",
 
+      marqueeText: "Bags ✦ Jewellery ✦ Caps ✦ Wallets ✦ Made for everyday ✦",
+
       aboutLabel: "01 / ABOUT",
-      aboutSub: "A DIFFERENT POINT OF VIEW",
-      aboutTitle: "More than<br>a digital space.",
-      aboutCopy: "CEE YA. is an independent Moroccan creative studio exploring ideas, creativity and the possibilities of the digital world. Driven by curiosity, shaped by intention, and built to see beyond the obvious.",
-      aboutBrand: "CEE YA. — MOROCCO",
+      aboutSub: "THE BRAND",
+      aboutTitle: "Small details.<br>Quiet distinction.",
+      aboutCopy: "<bdi>CEE YA.</bdi> is a Moroccan accessories brand built around one idea: the smallest details change how an outfit feels. We choose each piece with intention, check it with care, and bring it to you at a fair price.",
+      aboutBrand: "<bdi>CEE YA.</bdi> — MOROCCO",
+      statOneLabel: "CATEGORIES",
+      statTwoLabel: "PAY WHEN YOU RECEIVE",
+      statThreeLabel: "DELIVERY ACROSS MOROCCO",
 
-      exploreLabel: "02 / EXPLORATIONS",
-      exploreDirections: "THREE DIRECTIONS",
-      explorePerspective: "OUR PERSPECTIVE",
-      exploreTitle: "Ideas beyond<br>the expected.",
-
-      creativity: "Creativity",
-      creativityCopy: "Seeing familiar things from unfamiliar perspectives.",
-      innovation: "Innovation",
-      innovationCopy: "Transforming original thinking into meaningful experiences.",
-      discovery: "Discovery",
-      discoveryCopy: "Finding possibilities where others see the ordinary.",
+      exploreLabel: "02 / VALUES",
+      exploreDirections: "THREE PRINCIPLES",
+      explorePerspective: "WHAT WE STAND FOR",
+      exploreTitle: "Made with<br>intention.",
+      valueOne: "Intention",
+      valueOneCopy: "Every piece is chosen on purpose, never added by default.",
+      valueTwo: "Quality",
+      valueTwoCopy: "Each item is checked before it reaches you.",
+      valueThree: "Detail",
+      valueThreeCopy: "Finishes, shapes and colours that feel considered.",
 
       collectionLabel: "03 / THE COLLECTION",
-      collectionEdition: "A CURATED EDIT",
+      collectionEdition: "FOUR CATEGORIES",
       collectionEyebrow: "THE ART OF EVERYDAY DETAILS",
       collectionTitle: "Objects of<br>quiet distinction.",
-      collectionCopy: "A considered selection of beauty, accessories and little details that make everyday moments feel special.",
-
+      collectionCopy: "Bags, jewellery, caps and wallets: a considered selection that makes everyday moments feel special.",
       conceptLabel: "CONCEPT",
+      badgePreorder: "PRE-ORDER",
+      badgeSoon: "COMING SOON",
 
-      productCategoryOne: "BEAUTY",
-      productTypeOne: "THE BEAUTY EDIT",
-      productNameOne: "The Ritual",
-      productDescriptionOne: "A concept in everyday beauty.",
+      productCategoryOne: "BAGS",
+      productTypeOne: "SHOULDER BAG",
+      productNameOne: "The Heart Bag",
+      productDescriptionOne: "A soft pink shoulder bag with a heart on the flap.",
 
-      productCategoryTwo: "ACCESSORIES",
-      productTypeTwo: "THE ACCESSORY EDIT",
-      productNameTwo: "The Essential",
-      productDescriptionTwo: "A study in form and simplicity.",
+      productCategoryTwo: "JEWELLERY",
+      productTypeTwo: "RINGS",
+      productNameTwo: "The Finishing Touch",
+      productDescriptionTwo: "Small gold-tone details, worn every day.",
 
-      productCategoryThree: "JEWELLERY",
-      productTypeThree: "THE DETAIL EDIT",
-      productNameThree: "The Finishing Touch",
-      productDescriptionThree: "Small details, considered differently.",
+      productCategoryThree: "CAPS",
+      productTypeThree: "EVERYDAY CAP",
+      productNameThree: "The Essential Cap",
+      productDescriptionThree: "A clean shape for easy days.",
 
-      collectionNote: "An initial creative direction. Product selection and availability will be introduced in a future update.",
+      productCategoryFour: "WALLETS",
+      productTypeFour: "COMPACT WALLET",
+      productNameFour: "The Pocket Ritual",
+      productDescriptionFour: "Small, structured, made to be carried.",
+
+      collectionNote: "These are concept visuals. Final products and prices will be announced soon. Order by message and pay on delivery.",
+
+      identityLabel: "04 / BRAND",
+      identitySub: "THE CEE YA. SYSTEM",
+      identityTitle: "A quiet,<br>warm signature.",
+      logoTitle: "LOGO",
+      logoCopy: "A serif wordmark with a gold full stop. The monogram is used on small formats.",
+      paletteTitle: "COLOURS",
+      paletteCopy: "Noir leads. Gold and Blush are accents, used with restraint.",
+      typeTitle: "TYPOGRAPHY",
+      typeCopy: "Cormorant Garamond for headlines, Manrope for details. Amiri and Cairo for Arabic.",
+      voiceTitle: "VOICE",
+      voiceOne: "Quiet.",
+      voiceTwo: "Considered.",
+      voiceThree: "Moroccan.",
+
+      orderLabel: "05 / HOW TO ORDER",
+      orderSub: "SIMPLE AND SAFE",
+      orderTitle: "Three steps,<br>no stress.",
+      stepOne: "Choose",
+      stepOneCopy: "Pick your piece from the collection.",
+      stepTwo: "Message us",
+      stepTwoCopy: "Send your order on WhatsApp or Instagram.",
+      stepThree: "Pay on delivery",
+      stepThreeCopy: "Receive it anywhere in Morocco and pay when it arrives.",
 
       manifestoEyebrow: "THE CEE YA. PERSPECTIVE",
       manifestoTitle: "We are not here to follow.<br>We are here to discover.",
 
-      contactLabel: "04 / CONTACT",
+      contactLabel: "06 / CONTACT",
       contactConnect: "LET'S CONNECT",
-      contactEyebrow: "HAVE AN IDEA IN MIND?",
+      contactEyebrow: "READY TO ORDER, OR JUST CURIOUS?",
       contactTitle: "Let's start a<br>conversation.",
-      contactTalk: "LET'S TALK",
+      contactWhatsapp: "WHATSAPP",
+      contactInstagram: "INSTAGRAM",
+      contactEmail: "EMAIL",
+      contactSoon: "Contact details are coming soon.",
+      waMessage: "Hello CEE YA., I would like to place an order.",
 
       footerLocation: "MADE IN MOROCCO",
       backToTop: "BACK TO TOP ↑",
@@ -87,69 +141,111 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     fr: {
+      titleTag: "CEE YA. — OWN THE UNSEEN.",
+      metaDescription: "CEE YA. est une marque marocaine d'accessoires de mode : sacs, bijoux, casquettes et portefeuilles à la signature discrète. Paiement à la livraison partout au Maroc.",
+      skipLink: "Aller au contenu",
+
       navHome: "Accueil",
       navAbout: "À propos",
-      navExplore: "Explorer",
       navCollection: "Collection",
+      navBrand: "Marque",
       navContact: "Contact",
 
-      heroEyebrow: "STUDIO CRÉATIF DIGITAL INDÉPENDANT",
+      heroEyebrow: "ACCESSOIRES DE MODE MAROCAINS",
       heroTitle: "OWN THE<br>UNSEEN.",
-      heroDescription: "Une nouvelle perspective sur la créativité, les idées et l'univers digital. Créé avec intention. Conçu pour inspirer.",
-      heroButton: "DÉCOUVRIR CEE YA.",
+      heroDescription: "Sacs, bijoux, casquettes et portefeuilles à la signature discrète. Choisis avec intention, livrés partout au Maroc.",
+      heroButton: "DÉCOUVRIR LA COLLECTION",
       scrollText: "DÉFILER POUR DÉCOUVRIR",
 
+      marqueeText: "Sacs ✦ Bijoux ✦ Casquettes ✦ Portefeuilles ✦ Pensés pour le quotidien ✦",
+
       aboutLabel: "01 / À PROPOS",
-      aboutSub: "UN AUTRE POINT DE VUE",
-      aboutTitle: "Plus qu'un<br>espace digital.",
-      aboutCopy: "CEE YA. est un studio créatif marocain indépendant qui explore les idées, la créativité et les possibilités du monde digital. Guidé par la curiosité, façonné avec intention et conçu pour voir au-delà de l'évidence.",
-      aboutBrand: "CEE YA. — MAROC",
+      aboutSub: "LA MARQUE",
+      aboutTitle: "Petits détails.<br>Distinction discrète.",
+      aboutCopy: "<bdi>CEE YA.</bdi> est une marque marocaine d'accessoires née d'une idée : les plus petits détails changent la façon dont une tenue se porte. Nous choisissons chaque pièce avec intention, la vérifions avec soin et vous la proposons à un prix juste.",
+      aboutBrand: "<bdi>CEE YA.</bdi> — MAROC",
+      statOneLabel: "CATÉGORIES",
+      statTwoLabel: "PAYEZ À LA RÉCEPTION",
+      statThreeLabel: "LIVRAISON DANS TOUT LE MAROC",
 
-      exploreLabel: "02 / EXPLORATIONS",
-      exploreDirections: "TROIS DIRECTIONS",
-      explorePerspective: "NOTRE PERSPECTIVE",
-      exploreTitle: "Des idées au-delà<br>de l'évidence.",
-
-      creativity: "Créativité",
-      creativityCopy: "Voir les choses familières sous un angle nouveau.",
-      innovation: "Innovation",
-      innovationCopy: "Transformer une pensée originale en expériences significatives.",
-      discovery: "Découverte",
-      discoveryCopy: "Trouver des possibilités là où d'autres voient l'ordinaire.",
+      exploreLabel: "02 / VALEURS",
+      exploreDirections: "TROIS PRINCIPES",
+      explorePerspective: "CE QUI NOUS GUIDE",
+      exploreTitle: "Créé avec<br>intention.",
+      valueOne: "Intention",
+      valueOneCopy: "Chaque pièce est choisie à dessein, jamais ajoutée par défaut.",
+      valueTwo: "Qualité",
+      valueTwoCopy: "Chaque article est vérifié avant de vous parvenir.",
+      valueThree: "Détail",
+      valueThreeCopy: "Des finitions, des formes et des couleurs réfléchies.",
 
       collectionLabel: "03 / LA COLLECTION",
-      collectionEdition: "UNE SÉLECTION",
+      collectionEdition: "QUATRE CATÉGORIES",
       collectionEyebrow: "L'ART DES DÉTAILS DU QUOTIDIEN",
       collectionTitle: "Des objets<br>qui se distinguent.",
-      collectionCopy: "Une sélection réfléchie de beauté, d'accessoires et de petits détails qui rendent les moments du quotidien particuliers.",
-
+      collectionCopy: "Sacs, bijoux, casquettes et portefeuilles : une sélection réfléchie qui rend le quotidien plus spécial.",
       conceptLabel: "CONCEPT",
+      badgePreorder: "PRÉCOMMANDE",
+      badgeSoon: "BIENTÔT",
 
-      productCategoryOne: "BEAUTÉ",
-      productTypeOne: "SÉLECTION BEAUTÉ",
-      productNameOne: "Le Rituel",
-      productDescriptionOne: "Un concept autour de la beauté au quotidien.",
+      productCategoryOne: "SACS",
+      productTypeOne: "SAC BANDOULIÈRE",
+      productNameOne: "Le Sac Cœur",
+      productDescriptionOne: "Un sac bandoulière rose tendre avec un cœur sur le rabat.",
 
-      productCategoryTwo: "ACCESSOIRES",
-      productTypeTwo: "SÉLECTION ACCESSOIRES",
-      productNameTwo: "L'Essentiel",
-      productDescriptionTwo: "Une étude de forme et de simplicité.",
+      productCategoryTwo: "BIJOUX",
+      productTypeTwo: "BAGUES",
+      productNameTwo: "La Touche Finale",
+      productDescriptionTwo: "De petits détails dorés, à porter chaque jour.",
 
-      productCategoryThree: "BIJOUX",
-      productTypeThree: "SÉLECTION DÉTAILS",
-      productNameThree: "La Touche Finale",
-      productDescriptionThree: "Les petits détails, autrement.",
+      productCategoryThree: "CASQUETTES",
+      productTypeThree: "CASQUETTE QUOTIDIENNE",
+      productNameThree: "La Casquette Essentielle",
+      productDescriptionThree: "Une forme épurée pour les jours faciles.",
 
-      collectionNote: "Une première direction créative. La sélection et la disponibilité des produits seront présentées dans une prochaine mise à jour.",
+      productCategoryFour: "PORTEFEUILLES",
+      productTypeFour: "PORTEFEUILLE COMPACT",
+      productNameFour: "Le Rituel de Poche",
+      productDescriptionFour: "Petit, structuré, fait pour être emporté.",
+
+      collectionNote: "Ces visuels sont des concepts. Les produits et les prix définitifs seront annoncés bientôt. Commandez par message et payez à la livraison.",
+
+      identityLabel: "04 / MARQUE",
+      identitySub: "LE SYSTÈME CEE YA.",
+      identityTitle: "Une signature<br>discrète et chaleureuse.",
+      logoTitle: "LOGO",
+      logoCopy: "Un logotype serif avec un point doré. Le monogramme sert pour les petits formats.",
+      paletteTitle: "COULEURS",
+      paletteCopy: "Le noir domine. L'or et le rose poudré sont des accents, utilisés avec retenue.",
+      typeTitle: "TYPOGRAPHIE",
+      typeCopy: "Cormorant Garamond pour les titres, Manrope pour les détails. Amiri et Cairo pour l'arabe.",
+      voiceTitle: "TON",
+      voiceOne: "Discrète.",
+      voiceTwo: "Réfléchie.",
+      voiceThree: "Marocaine.",
+
+      orderLabel: "05 / COMMENT COMMANDER",
+      orderSub: "SIMPLE ET SÛR",
+      orderTitle: "Trois étapes,<br>zéro stress.",
+      stepOne: "Choisissez",
+      stepOneCopy: "Sélectionnez votre pièce dans la collection.",
+      stepTwo: "Écrivez-nous",
+      stepTwoCopy: "Envoyez votre commande sur WhatsApp ou Instagram.",
+      stepThree: "Payez à la livraison",
+      stepThreeCopy: "Recevez-la partout au Maroc et payez à l'arrivée.",
 
       manifestoEyebrow: "LA VISION CEE YA.",
       manifestoTitle: "Nous ne sommes pas là pour suivre.<br>Nous sommes là pour découvrir.",
 
-      contactLabel: "04 / CONTACT",
+      contactLabel: "06 / CONTACT",
       contactConnect: "RESTONS EN CONTACT",
-      contactEyebrow: "UNE IDÉE EN TÊTE ?",
+      contactEyebrow: "PRÊT·E À COMMANDER, OU SIMPLEMENT CURIEUX ?",
       contactTitle: "Commençons<br>une conversation.",
-      contactTalk: "PARLONS-EN",
+      contactWhatsapp: "WHATSAPP",
+      contactInstagram: "INSTAGRAM",
+      contactEmail: "E-MAIL",
+      contactSoon: "Les coordonnées arrivent bientôt.",
+      waMessage: "Bonjour CEE YA., je souhaite passer une commande.",
 
       footerLocation: "CRÉÉ AU MAROC",
       backToTop: "RETOUR EN HAUT ↑",
@@ -160,69 +256,111 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     ar: {
+      titleTag: "CEE YA. — OWN THE UNSEEN.",
+      metaDescription: "CEE YA. علامة مغربية لإكسسوارات الأزياء: حقائب ومجوهرات وقبعات ومحافظ بلمسة هادئة. الدفع عند الاستلام في كل المغرب.",
+      skipLink: "انتقل إلى المحتوى",
+
       navHome: "الرئيسية",
       navAbout: "من نحن",
-      navExplore: "اكتشف",
       navCollection: "المجموعة",
+      navBrand: "العلامة",
       navContact: "تواصل",
 
-      heroEyebrow: "استوديو إبداعي رقمي مستقل",
+      heroEyebrow: "إكسسوارات أزياء مغربية",
       heroTitle: "OWN THE<br>UNSEEN.",
-      heroDescription: "رؤية جديدة للإبداع والأفكار وعالم الرقمنة. صُنع باهتمام، وصُمّم للإلهام.",
-      heroButton: "اكتشف CEE YA.",
+      heroDescription: "حقائب ومجوهرات وقبعات ومحافظ بلمسة هادئة. مختارة بعناية وتصل إلى كل مدن المغرب.",
+      heroButton: "اكتشف المجموعة",
       scrollText: "اكتشف المزيد",
 
+      marqueeText: "حقائب ✦ مجوهرات ✦ قبعات ✦ محافظ ✦ لكل يوم ✦",
+
       aboutLabel: "01 / من نحن",
-      aboutSub: "وجهة نظر مختلفة",
-      aboutTitle: "أكثر من مجرد<br>مساحة رقمية.",
-      aboutCopy: "CEE YA. استوديو إبداعي مغربي مستقل يستكشف الأفكار والإبداع وإمكانيات العالم الرقمي. نستلهم من الفضول، ونصنع برؤية واضحة، ونتطلع إلى ما وراء المألوف.",
-      aboutBrand: "CEE YA. — المغرب",
+      aboutSub: "العلامة",
+      aboutTitle: "تفاصيل صغيرة.<br>تميّز هادئ.",
+      aboutCopy: "<bdi>CEE YA.</bdi> علامة مغربية للإكسسوارات تقوم على فكرة واحدة: أصغر التفاصيل تغيّر إحساس الإطلالة. نختار كل قطعة بعناية، ونفحصها جيداً، ونقدمها لك بسعر عادل.",
+      aboutBrand: "<bdi>CEE YA.</bdi> — المغرب",
+      statOneLabel: "أصناف",
+      statTwoLabel: "ادفع عند الاستلام",
+      statThreeLabel: "توصيل إلى كل المغرب",
 
-      exploreLabel: "02 / استكشاف",
-      exploreDirections: "ثلاثة توجهات",
-      explorePerspective: "رؤيتنا",
-      exploreTitle: "أفكار تتجاوز<br>المتوقع.",
-
-      creativity: "الإبداع",
-      creativityCopy: "رؤية الأشياء المألوفة من زوايا غير مألوفة.",
-      innovation: "الابتكار",
-      innovationCopy: "تحويل الأفكار الجديدة إلى تجارب ذات معنى.",
-      discovery: "الاكتشاف",
-      discoveryCopy: "اكتشاف الإمكانيات حيث يرى الآخرون الأشياء العادية.",
+      exploreLabel: "02 / قيمنا",
+      exploreDirections: "ثلاثة مبادئ",
+      explorePerspective: "ما نؤمن به",
+      exploreTitle: "صُنع<br>بعناية.",
+      valueOne: "العناية",
+      valueOneCopy: "كل قطعة مختارة عن قصد، ولا تُضاف بشكل عشوائي.",
+      valueTwo: "الجودة",
+      valueTwoCopy: "كل منتج يُفحص قبل أن يصل إليك.",
+      valueThree: "التفاصيل",
+      valueThreeCopy: "تشطيبات وأشكال وألوان مدروسة.",
 
       collectionLabel: "03 / المجموعة",
-      collectionEdition: "اختيارات منتقاة",
+      collectionEdition: "أربعة أصناف",
       collectionEyebrow: "فن التفاصيل اليومية",
       collectionTitle: "أشياء تتميز<br>بهدوء.",
-      collectionCopy: "اختيارات مدروسة من الجمال والإكسسوارات والتفاصيل الصغيرة التي تضفي طابعاً مميزاً على اللحظات اليومية.",
-
+      collectionCopy: "حقائب ومجوهرات وقبعات ومحافظ: اختيارات مدروسة تضفي طابعاً مميزاً على لحظاتك اليومية.",
       conceptLabel: "تصور أولي",
+      badgePreorder: "حجز مسبق",
+      badgeSoon: "قريباً",
 
-      productCategoryOne: "الجمال",
-      productTypeOne: "اختيارات الجمال",
-      productNameOne: "الطقس اليومي",
-      productDescriptionOne: "تصور أولي للجمال في تفاصيل الحياة اليومية.",
+      productCategoryOne: "حقائب",
+      productTypeOne: "حقيبة كتف",
+      productNameOne: "حقيبة القلب",
+      productDescriptionOne: "حقيبة كتف وردية ناعمة بقلب على الغطاء.",
 
-      productCategoryTwo: "الإكسسوارات",
-      productTypeTwo: "اختيارات الإكسسوارات",
-      productNameTwo: "الأساسيات",
-      productDescriptionTwo: "دراسة في الشكل والبساطة.",
+      productCategoryTwo: "مجوهرات",
+      productTypeTwo: "خواتم",
+      productNameTwo: "اللمسة الأخيرة",
+      productDescriptionTwo: "تفاصيل صغيرة بلمعة ذهبية، لكل يوم.",
 
-      productCategoryThree: "المجوهرات",
-      productTypeThree: "اختيارات التفاصيل",
-      productNameThree: "اللمسة الأخيرة",
-      productDescriptionThree: "تفاصيل صغيرة برؤية مختلفة.",
+      productCategoryThree: "قبعات",
+      productTypeThree: "قبعة يومية",
+      productNameThree: "القبعة الأساسية",
+      productDescriptionThree: "شكل بسيط للأيام الهادئة.",
 
-      collectionNote: "هذه بداية للتوجه الإبداعي. سيتم تقديم المنتجات وتفاصيل توفرها في تحديث قادم.",
+      productCategoryFour: "محافظ",
+      productTypeFour: "محفظة صغيرة",
+      productNameFour: "طقس الجيب",
+      productDescriptionFour: "صغيرة ومنظمة، صُنعت لتُحمل معك.",
 
-      manifestoEyebrow: "رؤية CEE YA.",
+      collectionNote: "هذه تصورات أولية. سيتم الإعلان عن المنتجات والأسعار النهائية قريباً. اطلب برسالة وادفع عند الاستلام.",
+
+      identityLabel: "04 / العلامة",
+      identitySub: "هوية CEE YA.",
+      identityTitle: "توقيع هادئ<br>ودافئ.",
+      logoTitle: "الشعار",
+      logoCopy: "كتابة بخط سيريف مع نقطة ذهبية. يُستخدم الرمز المختصر في المساحات الصغيرة.",
+      paletteTitle: "الألوان",
+      paletteCopy: "الأسود هو الأساس. الذهبي والوردي لمسات تُستخدم باعتدال.",
+      typeTitle: "الخطوط",
+      typeCopy: "Cormorant Garamond للعناوين، وManrope للتفاصيل. وAmiri وCairo للعربية.",
+      voiceTitle: "الأسلوب",
+      voiceOne: "هادئة.",
+      voiceTwo: "مدروسة.",
+      voiceThree: "مغربية.",
+
+      orderLabel: "05 / كيف تطلب",
+      orderSub: "بسيط وآمن",
+      orderTitle: "ثلاث خطوات،<br>بلا تعقيد.",
+      stepOne: "اختر",
+      stepOneCopy: "اختر قطعتك من المجموعة.",
+      stepTwo: "راسلنا",
+      stepTwoCopy: "أرسل طلبك عبر واتساب أو إنستغرام.",
+      stepThree: "ادفع عند الاستلام",
+      stepThreeCopy: "استلم طلبك في أي مدينة بالمغرب وادفع عند وصوله.",
+
+      manifestoEyebrow: "رؤية <bdi>CEE YA.</bdi>",
       manifestoTitle: "لسنا هنا لنتبع الآخرين.<br>نحن هنا لنكتشف.",
 
-      contactLabel: "04 / تواصل",
+      contactLabel: "06 / تواصل",
       contactConnect: "لنبقَ على تواصل",
-      contactEyebrow: "هل لديك فكرة؟",
+      contactEyebrow: "جاهز للطلب، أو فضولي فقط؟",
       contactTitle: "لنبدأ<br>حواراً جديداً.",
-      contactTalk: "تواصل معنا",
+      contactWhatsapp: "واتساب",
+      contactInstagram: "إنستغرام",
+      contactEmail: "البريد الإلكتروني",
+      contactSoon: "بيانات التواصل قريباً.",
+      waMessage: "مرحباً CEE YA.، أرغب في تقديم طلب.",
 
       footerLocation: "صُنع في المغرب",
       backToTop: "العودة للأعلى ↑",
@@ -241,11 +379,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
   const loader = document.querySelector(".loader");
+  const metaDescription = document.querySelector('meta[name="description"]');
+
+  const MENU_BREAKPOINT = 900;
 
   let currentLanguage = "en";
 
 
-  /* 03 — LANGUAGE SYSTEM */
+  /* 03 — CONTACT LINKS */
+
+  function applyContacts() {
+
+    const message = translations[currentLanguage].waMessage;
+
+    const links = {
+      whatsapp: SITE.whatsapp
+        ? "https://wa.me/" + SITE.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(message)
+        : "",
+      instagram: SITE.instagram
+        ? "https://instagram.com/" + SITE.instagram.replace(/^@/, "")
+        : "",
+      email: SITE.email
+        ? "mailto:" + SITE.email
+        : ""
+    };
+
+    let hasAny = false;
+
+    document.querySelectorAll("[data-contact]").forEach((element) => {
+
+      const href = links[element.dataset.contact];
+
+      element.hidden = !href;
+
+      if (href) {
+        element.href = href;
+        hasAny = true;
+      }
+
+    });
+
+    const emailLine = document.querySelector("[data-email]");
+
+    if (emailLine) {
+      emailLine.textContent = SITE.email;
+      emailLine.hidden = !SITE.email;
+    }
+
+    const soon = document.querySelector(".contact-soon");
+
+    if (soon) {
+      soon.hidden = hasAny;
+    }
+
+  }
+
+
+  /* 04 — LANGUAGE SYSTEM */
 
   function updateMenuLabel() {
 
@@ -272,12 +462,15 @@ document.addEventListener("DOMContentLoaded", () => {
     currentLanguage = language;
 
     const dictionary = translations[language];
-    const isArabic = language === "ar";
 
     document.documentElement.lang = language;
-    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
 
-    document.body.classList.toggle("arabic", isArabic);
+    document.title = dictionary.titleTag;
+
+    if (metaDescription) {
+      metaDescription.setAttribute("content", dictionary.metaDescription);
+    }
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
 
@@ -299,33 +492,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateMenuLabel();
+    applyContacts();
 
     try {
       localStorage.setItem("ceeya-language", language);
     } catch (error) {
-      // The language system remains functional without storage.
+      // The language system works without storage.
     }
 
   }
 
 
-  function restoreLanguage() {
-
-    let savedLanguage = "en";
+  function detectLanguage() {
 
     try {
 
-      const storedLanguage = localStorage.getItem("ceeya-language");
+      const stored = localStorage.getItem("ceeya-language");
 
-      if (Object.prototype.hasOwnProperty.call(translations, storedLanguage)) {
-        savedLanguage = storedLanguage;
+      if (Object.prototype.hasOwnProperty.call(translations, stored)) {
+        return stored;
       }
 
     } catch (error) {
-      // English is used as the default language.
+      // Fall through to the browser language.
     }
 
-    setLanguage(savedLanguage);
+    const browser = (navigator.language || "").slice(0, 2).toLowerCase();
+
+    return Object.prototype.hasOwnProperty.call(translations, browser)
+      ? browser
+      : "en";
 
   }
 
@@ -343,7 +539,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* 04 — MOBILE MENU */
+  /* 05 — MOBILE MENU */
 
   function openMenu() {
 
@@ -393,9 +589,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuToggle.addEventListener("click", () => {
 
-      const isOpen = menuToggle.classList.contains("active");
-
-      if (isOpen) {
+      if (menuToggle.classList.contains("active")) {
         closeMenu();
       } else {
         openMenu();
@@ -403,44 +597,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-
     mobileMenu.querySelectorAll("a").forEach((link) => {
-
-      link.addEventListener("click", () => {
-        closeMenu();
-      });
-
+      link.addEventListener("click", () => closeMenu());
     });
-
 
     document.addEventListener("click", (event) => {
 
-      const isOpen = menuToggle.classList.contains("active");
+      if (!menuToggle.classList.contains("active")) return;
 
-      if (!isOpen) return;
+      const insideMenu = mobileMenu.contains(event.target);
+      const onToggle = menuToggle.contains(event.target);
 
-      const clickedInsideMenu = mobileMenu.contains(event.target);
-      const clickedToggle = menuToggle.contains(event.target);
-
-      if (!clickedInsideMenu && !clickedToggle) {
+      if (!insideMenu && !onToggle) {
         closeMenu();
       }
 
     });
 
-
     document.addEventListener("keydown", (event) => {
 
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && menuToggle.classList.contains("active")) {
         closeMenu(true);
       }
 
     });
 
-
     window.addEventListener("resize", () => {
 
-      if (window.innerWidth > 760) {
+      if (window.innerWidth > MENU_BREAKPOINT) {
         closeMenu();
       }
 
@@ -449,87 +633,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 05 — MOTION PREFERENCE */
+  /* 06 — MOTION PREFERENCE */
 
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-
-  /* 06 — GENERAL REVEAL ANIMATIONS */
-
-  const revealElements = document.querySelectorAll(".reveal");
+  const canObserve = "IntersectionObserver" in window;
 
 
-  if (reduceMotion || !("IntersectionObserver" in window)) {
+  /* 07 — REVEAL ANIMATIONS */
 
-    revealElements.forEach((element) => {
-      element.classList.add("visible");
-    });
+  function observe(selector, className, options) {
 
-  } else {
+    const elements = document.querySelectorAll(selector);
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    if (reduceMotion || !canObserve) {
 
-      entries.forEach((entry) => {
+      elements.forEach((element) => element.classList.add(className));
 
-        if (!entry.isIntersecting) return;
+      return;
 
-        entry.target.classList.add("visible");
+    }
 
-        observer.unobserve(entry.target);
-
-      });
-
-    }, {
-      threshold: 0.12,
-      rootMargin: "0px 0px -35px 0px"
-    });
-
-
-    revealElements.forEach((element) => {
-      revealObserver.observe(element);
-    });
-
-  }
-
-
-  /* 07 — PRODUCT REVEAL ANIMATIONS */
-
-  const productCards = document.querySelectorAll(".product-card");
-
-
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-
-    productCards.forEach((card) => {
-      card.classList.add("product-visible");
-    });
-
-  } else {
-
-    const productObserver = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, instance) => {
 
       entries.forEach((entry) => {
 
         if (!entry.isIntersecting) return;
 
-        entry.target.classList.add("product-visible");
+        entry.target.classList.add(className);
 
-        observer.unobserve(entry.target);
+        instance.unobserve(entry.target);
 
       });
 
-    }, {
-      threshold: 0.2,
-      rootMargin: "0px 0px -40px 0px"
-    });
+    }, options);
 
-
-    productCards.forEach((card) => {
-      productObserver.observe(card);
-    });
+    elements.forEach((element) => observer.observe(element));
 
   }
+
+
+  observe(".reveal", "visible", {
+    threshold: 0.12,
+    rootMargin: "0px 0px -35px 0px"
+  });
+
+  observe(".product-card", "product-visible", {
+    threshold: 0.2,
+    rootMargin: "0px 0px -40px 0px"
+  });
 
 
   /* 08 — LOADER */
@@ -561,52 +715,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  window.addEventListener("load", hideLoader, { once: true });
+  if (document.readyState === "complete") {
+    hideLoader();
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
 
   loaderFallback = window.setTimeout(hideLoader, 2500);
 
 
-  /* 09 — SMOOTH ANCHOR SCROLL */
+  /* 09 — INITIALIZE */
 
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-    link.addEventListener("click", (event) => {
-
-      const href = link.getAttribute("href");
-
-      if (!href || href === "#") return;
-
-      let targetId;
-
-      try {
-        targetId = decodeURIComponent(href.slice(1));
-      } catch (error) {
-        return;
-      }
-
-      const target = document.getElementById(targetId);
-
-      if (!target) return;
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-        block: "start"
-      });
-
-      if (window.location.hash !== href) {
-        history.replaceState(null, "", href);
-      }
-
-    });
-
-  });
-
-
-  /* 10 — INITIALIZE */
-
-  restoreLanguage();
+  setLanguage(detectLanguage());
 
   document.body.classList.add("js-ready");
 
