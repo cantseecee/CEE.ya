@@ -814,6 +814,51 @@ svg {
   line-height: 1.8;
 }
 
+/* COLLECTION — PRODUCT MOTION */
+
+.product-card {
+  transition: transform 700ms cubic-bezier(.2, .65, .3, 1);
+}
+
+.product-card .product-visual {
+  transition:
+    border-color 600ms ease,
+    background 600ms ease;
+}
+
+.product-card .beauty-object,
+.product-card .bag-object,
+.product-card .ring-object {
+  transition:
+    transform 800ms cubic-bezier(.2, .65, .3, 1),
+    box-shadow 800ms ease;
+}
+
+.product-card:hover .beauty-object {
+  transform: translateY(-9px) rotate(-3deg);
+}
+
+.product-card:hover .bag-object {
+  transform: translateY(-8px);
+}
+
+.product-card:hover .ring-object {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.product-card:hover .product-visual {
+  border-color: var(--line-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-card .product-visual,
+  .product-card .beauty-object,
+  .product-card .bag-object,
+  .product-card .ring-object {
+    transition: none;
+  }
+}
 
 /* 12 — MANIFESTO */
 
