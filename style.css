@@ -2280,5 +2280,54 @@ button {
 
 /* END VERSION 21 — PART 2 */
 
+/* =====================================================
+   CEE YA. — VERSION 21
+   FINAL MOTION REFINEMENT
+===================================================== */
+
+.reveal {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section,
+.explorations-section {
+  scroll-margin-top: 90px;
+}
+
+.primary-button,
+.secondary-button {
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .explorations-section .exploration-card,
+  .explorations-section .exploration-card::after,
+  .primary-button,
+  .secondary-button {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* END VERSION 21 */
+
+
 
 
