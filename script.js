@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
 
       heroEyebrow: "INDEPENDENT CREATIVE DIGITAL STUDIO",
-      heroTitle: "THINK BEYOND<br>THE ORDINARY.",
+      heroTitle: "OWN THE<br>UNSEEN.",
       heroDescription: "A new perspective on creativity, ideas and the digital world. Made with intention. Designed to inspire.",
       heroButton: "EXPLORE CEE YA.",
       scrollText: "SCROLL TO DISCOVER",
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
 
       heroEyebrow: "STUDIO CRÉATIF DIGITAL INDÉPENDANT",
-      heroTitle: "PENSER AU-DELÀ<br>DE L'ORDINAIRE.",
+      heroTitle: "OWN THE<br>UNSEEN.",
       heroDescription: "Une nouvelle perspective sur la créativité, les idées et le monde digital. Pensé avec intention. Conçu pour inspirer.",
       heroButton: "EXPLORER CEE YA.",
       scrollText: "DÉFILER POUR DÉCOUVRIR",
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "تواصل معنا",
 
       heroEyebrow: "استوديو إبداعي رقمي مستقل",
-      heroTitle: "فكّر خارج<br>حدود المألوف.",
+      heroTitle: "OWN THE<br>UNSEEN.",
       heroDescription: "نظرة جديدة إلى الإبداع والأفكار والعالم الرقمي. صُمّم بشغف، ونُفّذ بهدف الإلهام.",
       heroButton: "اكتشف CEE YA.",
       scrollText: "مرّر لاكتشاف المزيد",
