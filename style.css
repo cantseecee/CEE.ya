@@ -2128,5 +2128,81 @@ button {
 
 /* END VERSION 20 */
 
+/* =====================================================
+   CEE YA. — VERSION 21
+   ABOUT SECTION REFINEMENT
+===================================================== */
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0c;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -180px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(201, 169, 110, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-section .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section .section-label {
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.about-section h2 {
+  max-width: 760px;
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.about-section p {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.about-section .about-brand {
+  display: inline-block;
+  margin-top: 35px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(201, 169, 110, 0.3);
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+[dir="rtl"] .about-section::before {
+  right: auto;
+  left: -180px;
+}
+
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: clamp(38px, 10vw, 58px);
+    letter-spacing: -0.5px;
+  }
+
+  .about-section p {
+    font-size: 13px;
+  }
+}
+
+/* END VERSION 21 — PART 1 */
 
 
