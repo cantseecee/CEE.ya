@@ -247,30 +247,27 @@ svg {
 }
 
 .menu-toggle {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   border: 0;
   background: transparent;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .menu-toggle span {
-  width: 23px;
+  width: 19px;
   height: 1px;
   background: var(--ivory);
   transition: transform var(--transition);
 }
 
 .menu-toggle.active span:first-child {
-  transform: translateY(3.5px) rotate(45deg);
-}
-
-.menu-toggle.active span:last-child {
-  transform: translateY(-3.5px) rotate(-45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 
