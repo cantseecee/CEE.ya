@@ -1,37 +1,41 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="CEE YA. is an independent Moroccan creative digital studio exploring ideas, creativity and the possibilities of the digital world.">
+  <meta property="og:title" content="CEE YA. — OWN THE UNSEEN.">
+  <meta property="og:description" content="Independent creative digital studio. Made in Morocco.">
+  <meta property="og:type" content="website">
 
   <title>CEE YA. — OWN THE UNSEEN.</title>
 
-  <meta name="description" content="CEE YA. is an independent Moroccan creative digital studio exploring ideas, creativity and the possibilities of the digital world.">
-  <meta name="theme-color" content="#090909">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=24">
-  <script src="script.js?v=16" defer></script>
+  <link rel="stylesheet" href="style.css?v=25">
+  <script src="script.js?v=17" defer></script>
 </head>
 
 <body>
 
-  <!-- LOADER -->
-  <div class="loader" id="loader" aria-label="Loading">
-    <span>CEE YA<span class="gold-dot">.</span></span>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="loader" aria-hidden="true">
+    <span class="loader-mark">CEE YA<span>.</span></span>
   </div>
 
-
   <!-- HEADER -->
+
   <header class="topbar">
 
-    <a href="#home" class="logo" aria-label="CEE YA Home">
+    <a class="wordmark" href="#home" aria-label="CEE YA. — Home">
       CEE YA<span>.</span>
     </a>
 
@@ -43,12 +47,12 @@
       <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
 
-    <div class="header-right">
+    <div class="header-actions">
 
-      <div class="language-switcher" aria-label="Choose language">
-        <button class="lang-btn active" type="button" data-lang="en">EN</button>
-        <button class="lang-btn" type="button" data-lang="fr">FR</button>
-        <button class="lang-btn" type="button" data-lang="ar">عربي</button>
+      <div class="language-switch" aria-label="Language selection">
+        <button class="lang-btn active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" type="button" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" type="button" data-lang="ar" aria-pressed="false">عربي</button>
       </div>
 
       <button
@@ -56,45 +60,33 @@
         type="button"
         aria-label="Open menu"
         aria-expanded="false"
-        aria-controls="mobile-menu">
-
+        aria-controls="mobile-menu"
+      >
         <span></span>
         <span></span>
-
       </button>
 
     </div>
 
   </header>
 
+  <!-- MOBILE MENU -->
 
-  <!-- MOBILE NAVIGATION -->
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
     <a href="#home" data-i18n="navHome">Home</a>
     <a href="#about" data-i18n="navAbout">About</a>
     <a href="#explore" data-i18n="navExplore">Explore</a>
     <a href="#collection" data-i18n="navCollection">Collection</a>
     <a href="#contact" data-i18n="navContact">Contact</a>
-
   </nav>
 
+  <main id="main-content">
 
-  <main>
+    <!-- HERO -->
 
-
-    <!-- 01 — HERO -->
-    <section class="hero" id="home">
-
-      <div class="hero-decoration hero-decoration-one"></div>
-      <div class="hero-decoration hero-decoration-two"></div>
+    <section class="hero section-shell" id="home">
 
       <div class="hero-content reveal">
-
-        <div class="hero-topline">
-          <span>CEE YA. — MOROCCO</span>
-          <span>EST. 2026</span>
-        </div>
 
         <p class="eyebrow" data-i18n="heroEyebrow">
           INDEPENDENT CREATIVE DIGITAL STUDIO
@@ -109,50 +101,43 @@
           Made with intention. Designed to inspire.
         </p>
 
-        <a href="#explore" class="primary-button" data-i18n="heroButton">
+        <a class="primary-button" href="#explore" data-i18n="heroButton">
           EXPLORE CEE YA.
         </a>
 
       </div>
 
-      <div class="hero-index">01 — 04</div>
+      <div class="hero-index" aria-hidden="true">
+        <span>01</span>
+        <i></i>
+        <span>04</span>
+      </div>
 
-      <a href="#explore" class="scroll-indicator" data-i18n="scrollText">
-        SCROLL TO DISCOVER ↓
+      <a class="scroll-cue" href="#about">
+        <span data-i18n="scrollText">SCROLL TO DISCOVER</span>
+        <i></i>
       </a>
+
+      <div class="hero-signature" aria-hidden="true">
+        CY<span>.</span>
+      </div>
 
     </section>
 
+    <!-- ABOUT -->
 
-
-    <!-- 02 — ABOUT -->
-    <section class="about section" id="about">
+    <section class="about section-shell section-pad" id="about">
 
       <div class="section-label reveal">
-
-        <span data-i18n="aboutLabel">
-          01 / ABOUT
-        </span>
-
-        <span>CEE YA.</span>
-
+        <span data-i18n="aboutLabel">01 / ABOUT</span>
+        <span data-i18n="aboutSub">A DIFFERENT POINT OF VIEW</span>
       </div>
 
+      <div class="about-grid">
 
-      <div class="about-layout">
-
-        <div class="about-heading reveal">
-
-          <p class="eyebrow" data-i18n="aboutSub">
-            A DIFFERENT POINT OF VIEW
-          </p>
-
-          <h2 data-i18n="aboutTitle">
-            More than<br>a digital space.
-          </h2>
-
-        </div>
-
+        <h2 class="section-heading reveal" data-i18n="aboutTitle">
+          More than<br>a digital space.
+        </h2>
 
         <div class="about-copy reveal">
 
@@ -163,7 +148,7 @@
             beyond the obvious.
           </p>
 
-          <span class="about-brand" data-i18n="aboutBrand">
+          <span class="micro-signature" data-i18n="aboutBrand">
             CEE YA. — MOROCCO
           </span>
 
@@ -173,23 +158,14 @@
 
     </section>
 
+    <!-- EXPLORATIONS -->
 
-
-    <!-- 03 — EXPLORE -->
-    <section class="explore section" id="explore">
+    <section class="explore section-shell section-pad" id="explore">
 
       <div class="section-label reveal">
-
-        <span data-i18n="exploreLabel">
-          02 / EXPLORATIONS
-        </span>
-
-        <span data-i18n="exploreDirections">
-          THREE DIRECTIONS
-        </span>
-
+        <span data-i18n="exploreLabel">02 / EXPLORATIONS</span>
+        <span data-i18n="exploreDirections">THREE DIRECTIONS</span>
       </div>
-
 
       <div class="explore-intro reveal">
 
@@ -197,105 +173,74 @@
           OUR PERSPECTIVE
         </p>
 
-        <h2 data-i18n="exploreTitle">
+        <h2 class="section-heading" data-i18n="exploreTitle">
           Ideas beyond<br>the expected.
         </h2>
 
       </div>
 
+      <div class="direction-grid">
 
-      <div class="explore-grid">
-
-
-        <!-- CREATIVITY -->
-        <article class="explore-card reveal">
+        <article class="direction-card reveal">
 
           <span class="card-number">01</span>
 
-          <div class="card-content">
-
-            <h3 data-i18n="creativity">
-              Creativity
-            </h3>
-
-            <p data-i18n="creativityCopy">
-              Seeing familiar things from unfamiliar perspectives.
-            </p>
-
+          <div class="direction-symbol symbol-orbit" aria-hidden="true">
+            <i></i>
           </div>
 
-          <span class="card-index">01 / 03</span>
+          <h3 data-i18n="creativity">Creativity</h3>
+
+          <p data-i18n="creativityCopy">
+            Seeing familiar things from unfamiliar perspectives.
+          </p>
 
         </article>
 
-
-
-        <!-- INNOVATION -->
-        <article class="explore-card reveal">
+        <article class="direction-card reveal">
 
           <span class="card-number">02</span>
 
-          <div class="card-content">
-
-            <h3 data-i18n="innovation">
-              Innovation
-            </h3>
-
-            <p data-i18n="innovationCopy">
-              Transforming original thinking into meaningful experiences.
-            </p>
-
+          <div class="direction-symbol symbol-grid" aria-hidden="true">
+            <i></i>
           </div>
 
-          <span class="card-index">02 / 03</span>
+          <h3 data-i18n="innovation">Innovation</h3>
+
+          <p data-i18n="innovationCopy">
+            Transforming original thinking into meaningful experiences.
+          </p>
 
         </article>
 
-
-
-        <!-- DISCOVERY -->
-        <article class="explore-card reveal">
+        <article class="direction-card reveal">
 
           <span class="card-number">03</span>
 
-          <div class="card-content">
-
-            <h3 data-i18n="discovery">
-              Discovery
-            </h3>
-
-            <p data-i18n="discoveryCopy">
-              Finding possibilities where others see the ordinary.
-            </p>
-
+          <div class="direction-symbol symbol-arc" aria-hidden="true">
+            <i></i>
           </div>
 
-          <span class="card-index">03 / 03</span>
+          <h3 data-i18n="discovery">Discovery</h3>
+
+          <p data-i18n="discoveryCopy">
+            Finding possibilities where others see the ordinary.
+          </p>
 
         </article>
-
 
       </div>
 
     </section>
 
+    <!-- COLLECTION -->
 
-
-    <!-- 04 — COLLECTION -->
-    <section class="collection section" id="collection">
+    <section class="collection section-shell section-pad" id="collection">
 
       <div class="section-label reveal">
-
-        <span data-i18n="collectionLabel">
-          03 / THE COLLECTION
-        </span>
-
-        <span data-i18n="collectionEdition">
-          A CURATED EDIT
-        </span>
-
+        <span data-i18n="collectionLabel">03 / THE COLLECTION</span>
+        <span data-i18n="collectionEdition">A CURATED EDIT</span>
       </div>
-
 
       <div class="collection-intro reveal">
 
@@ -303,177 +248,111 @@
           THE ART OF EVERYDAY DETAILS
         </p>
 
-        <h2 data-i18n="collectionTitle">
+        <h2 class="section-heading" data-i18n="collectionTitle">
           Objects of<br>quiet distinction.
         </h2>
 
-        <p class="collection-description" data-i18n="collectionCopy">
+        <p class="collection-copy" data-i18n="collectionCopy">
           A considered selection of beauty, accessories and little details
           that make everyday moments feel special.
         </p>
 
       </div>
 
+      <div class="product-grid">
 
+        <!-- CONCEPT 01 -->
 
-      <div class="collection-grid">
-
-
-        <!-- PRODUCT 01 -->
         <article class="product-card reveal">
 
           <div class="product-visual visual-beauty">
 
-            <span class="visual-label">01</span>
-
-            <div class="beauty-object">
-
-              <div class="beauty-cap"></div>
-
-              <div class="beauty-bottle">
-                <span>FORME</span>
-                <small>01 / BEAUTY</small>
-              </div>
-
-            </div>
-
-            <span class="visual-category" data-i18n="productCategoryOne">
-              BEAUTY
-            </span>
-
-          </div>
-
-
-          <div class="product-info">
-
-            <div>
-
-              <p class="product-type" data-i18n="productTypeOne">
-                THE BEAUTY EDIT
-              </p>
-
-              <h3 data-i18n="productNameOne">
-                The Ritual
-              </h3>
-
-              <p class="product-description" data-i18n="productDescriptionOne">
-                A concept in everyday beauty.
-              </p>
-
-            </div>
-
-            <span class="product-status" data-i18n="conceptLabel">
+            <span class="concept-tag" data-i18n="conceptLabel">
               CONCEPT
             </span>
 
+            <div class="beauty-object" aria-hidden="true">
+              <span></span>
+            </div>
+
+            <span class="visual-index">01</span>
+
           </div>
+
+          <div class="product-meta">
+            <span data-i18n="productCategoryOne">BEAUTY</span>
+            <span data-i18n="productTypeOne">THE BEAUTY EDIT</span>
+          </div>
+
+          <h3 data-i18n="productNameOne">The Ritual</h3>
+
+          <p data-i18n="productDescriptionOne">
+            A concept in everyday beauty.
+          </p>
 
         </article>
 
+        <!-- CONCEPT 02 -->
 
-
-        <!-- PRODUCT 02 -->
         <article class="product-card reveal">
 
           <div class="product-visual visual-accessory">
 
-            <span class="visual-label">02</span>
-
-            <div class="accessory-object">
-
-              <div class="accessory-handle"></div>
-
-              <div class="accessory-body">
-                <span>CEE YA.</span>
-              </div>
-
-            </div>
-
-            <span class="visual-category" data-i18n="productCategoryTwo">
-              ACCESSORIES
-            </span>
-
-          </div>
-
-
-          <div class="product-info">
-
-            <div>
-
-              <p class="product-type" data-i18n="productTypeTwo">
-                THE ACCESSORY EDIT
-              </p>
-
-              <h3 data-i18n="productNameTwo">
-                The Essential
-              </h3>
-
-              <p class="product-description" data-i18n="productDescriptionTwo">
-                A study in form and simplicity.
-              </p>
-
-            </div>
-
-            <span class="product-status" data-i18n="conceptLabel">
+            <span class="concept-tag" data-i18n="conceptLabel">
               CONCEPT
             </span>
 
+            <div class="bag-object" aria-hidden="true">
+              <i></i>
+            </div>
+
+            <span class="visual-index">02</span>
+
           </div>
+
+          <div class="product-meta">
+            <span data-i18n="productCategoryTwo">ACCESSORIES</span>
+            <span data-i18n="productTypeTwo">THE ACCESSORY EDIT</span>
+          </div>
+
+          <h3 data-i18n="productNameTwo">The Essential</h3>
+
+          <p data-i18n="productDescriptionTwo">
+            A study in form and simplicity.
+          </p>
 
         </article>
 
+        <!-- CONCEPT 03 -->
 
-
-        <!-- PRODUCT 03 -->
         <article class="product-card reveal">
 
           <div class="product-visual visual-jewellery">
 
-            <span class="visual-label">03</span>
-
-            <div class="jewellery-object">
-
-              <div class="jewel-ring"></div>
-              <div class="jewel-stone"></div>
-
-            </div>
-
-            <span class="visual-category" data-i18n="productCategoryThree">
-              JEWELLERY
-            </span>
-
-          </div>
-
-
-          <div class="product-info">
-
-            <div>
-
-              <p class="product-type" data-i18n="productTypeThree">
-                THE DETAIL EDIT
-              </p>
-
-              <h3 data-i18n="productNameThree">
-                The Finishing Touch
-              </h3>
-
-              <p class="product-description" data-i18n="productDescriptionThree">
-                Small details, considered differently.
-              </p>
-
-            </div>
-
-            <span class="product-status" data-i18n="conceptLabel">
+            <span class="concept-tag" data-i18n="conceptLabel">
               CONCEPT
             </span>
 
+            <div class="ring-object" aria-hidden="true"></div>
+
+            <span class="visual-index">03</span>
+
           </div>
+
+          <div class="product-meta">
+            <span data-i18n="productCategoryThree">JEWELLERY</span>
+            <span data-i18n="productTypeThree">THE DETAIL EDIT</span>
+          </div>
+
+          <h3 data-i18n="productNameThree">The Finishing Touch</h3>
+
+          <p data-i18n="productDescriptionThree">
+            Small details, considered differently.
+          </p>
 
         </article>
 
-
       </div>
-
 
       <p class="collection-note reveal" data-i18n="collectionNote">
         An initial creative direction. Product selection and availability
@@ -482,12 +361,11 @@
 
     </section>
 
+    <!-- MANIFESTO -->
 
+    <section class="manifesto section-shell">
 
-    <!-- 05 — MANIFESTO -->
-    <section class="manifesto section">
-
-      <div class="manifesto-content reveal">
+      <div class="manifesto-inner reveal">
 
         <p class="eyebrow" data-i18n="manifestoEyebrow">
           THE CEE YA. PERSPECTIVE
@@ -498,31 +376,24 @@
           We are here to discover.
         </h2>
 
-        <span class="manifesto-signature">
-          CEE YA.
-        </span>
+        <span class="manifesto-rule"></span>
+
+        <p class="manifesto-tagline">
+          OWN THE UNSEEN<span>.</span>
+        </p>
 
       </div>
 
     </section>
 
+    <!-- CONTACT -->
 
-
-    <!-- 06 — CONTACT -->
-    <section class="contact section" id="contact">
+    <section class="contact section-shell section-pad" id="contact">
 
       <div class="section-label reveal">
-
-        <span data-i18n="contactLabel">
-          04 / CONTACT
-        </span>
-
-        <span data-i18n="contactConnect">
-          LET'S CONNECT
-        </span>
-
+        <span data-i18n="contactLabel">04 / CONTACT</span>
+        <span data-i18n="contactConnect">LET'S CONNECT</span>
       </div>
-
 
       <div class="contact-content reveal">
 
@@ -530,42 +401,38 @@
           HAVE AN IDEA IN MIND?
         </p>
 
-        <h2 data-i18n="contactTitle">
+        <h2 class="section-heading" data-i18n="contactTitle">
           Let's start a<br>conversation.
         </h2>
 
-        <a href="mailto:hello@ceeya.com"
-           class="contact-link"
-           data-i18n="contactTalk">
-
-          LET'S TALK
-
+        <a class="contact-link" href="mailto:hello@ceeya.com">
+          <span data-i18n="contactTalk">LET'S TALK</span>
+          <i aria-hidden="true">↗</i>
         </a>
+
+        <p class="contact-email">hello@ceeya.com</p>
 
       </div>
 
     </section>
 
-
   </main>
 
-
-
   <!-- FOOTER -->
-  <footer class="footer">
 
-    <div class="footer-top">
+  <footer class="footer section-shell">
 
-      <a href="#home" class="footer-logo">
-        CEE YA<span>.</span>
-      </a>
+    <a class="footer-wordmark" href="#home">
+      CEE YA<span>.</span>
+    </a>
 
-      <a href="#home" class="back-to-top" data-i18n="backToTop">
-        BACK TO TOP ↑
-      </a>
+    <span class="footer-location" data-i18n="footerLocation">
+      MADE IN MOROCCO
+    </span>
 
-    </div>
-
+    <a class="back-to-top" href="#home" data-i18n="backToTop">
+      BACK TO TOP ↑
+    </a>
 
     <div class="footer-bottom">
 
@@ -573,19 +440,15 @@
         © 2026 CEE YA. ALL RIGHTS RESERVED.
       </span>
 
-      <span class="signature-mark" aria-hidden="true">
-        <i></i>
-        <b></b>
+      <span class="footer-monogram" aria-label="CY monogram">
+        CY<span>.</span>
       </span>
 
-      <span data-i18n="footerLocation">
-        MADE IN MOROCCO
-      </span>
+      <span>EST. 2026</span>
 
     </div>
 
   </footer>
-
 
 </body>
 </html>
