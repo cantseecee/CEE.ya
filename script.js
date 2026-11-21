@@ -1,7 +1,7 @@
 
 /* =====================================================
    CEE YA. — MASTER INTERACTION
-   VERSION 18
+   VERSION 19
    ENGLISH / FRENCH / ARABIC
 ===================================================== */
 
@@ -449,13 +449,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 05 — REVEAL ANIMATIONS */
-
-  const revealElements = document.querySelectorAll(".reveal");
+  /* 05 — MOTION PREFERENCE */
 
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
+
+
+  /* 06 — GENERAL REVEAL ANIMATIONS */
+
+  const revealElements = document.querySelectorAll(".reveal");
 
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
@@ -491,7 +494,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* 06 — LOADER */
+  /* 07 — PRODUCT REVEAL ANIMATIONS */
+
+  const productCards = document.querySelectorAll(".product-card");
+
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+
+    productCards.forEach((card) => {
+      card.classList.add("product-visible");
+    });
+
+  } else {
+
+    const productObserver = new IntersectionObserver((entries, observer) => {
+
+      entries.forEach((entry) => {
+
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("product-visible");
+
+        observer.unobserve(entry.target);
+
+      });
+
+    }, {
+      threshold: 0.2,
+      rootMargin: "0px 0px -40px 0px"
+    });
+
+
+    productCards.forEach((card) => {
+      productObserver.observe(card);
+    });
+
+  }
+
+
+  /* 08 — LOADER */
 
   let loaderHidden = false;
   let loaderFallback;
@@ -525,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loaderFallback = window.setTimeout(hideLoader, 2500);
 
 
-  /* 07 — SMOOTH ANCHOR SCROLL */
+  /* 09 — SMOOTH ANCHOR SCROLL */
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
@@ -563,7 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* 08 — INITIALIZE */
+  /* 10 — INITIALIZE */
 
   restoreLanguage();
 
