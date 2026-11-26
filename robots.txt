@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cantseecee.github.io/CEE.ya/sitemap.xml
