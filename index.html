@@ -1,12 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CEE YA. | Discover Your Next Favourite</title>
-    <meta name="description" content="Discover curated everyday essentials and trending finds at CEE YA.">
+    <!-- GOOGLE SEARCH CONSOLE -->
+    <meta name="google-site-verification" content="EgMK4Y1mk4HihxDeVRWCr8M0Hlkdi6uPTp1P4EPor1s">
+
+    <!-- SEO -->
+    <title>CEE YA. | Curated Finds & Everyday Essentials in Morocco</title>
+    <meta
+        name="description"
+        content="Discover curated products, trending finds and everyday essentials at CEE YA. Explore our collection online in Morocco."
+    >
     <meta name="theme-color" content="#090909">
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://cantseecee.github.io/CEE.ya/"
+    >
 
     <!-- FAVICON -->
     <link rel="icon" href="favicon.ico?v=5" sizes="any">
@@ -14,32 +28,78 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=5">
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=5">
 
-    <!-- SHARE PREVIEW (WhatsApp / Instagram / Facebook) -->
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CEE YA.">
-    <meta property="og:title" content="CEE YA. | Discover Your Next Favourite">
-    <meta property="og:description" content="Trending finds. Everyday essentials. A new standard of discovery.">
-    <meta property="og:url" content="https://cantseecee.github.io/CEE.ya/">
-    <meta property="og:image" content="https://cantseecee.github.io/CEE.ya/og-image.jpg">
+    <meta property="og:title" content="CEE YA. | Curated Finds & Everyday Essentials">
+    <meta
+        property="og:description"
+        content="Trending finds. Everyday essentials. A new standard of discovery."
+    >
+    <meta
+        property="og:url"
+        content="https://cantseecee.github.io/CEE.ya/"
+    >
+    <meta
+        property="og:image"
+        content="https://cantseecee.github.io/CEE.ya/og-image.jpg"
+    >
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://cantseecee.github.io/CEE.ya/og-image.jpg">
+    <meta
+        property="og:image:alt"
+        content="CEE YA. — Curated finds and everyday essentials"
+    >
 
-    <link rel="stylesheet" href="style.css?v=5">
+    <!-- TWITTER / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+        name="twitter:title"
+        content="CEE YA. | Curated Finds & Everyday Essentials"
+    >
+    <meta
+        name="twitter:description"
+        content="Trending finds. Everyday essentials. A new standard of discovery."
+    >
+    <meta
+        name="twitter:image"
+        content="https://cantseecee.github.io/CEE.ya/og-image.jpg"
+    >
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CEE YA.",
+        "url": "https://cantseecee.github.io/CEE.ya/",
+        "description": "Discover curated products, trending finds and everyday essentials at CEE YA.",
+        "inLanguage": ["en", "fr", "ar"]
+    }
+    </script>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header class="header">
+
         <a href="#home" class="logo" aria-label="CEE YA home">
             CEE YA<span>.</span>
         </a>
 
-        <button class="menu-toggle" id="menu-toggle"
-                type="button" aria-label="Open navigation"
-                aria-expanded="false" aria-controls="main-nav">
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            data-i18n-aria="openNav"
+        >
             <span></span>
             <span></span>
         </button>
@@ -52,26 +112,43 @@
         </nav>
 
         <div class="header-actions">
-            <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="langLabel">
+
+            <div
+                class="lang-switch"
+                role="group"
+                aria-label="Language"
+                data-i18n-aria="langLabel"
+            >
                 <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
                 <button class="lang-btn" type="button" data-lang="fr" aria-pressed="false">FR</button>
                 <button class="lang-btn" type="button" data-lang="ar" aria-pressed="false">AR</button>
             </div>
 
-        <button class="cart-button" id="cart-toggle" type="button"
-                aria-label="Open shopping bag" data-i18n-aria="openBag">
-            <span class="cart-label" data-i18n="bag">BAG</span>
-            <span class="cart-count" id="cart-count">0</span>
-        </button>
+            <button
+                class="cart-button"
+                id="cart-toggle"
+                type="button"
+                aria-label="Open shopping bag"
+                data-i18n-aria="openBag"
+            >
+                <span class="cart-label" data-i18n="bag">BAG</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+
         </div>
     </header>
 
+    <!-- MAIN -->
     <main id="home-page">
 
         <!-- HERO -->
         <section class="hero" id="home">
+
             <div class="hero-content">
-                <p class="eyebrow" data-i18n="heroEyebrow">CEE YA. — CURATED DISCOVERY</p>
+
+                <p class="eyebrow" data-i18n="heroEyebrow">
+                    CEE YA. — CURATED DISCOVERY
+                </p>
 
                 <h1 data-i18n-html="heroTitle">
                     FIND YOUR NEXT
@@ -86,135 +163,265 @@
                 <a href="#collection" class="primary-button" data-i18n="heroCta">
                     EXPLORE COLLECTION
                 </a>
+
             </div>
 
             <div class="hero-index">01 — CEE YA.</div>
+
         </section>
 
         <!-- COLLECTION -->
         <section class="collection section" id="collection">
+
             <div class="section-heading">
+
                 <p class="eyebrow" data-i18n="colEyebrow">CURATED FOR YOU</p>
+
                 <h2 data-i18n="colTitle">THE COLLECTION</h2>
-                <p data-i18n="colSub">Considered finds for everyday living.</p>
+
+                <p data-i18n="colSub">
+                    Considered finds for everyday living.
+                </p>
+
             </div>
 
-            <div class="filters" id="filters" role="group" aria-label="Filter products" data-i18n-aria="filterAria">
-                <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" data-i18n="fAll">ALL</button>
-                <button class="filter-btn" type="button" data-filter="tech" aria-pressed="false" data-i18n="cat_tech">TECH</button>
-                <button class="filter-btn" type="button" data-filter="style" aria-pressed="false" data-i18n="cat_style">STYLE</button>
-                <button class="filter-btn" type="button" data-filter="beauty" aria-pressed="false" data-i18n="cat_beauty">BEAUTY</button>
+            <!-- PRODUCT FILTERS -->
+            <div
+                class="filters"
+                id="filters"
+                role="group"
+                aria-label="Filter products"
+                data-i18n-aria="filterAria"
+            >
+
+                <button
+                    class="filter-btn active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
+                    data-i18n="fAll"
+                >ALL</button>
+
+                <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="tech"
+                    aria-pressed="false"
+                    data-i18n="cat_tech"
+                >TECH</button>
+
+                <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="style"
+                    aria-pressed="false"
+                    data-i18n="cat_style"
+                >STYLE</button>
+
+                <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="beauty"
+                    aria-pressed="false"
+                    data-i18n="cat_beauty"
+                >BEAUTY</button>
+
             </div>
 
+            <!-- PRODUCTS -->
             <div class="products">
 
-                <article class="product-card"
-                         data-name="Sunglasses" data-price="159"
-                         data-category="style"
-                         data-status="new"
-                         data-description="Lightweight frame with a clean, timeless shape. Easy to pair with any outfit, from morning to sunset." tabindex="0">
+                <!-- SUNGLASSES -->
+                <article
+                    class="product-card"
+                    data-name="Sunglasses"
+                    data-price="159"
+                    data-category="style"
+                    data-status="new"
+                    data-description="Lightweight frame with a clean, timeless shape. Easy to pair with any outfit, from morning to sunset."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/sunglasses.jpg"
-                             alt="Sunglasses" loading="lazy">
+                        <img
+                            src="images/sunglasses.jpg"
+                            alt="Sunglasses"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Sunglasses</h3>
                             <p>Clean look. Sun ready.</p>
                         </div>
+
                         <strong class="price">159 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
-                <article class="product-card"
-                         data-name="Phone Case" data-price="59"
-                         data-category="tech"
-                         data-description="Slim fit with a raised edge around the screen and camera. Simple protection for everyday use." tabindex="0">
+                <!-- PHONE CASE -->
+                <article
+                    class="product-card"
+                    data-name="Phone Case"
+                    data-price="59"
+                    data-category="tech"
+                    data-description="Slim fit with a raised edge around the screen and camera. Simple protection for everyday use."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/phonecase.jpg"
-                             alt="Phone Case" loading="lazy">
+                        <img
+                            src="images/phonecase.jpg"
+                            alt="Phone Case"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Phone Case</h3>
                             <p>Slim fit. Solid protection.</p>
                         </div>
+
                         <strong class="price">59 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
-                <article class="product-card"
-                         data-name="Backpack" data-price="299"
-                         data-category="style"
-                         data-description="A spacious everyday backpack with a front pocket and padded straps. Made for work, school and weekends." tabindex="0">
+                <!-- BACKPACK -->
+                <article
+                    class="product-card"
+                    data-name="Backpack"
+                    data-price="299"
+                    data-category="style"
+                    data-description="A spacious everyday backpack with a front pocket and padded straps. Made for work, school and weekends."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/backpack.jpg"
-                             alt="Backpack" loading="lazy">
+                        <img
+                            src="images/backpack.jpg"
+                            alt="Backpack"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Backpack</h3>
                             <p>Daily carry. Spacious design.</p>
                         </div>
+
                         <strong class="price">299 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
-                <article class="product-card"
-                         data-name="Perfume" data-price="219"
-                         data-category="beauty"
-                         data-status="new"
-                         data-description="A fresh, lasting scent for every day. Light enough for daytime, memorable enough for the evening." tabindex="0">
+                <!-- PERFUME -->
+                <article
+                    class="product-card"
+                    data-name="Perfume"
+                    data-price="219"
+                    data-category="beauty"
+                    data-status="new"
+                    data-description="A fresh, lasting scent for every day. Light enough for daytime, memorable enough for the evening."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/perfume.jpg"
-                             alt="Perfume" loading="lazy">
+                        <img
+                            src="images/perfume.jpg"
+                            alt="Perfume"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Perfume</h3>
                             <p>Fresh notes. Lasting scent.</p>
                         </div>
+
                         <strong class="price">219 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
-                <article class="product-card"
-                         data-name="Sneakers" data-price="399"
-                         data-category="style"
-                         data-description="Street-ready sneakers with a cushioned sole. Comfortable from the first step." tabindex="0">
+                <!-- SNEAKERS -->
+                <article
+                    class="product-card"
+                    data-name="Sneakers"
+                    data-price="399"
+                    data-category="style"
+                    data-description="Street-ready sneakers with a cushioned sole. Comfortable from the first step."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/sneakers.jpg"
-                             alt="Sneakers" loading="lazy">
+                        <img
+                            src="images/sneakers.jpg"
+                            alt="Sneakers"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Sneakers</h3>
                             <p>Street comfort. Easy style.</p>
                         </div>
+
                         <strong class="price">399 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
-                <article class="product-card"
-                         data-name="Power Bank" data-price="169"
-                         data-category="tech"
-                         data-description="Compact power bank for fast charging on the go. Keep your phone ready all day." tabindex="0">
+                <!-- POWER BANK -->
+                <article
+                    class="product-card"
+                    data-name="Power Bank"
+                    data-price="169"
+                    data-category="tech"
+                    data-description="Compact power bank for fast charging on the go. Keep your phone ready all day."
+                    tabindex="0"
+                >
                     <div class="product-image">
-                        <img src="images/powerbank.jpg"
-                             alt="Power Bank" loading="lazy">
+                        <img
+                            src="images/powerbank.jpg"
+                            alt="Power Bank"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
+
                     <div class="product-info">
                         <div>
                             <h3>Power Bank</h3>
                             <p>Fast charge. Always ready.</p>
                         </div>
+
                         <strong class="price">169 DH</strong>
-                        <button class="add-cart" type="button" data-i18n="addToBag">ADD TO BAG</button>
+
+                        <button class="add-cart" type="button" data-i18n="addToBag">
+                            ADD TO BAG
+                        </button>
                     </div>
                 </article>
 
@@ -223,50 +430,74 @@
 
         <!-- ABOUT -->
         <section class="about section" id="about">
-            <p class="eyebrow" data-i18n="aboutEyebrow">A DIFFERENT PERSPECTIVE</p>
-            <h2 data-i18n-html="aboutTitle">BEYOND <span>ORDINARY.</span></h2>
-            <p data-i18n="aboutText">Discover a different standard.</p>
-        </section>
 
+            <p class="eyebrow" data-i18n="aboutEyebrow">
+                A DIFFERENT PERSPECTIVE
+            </p>
+
+            <h2 data-i18n-html="aboutTitle">
+                BEYOND <span>ORDINARY.</span>
+            </h2>
+
+            <p data-i18n="aboutText">Discover a different standard.</p>
+
+        </section>
 
         <!-- FAQ -->
         <section class="faq section" id="faq">
+
             <div class="section-heading">
+
                 <p class="eyebrow" data-i18n="faqEyebrow">GOOD TO KNOW</p>
+
                 <h2 data-i18n="faqTitle">FAQ</h2>
+
                 <p data-i18n="faqSub">Quick answers before you order.</p>
+
             </div>
 
             <div class="faq-list">
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ1">How do I place an order?</summary>
-                    <p class="faq-answer" data-i18n="faqA1">Add your favourites to the bag, continue to checkout and enter your delivery details. Your order message opens in WhatsApp. Send it to us to confirm.</p>
+                    <p class="faq-answer" data-i18n="faqA1">
+                        The website is currently a preview. Online ordering is not available yet. We will announce when orders officially open.
+                    </p>
                 </details>
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ2">Where do you deliver?</summary>
-                    <p class="faq-answer" data-i18n="faqA2">We deliver across Morocco. Delivery details are confirmed with you when we receive your order.</p>
+                    <p class="faq-answer" data-i18n="faqA2">
+                        Delivery availability across Morocco will be confirmed before orders open.
+                    </p>
                 </details>
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ3">How much is delivery and how long does it take?</summary>
-                    <p class="faq-answer" data-i18n="faqA3">It depends on your city. We confirm the delivery cost and time with you on WhatsApp before your order is final.</p>
+                    <p class="faq-answer" data-i18n="faqA3">
+                        Delivery costs and estimated times will be confirmed before an order is accepted.
+                    </p>
                 </details>
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ4">How do I pay?</summary>
-                    <p class="faq-answer" data-i18n="faqA4">No online payment is taken on the website. We confirm the payment method with you on WhatsApp when you place your order.</p>
+                    <p class="faq-answer" data-i18n="faqA4">
+                        Online payment is not available yet. Payment details will be shared when ordering becomes available.
+                    </p>
                 </details>
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ5">Can I return or exchange an item?</summary>
-                    <p class="faq-answer" data-i18n="faqA5">Message us on WhatsApp as soon as you receive your order and we will find a solution together.</p>
+                    <p class="faq-answer" data-i18n="faqA5">
+                        Return and exchange details will be published before orders open.
+                    </p>
                 </details>
 
                 <details class="faq-item">
                     <summary data-i18n="faqQ6">How can I contact you?</summary>
-                    <p class="faq-answer" data-i18n="faqA6">Write to us on WhatsApp. We reply as soon as possible.</p>
+                    <p class="faq-answer" data-i18n="faqA6">
+                        Our contact channels will be available when ordering officially opens.
+                    </p>
                 </details>
 
             </div>
@@ -276,123 +507,224 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <a href="#home" class="footer-logo">CEE YA<span>.</span></a>
-        <p data-i18n="footer">© 2026 CEE YA. ALL RIGHTS RESERVED.</p>
+
+        <a href="#home" class="footer-logo">
+            CEE YA<span>.</span>
+        </a>
+
+        <p data-i18n="footer">
+            © 2026 CEE YA. ALL RIGHTS RESERVED.
+        </p>
+
     </footer>
 
     <!-- CART OVERLAY -->
     <div class="cart-overlay" id="cart-overlay"></div>
 
     <!-- CART PANEL -->
-    <aside class="cart-panel" id="cart-panel"
-           aria-label="Shopping bag" data-i18n-aria="cartAria" aria-hidden="true">
-
+    <aside
+        class="cart-panel"
+        id="cart-panel"
+        aria-label="Shopping bag"
+        data-i18n-aria="cartAria"
+        aria-hidden="true"
+    >
         <div class="cart-header">
+
             <div>
                 <p class="eyebrow" data-i18n="cartEyebrow">YOUR SELECTION</p>
                 <h2 data-i18n="cartTitle">YOUR BAG</h2>
             </div>
-            <button class="close-cart" id="close-cart"
-                    type="button" aria-label="Close bag" data-i18n-aria="closeBag">×</button>
+
+            <button
+                class="close-cart"
+                id="close-cart"
+                type="button"
+                aria-label="Close bag"
+                data-i18n-aria="closeBag"
+            >×</button>
+
         </div>
 
         <div class="cart-items" id="cart-items"></div>
 
         <div class="cart-bottom">
+
             <div class="cart-total">
                 <span data-i18n="subtotal">SUBTOTAL</span>
                 <strong id="cart-total">0 DH</strong>
             </div>
-            <button class="checkout-button" id="checkout-btn" type="button" data-i18n="checkoutBtn">
+
+            <button
+                class="checkout-button"
+                id="checkout-btn"
+                type="button"
+                data-i18n="checkoutBtn"
+            >
                 CONTINUE TO CHECKOUT
             </button>
-            <p class="cart-note" data-i18n="cartNote">Delivery details will be confirmed with your order.</p>
+
+            <p class="cart-note" data-i18n="cartNote">
+                This store is currently a preview. Ordering is not available yet.
+            </p>
+
         </div>
     </aside>
 
     <!-- CHECKOUT -->
     <section class="checkout" id="checkout">
+
         <div class="checkout-inner">
 
-            <button class="back-button" id="back-to-shop" type="button" data-i18n="back">
-                ← BACK TO SHOP
-            </button>
+            <button
+                class="back-button"
+                id="back-to-shop"
+                type="button"
+                data-i18n="back"
+            >← BACK TO SHOP</button>
 
             <div class="section-heading">
+
                 <p class="eyebrow" data-i18n="coEyebrow">ALMOST YOURS</p>
+
                 <h2 data-i18n="coTitle">CHECKOUT</h2>
+
                 <p data-i18n="coSub">Enter your details to prepare your order.</p>
+
             </div>
 
             <div class="checkout-content">
 
+                <!-- DELIVERY FORM -->
                 <form class="checkout-form" id="checkout-form">
+
                     <h3 data-i18n="delivery">DELIVERY DETAILS</h3>
 
                     <label for="customer-name" data-i18n="lName">Full name</label>
-                    <input id="customer-name" name="name"
-                           type="text" placeholder="Your full name" data-i18n-placeholder="pName"
-                           autocomplete="name" required minlength="3">
+                    <input
+                        id="customer-name"
+                        name="name"
+                        type="text"
+                        placeholder="Your full name"
+                        data-i18n-placeholder="pName"
+                        autocomplete="name"
+                        required
+                        minlength="3"
+                    >
 
                     <label for="customer-phone" data-i18n="lPhone">Phone number</label>
-                    <input id="customer-phone" name="phone"
-                           type="tel" placeholder="06XXXXXXXX"
-                           autocomplete="tel" required minlength="9">
+                    <input
+                        id="customer-phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="06XXXXXXXX"
+                        data-i18n-placeholder="pPhone"
+                        autocomplete="tel"
+                        required
+                        minlength="9"
+                    >
 
                     <label for="customer-city" data-i18n="lCity">City</label>
-                    <input id="customer-city" name="city"
-                           type="text" placeholder="Your city" data-i18n-placeholder="pCity"
-                           autocomplete="address-level2" required>
+                    <input
+                        id="customer-city"
+                        name="city"
+                        type="text"
+                        placeholder="Your city"
+                        data-i18n-placeholder="pCity"
+                        autocomplete="address-level2"
+                        required
+                    >
 
                     <label for="customer-address" data-i18n="lAddress">Delivery address</label>
-                    <textarea id="customer-address" name="address"
-                              placeholder="Your full delivery address" data-i18n-placeholder="pAddress"
-                              autocomplete="street-address"
-                              rows="3" required></textarea>
+                    <textarea
+                        id="customer-address"
+                        name="address"
+                        placeholder="Your full delivery address"
+                        data-i18n-placeholder="pAddress"
+                        autocomplete="street-address"
+                        rows="3"
+                        required
+                    ></textarea>
 
-                    <button class="checkout-button" type="submit" data-i18n="prepare">
-                        PREPARE MY ORDER
-                    </button>
+                    <button
+                        class="checkout-button"
+                        type="submit"
+                        data-i18n="prepare"
+                    >PREPARE MY ORDER</button>
 
-                    <p class="form-note" id="form-note" aria-live="polite" data-i18n="formNote">
-                        No payment is processed on this demo website.
+                    <p
+                        class="form-note"
+                        id="form-note"
+                        aria-live="polite"
+                        data-i18n="formNote"
+                    >
+                        This is a demo checkout. No order is sent and no payment is processed.
                     </p>
+
                 </form>
 
+                <!-- ORDER SUMMARY -->
                 <div class="checkout-summary">
+
                     <h3 data-i18n="summary">ORDER SUMMARY</h3>
+
                     <div id="checkout-items"></div>
 
                     <div class="summary-total">
                         <span data-i18n="total">TOTAL</span>
                         <strong id="checkout-total">0 DH</strong>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- PRODUCT DETAILS -->
+    <!-- PRODUCT DETAILS MODAL -->
     <div class="product-modal" id="product-modal" aria-hidden="true">
+
         <div class="modal-backdrop" id="modal-backdrop"></div>
-        <div class="modal-dialog" role="dialog" aria-modal="true"
-             aria-labelledby="modal-name">
-            <button class="modal-close" id="modal-close"
-                    type="button" aria-label="Close" data-i18n-aria="close">×</button>
+
+        <div
+            class="modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-name"
+        >
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close"
+                data-i18n-aria="close"
+            >×</button>
+
             <div class="modal-media" id="modal-media"></div>
+
             <div class="modal-body">
+
                 <p class="eyebrow" id="modal-category"></p>
+
                 <h3 id="modal-name"></h3>
+
                 <p class="modal-desc" id="modal-desc"></p>
+
                 <strong class="modal-price" id="modal-price"></strong>
-                <button class="checkout-button" id="modal-add" type="button" data-i18n="addToBag">
-                    ADD TO BAG
-                </button>
+
+                <button
+                    class="checkout-button"
+                    id="modal-add"
+                    type="button"
+                    data-i18n="addToBag"
+                >ADD TO BAG</button>
+
             </div>
         </div>
     </div>
 
-    <script src="script.js?v=5"></script>
+    <!-- JAVASCRIPT -->
+    <script src="script.js?v=16" defer></script>
+
 </body>
 </html>
